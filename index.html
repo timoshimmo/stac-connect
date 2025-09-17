@@ -14,7 +14,61 @@
       <div class="logo" aria-label="STAC Connect">
         <img src="img/stac_connect_logo.png" height="45px"/>
       </div>
-      <nav class="nav-menu" aria-label="Primary">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="whatsNew()">WHAT'S NEW
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="whatsNewMenu">
+            <h2>What's New</h2>
+            <div class="dropdown-grid">
+               <div class="dropdown-column">
+                  <h4>All local news</h4>
+                  <a href="#">Nigeria</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>SMO Community</h4>
+                  <a href="#">Yammer</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>More News</h4>
+                  <a href="#">Company Website</a>
+                  <a href="#">SMO LinkedIn</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">
+              WHAT WE DO
+            </button>
+            <div class="dropdown-content" id="whatWeDoMenu">
+              <h2>What We Do</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Working at SMO – Our Safety Culture</h4>
+                    <a href="#">Organization Charts</a>
+                    <a href="#">Zero Harm</a>
+                    <a href="#">Cultural Programme</a>
+                    <a href="#">Employee Resources</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Company Standards and Sustainability</h4>
+                    <a href="#">Corporate Governance</a>
+                    <a href="#">Ethics & Business Conduct</a>
+                    <a href="#">Data Protection</a>
+                    <a href="#">Commitment to ESG Principles</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <a href="#home">MANAGEMENT SYSTEM</a>
+        <a href="#news">RESOURCES & TOOLS</a>
+        <a href="#news">WHERE WE ARE</a>
+       
+      </div>
+
+      <!--<nav class="nav-menu" aria-label="Primary">
         <ul class="nav-item">
           <li class="dropdown">
             <a href="#">WHAT'S NEW ▾</a>
@@ -56,7 +110,7 @@
           <li><a href="#">RESOURCES & TOOLS</a></li>
           <li><a href="#">WHERE WE ARE</a></li>
         </ul>
-      </nav>
+      </nav> -->
       <div class="search">
         <input type="search" placeholder="Search" aria-label="Search" />
       </div>
@@ -306,5 +360,36 @@
     </div>
     <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
 </footer>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function whatsNew() {
+  document.getElementById("whatsNewMenu").classList.toggle("show");
+}
+
+function whatWeDo() {
+  document.getElementById("whatWeDoMenu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+
+
+  }
+}
+</script>
 </body>
 </html>
