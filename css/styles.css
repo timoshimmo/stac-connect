@@ -197,7 +197,7 @@
     }
     .hero-img{position:absolute; inset:0; background:
       radial-gradient(1200px 300px at 50% 100%, rgba(0,0,0,.6), transparent 60%),
-      url('../img/img_stac_news_main.jpg');
+      url('../img/news_item2.jpeg');
       background-size:cover; background-position:center; filter:saturate(.9) contrast(.95)
     }
     .bw-watermark{position:absolute; right:14%; top:50%; transform:translateY(-50%); font-size:180px; font-weight:800; color:rgba(255,255,255,.6); letter-spacing:-6px}
