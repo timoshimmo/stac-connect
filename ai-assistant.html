@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stac Connect</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 </head>
 <body>
+
+  <!-- Header -->
    <header class="site-header">
     <!--<div class="topbar-inner">-->
       <div class="logo" aria-label="STAC Connect">
@@ -70,55 +73,62 @@
         <input type="search" placeholder="Search" aria-label="Search" />
       </div>
     <!--</div>-->
-    </header>
-    <div class="container-main">
-        <div class="main-content">
-            <h2>Our Behaviour Values</h2>
-            <p class="subtitle">To truly live by our core values, Stac Marine expects all employees to exhibit the following behaviors, which reflect our commitment to sustaining a high-performing, ethical, and collaborative workplace.</p>
-            <div class="container-about">
-                   <div class="section-divider"></div>
-                   
-                    <article class="main-content-card">
-                        <h3>Sustainability</h3>
-                        <ul>
-                            <li>Actively reduce waste and energy consumption in both office and offshore environments.</li>
-                            <li>Proactively identify and address sustainability challenges.</li>
-                            <li>Use resources efficiently, avoiding waste.</li>
-                            <li>Strictly adhere to environmental laws and regulations.</li>
-                            <li>Continually seek to enhance knowledge on sustainable practices.</li>
-                        </ul>
-                        <h3>Teamwork</h3>
-                        <ul>
-                            <li>Communicate openly and honestly across teams.</li>
-                            <li>Collaborate and offer assistance to colleagues to achieve team goals.</li>
-                            <li>Trust and support each team member's contributions.</li>
-                            <li>Resolve conflicts respectfully, focusing on solutions.</li>
-                            <li>Recognize and celebrate team achievements.</li>
-                        </ul>
-                        <h3>Accountability</h3>
-                        <ul>
-                            <li>Take full responsibility for all tasks, decisions, and outcomes.</li>
-                            <li>Admit mistakes promptly and take corrective action.</li>
-                            <li>Execute duties reliably and deliver on commitments.</li>
-                            <li>Hold others accountable in a constructive manner.</li>
-                            <li>Maintain high ethical standards in all business activities.</li>
-                        </ul>
-                        <h3>Competence</h3>
-                        <ul>
-                            <li>Engage in continuous learning and skill development.</li>
-                            <li>Share knowledge and expertise to foster collective competence.</li>
-                            <li>Seek and utilize feedback to improve performance.</li>
-                            <li>Deliver high-quality work with attention to detail and safety.</li>
-                            <li>Apply expertise to solve problems and drive innovation.</li>
-                        </ul>
-                      </article>
+  </header>
+
+  <!-- Content -->
+  <div class="container-body">
+    <!-- Main content -->
+    <div class="main-content">
+      <h2>News</h2>
+      <div class="section-divider"></div>
+        <div class="containers">
+           
+            <!-- Detail Page 1 -->
+            <div id="detail1" class="news-detail-page">
+                <a class="back-button" onclick="window.history.back()">Back Home</a>
                 
+                <div class="detail-header">
+                    <div class="detail-date">27 June 2025</div>
+                    <h1 class="detail-title">Ai Assistants in Meetings and Info Processing</h1>
+                    <div class="detail-tags">- Corporate</div>
+                </div>
+
+                <div class="detail-image">
+                    <div class="placeholder-text"><img src="img/img_news_ai.jpg" alt=""/></div>
+                </div>
+
+                 <div class="detail-body">
+                    <p>Good News! You can now book your own travels. This is applicable for employees in Norway, France, and the Netherlands. We're excited to announce this new self-service capability that gives you more control over your business travel arrangements.</p>
+
+                    <h3>What's New?</h3>
+                    <p>Previously, all travel bookings had to be processed through the central travel desk. Starting today, you can directly book your flights, hotels, and rental cars through our new online booking platform. This change is designed to give you more flexibility and speed up the booking process.</p>
+
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li>Access the new booking platform through the company intranet</li>
+                        <li>Log in using your standard company credentials</li>
+                        <li>Complete the quick 15-minute online training module (mandatory)</li>
+                        <li>Review the updated travel policy guidelines</li>
+                        <li>Start booking your next business trip!</li>
+                    </ul>
+
+                    <h3>Benefits of AI Assistance</h3>
+                    <p>The new system offers several advantages including instant booking confirmation, real-time price comparisons, access to preferred vendor rates, automatic expense integration, and mobile app access for booking on the go. You'll also receive immediate notifications about any changes to your travel arrangements.</p>
+
+                    <h3>Policy Compliance</h3>
+                    <p>While you now have the freedom to book your own travel, all company travel policies still apply. The system includes built-in guardrails to ensure compliance with budget limits, preferred vendors, and advance booking requirements. Any exceptions will require manager approval before confirmation.</p>
+
+                    <h3>Training and Support</h3>
+                    <p>Live training sessions are scheduled for the next two weeks. Register through the HR portal to join a session convenient for your time zone. Additionally, comprehensive video tutorials and a detailed user guide are available on the travel portal.</p>
+
+                    <p>We're confident this new system will enhance your travel booking experience. Please don't hesitate to reach out to the support team if you need any assistance during the transition.</p>
+                </div>
             </div>
+
         </div>
-        <div></div> 
     </div>
-    
-    <footer class="site-footer">
+  </div>
+  <footer class="site-footer">
         <div class="logo"><img src="img/stac_logo_new.jpg" height="50px"/></div>
         <div class="quick-finder">
             <h3>Quick Finder</h3>
@@ -130,6 +140,7 @@
         </div>
         <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
     </footer>
+
     <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */

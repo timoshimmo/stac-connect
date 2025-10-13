@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stac Connect</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 </head>
 <body>
+
+  <!-- Header -->
    <header class="site-header">
     <!--<div class="topbar-inner">-->
       <div class="logo" aria-label="STAC Connect">
@@ -70,55 +73,59 @@
         <input type="search" placeholder="Search" aria-label="Search" />
       </div>
     <!--</div>-->
-    </header>
-    <div class="container-main">
-        <div class="main-content">
-            <h2>Our Behaviour Values</h2>
-            <p class="subtitle">To truly live by our core values, Stac Marine expects all employees to exhibit the following behaviors, which reflect our commitment to sustaining a high-performing, ethical, and collaborative workplace.</p>
-            <div class="container-about">
-                   <div class="section-divider"></div>
-                   
-                    <article class="main-content-card">
-                        <h3>Sustainability</h3>
-                        <ul>
-                            <li>Actively reduce waste and energy consumption in both office and offshore environments.</li>
-                            <li>Proactively identify and address sustainability challenges.</li>
-                            <li>Use resources efficiently, avoiding waste.</li>
-                            <li>Strictly adhere to environmental laws and regulations.</li>
-                            <li>Continually seek to enhance knowledge on sustainable practices.</li>
-                        </ul>
-                        <h3>Teamwork</h3>
-                        <ul>
-                            <li>Communicate openly and honestly across teams.</li>
-                            <li>Collaborate and offer assistance to colleagues to achieve team goals.</li>
-                            <li>Trust and support each team member's contributions.</li>
-                            <li>Resolve conflicts respectfully, focusing on solutions.</li>
-                            <li>Recognize and celebrate team achievements.</li>
-                        </ul>
-                        <h3>Accountability</h3>
-                        <ul>
-                            <li>Take full responsibility for all tasks, decisions, and outcomes.</li>
-                            <li>Admit mistakes promptly and take corrective action.</li>
-                            <li>Execute duties reliably and deliver on commitments.</li>
-                            <li>Hold others accountable in a constructive manner.</li>
-                            <li>Maintain high ethical standards in all business activities.</li>
-                        </ul>
-                        <h3>Competence</h3>
-                        <ul>
-                            <li>Engage in continuous learning and skill development.</li>
-                            <li>Share knowledge and expertise to foster collective competence.</li>
-                            <li>Seek and utilize feedback to improve performance.</li>
-                            <li>Deliver high-quality work with attention to detail and safety.</li>
-                            <li>Apply expertise to solve problems and drive innovation.</li>
-                        </ul>
-                      </article>
+  </header>
+
+  <!-- Content -->
+  <div class="container-body">
+    <!-- Main content -->
+    <div class="main-content">
+      <h2>News</h2>
+      <div class="section-divider"></div>
+        <div class="containers">
+           
+            <!-- Detail Page 1 -->
+            <div id="detail1" class="news-detail-page">
+                <a class="back-button" onclick="window.history.back()">Back Home</a>
                 
+                <div class="detail-header">
+                    <div class="detail-date">09 July 2025</div>
+                    <h1 class="detail-title">Technical Function - Monthly Management Report</h1>
+                    <div class="detail-tags">- Corporate</div>
+                </div>
+
+                <div class="detail-image">
+                    <div class="placeholder-text"><img src="img/zero-harm.png" alt=""/></div>
+                </div>
+
+                <div class="detail-body">
+                    <p>Please take note of the following routines when booking your travels with ATPI. These updated procedures ensure smooth travel arrangements for all employees across our Norway, France, and Netherlands offices.</p>
+
+                    <h3>Technical Skills</h3>
+                    <p>All travel bookings must be made through our designated travel partner ATPI. The booking system is accessible 24/7 through the company portal. Please ensure you have all necessary approvals before initiating your booking.</p>
+
+                    <h3>Procedures</h3>
+                    <ul>
+                        <li>Book flights at least 14 days in advance for domestic travel and 21 days for international trips</li>
+                        <li>Select economy class for flights under 6 hours duration</li>
+                        <li>Use preferred hotel partners when available at your destination</li>
+                        <li>Submit expense reports within 30 days of travel completion</li>
+                        <li>Retain all receipts and documentation for reimbursement</li>
+                    </ul>
+
+                    <h3>Approval Workflow</h3>
+                    <p>The approval process has been streamlined to ensure faster processing times. Your direct manager must approve all travel requests, with additional CFO approval required for international trips exceeding €2,000. Emergency travel requests should be flagged accordingly in the system.</p>
+
+                    <h3>Support and Assistance</h3>
+                    <p>If you encounter any issues or have questions about the booking process, please contact the ATPI support team at travel@company.com or call the dedicated helpline available in your region. The team is available Monday through Friday, 8:00 AM to 6:00 PM local time.</p>
+
+                    <p>Thank you for your cooperation in following these procedures. These guidelines help us manage travel costs effectively while ensuring your safety and comfort during business trips.</p>
+                </div>
             </div>
+
         </div>
-        <div></div> 
     </div>
-    
-    <footer class="site-footer">
+  </div>
+  <footer class="site-footer">
         <div class="logo"><img src="img/stac_logo_new.jpg" height="50px"/></div>
         <div class="quick-finder">
             <h3>Quick Finder</h3>
@@ -130,6 +137,7 @@
         </div>
         <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
     </footer>
+
     <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */

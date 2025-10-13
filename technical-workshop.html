@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+</head>
+<body>
+
+  <!-- Header -->
+   <header class="site-header">
+    <!--<div class="topbar-inner">-->
+      <div class="logo" aria-label="STAC Connect">
+        <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="whatsNew()">WHAT'S NEW
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="whatsNewMenu">
+            <h2>What's New</h2>
+            <div class="dropdown-grid">
+               <div class="dropdown-column">
+                  <h4>All local news</h4>
+                  <a href="news.html">Nigeria</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>SMO Community</h4>
+                  <a href="#">Yammer</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>More News</h4>
+                  <a href="https://stacmarine.com/" target="_blank">Company Website</a>
+                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">SMO LinkedIn</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">
+              WHAT WE DO
+            </button>
+            <div class="dropdown-content" id="whatWeDoMenu">
+              <h2>What We Do</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Working at SMO – Our Safety Culture</h4>
+                    <a href="#">Organization Charts</a>
+                    <a href="#">Zero Harm</a>
+                    <a href="#">Cultural Programme</a>
+                    <a href="employee-resources.html">Employee Resources</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Company Standards and Sustainability</h4>
+                    <a href="#">Corporate Governance</a>
+                    <a href="#">Ethics & Business Conduct</a>
+                    <a href="#">Data Protection</a>
+                    <a href="#">Commitment to ESG Principles</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <a href="#home">MANAGEMENT SYSTEM</a>
+        <a href="#news">RESOURCES & TOOLS</a>
+        <a href="#news">WHERE WE ARE</a>
+       
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Search" aria-label="Search" />
+      </div>
+    <!--</div>-->
+  </header>
+
+  <!-- Content -->
+  <div class="container-body">
+    <!-- Main content -->
+    <div class="main-content">
+      <h2>News</h2>
+      <div class="section-divider"></div>
+        <div class="containers">
+           
+            <!-- Detail Page 1 -->
+            <div id="detail1" class="news-detail-page">
+                <a class="back-button" onclick="window.history.back()">Back Home</a>
+                
+                <div class="detail-header">
+                    <div class="detail-date">25 June 2025</div>
+                    <h1 class="detail-title">Technical Workshop - Aligning Strategy and Driving Excellence</h1>
+                    <div class="detail-tags">- Corporate</div>
+                </div>
+
+                <div class="detail-image">
+                    <div class="placeholder-text"><img src="img/img_news_workshop.jpg" alt=""/></div>
+                </div>
+
+                <div class="detail-body">
+                    <p>Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before booking their next business trip. These changes reflect our commitment to employee wellbeing, cost efficiency, and environmental responsibility.</p>
+
+                    <h3>Major Policy Changes</h3>
+                    <p>The updated policy introduces several significant changes to how we approach business travel globally. These modifications have been carefully considered based on employee feedback, industry best practices, and our corporate sustainability goals.</p>
+
+                    <h3>Updated Guidelines</h3>
+                    <ul>
+                        <li>Business class now approved for flights over 6 hours (previously 8 hours)</li>
+                        <li>Increased daily meal allowance by 15% across all regions</li>
+                        <li>New carbon offset program for all company-funded travel</li>
+                        <li>Flexible work arrangements available during extended business trips</li>
+                        <li>Enhanced travel insurance coverage including pandemic-related disruptions</li>
+                        <li>Rail travel encouraged for routes under 4 hours as a sustainable alternative</li>
+                    </ul>
+
+                    <h3>Sustainability Initiatives</h3>
+                    <p>As part of our commitment to reducing our environmental footprint, we're introducing new guidelines that encourage sustainable travel choices. When rail travel is a viable option for journeys under 4 hours, it should be selected as the preferred mode of transportation. The company will also offset 100% of carbon emissions from all business flights through certified environmental programs.</p>
+
+                    <h3>Duty of Care</h3>
+                    <p>Employee safety and wellbeing remain our top priority. The enhanced travel insurance now covers a wider range of scenarios including pandemic-related travel disruptions, political unrest, and natural disasters. All travelers will receive pre-trip safety briefings for high-risk destinations.</p>
+
+                    <h3>Expense Reimbursement</h3>
+                    <p>The reimbursement process has been simplified with higher daily allowances that eliminate the need for individual meal receipts in most cases. Employees can now claim the standard daily rate without submitting itemized meal receipts, reducing administrative burden.</p>
+
+                    <p>These policy updates will take effect on October 1, 2022. Please review the complete policy document available on the company portal and contact HR with any questions or concerns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+        <div class="logo"><img src="img/stac_logo_new.jpg" height="50px"/></div>
+        <div class="quick-finder">
+            <h3>Quick Finder</h3>
+            <ul>
+                <li><a href="#">IT Support Information</a></li>
+                <li><a href="#">IT Support email</a></li>
+                <li><a href="#">My settings</a></li>
+            </ul>
+        </div>
+        <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function whatsNew() {
+  document.getElementById("whatsNewMenu").classList.toggle("show");
+}
+
+function whatWeDo() {
+  document.getElementById("whatWeDoMenu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+
+
+  }
+}
+</script>
+</body>
+</html>

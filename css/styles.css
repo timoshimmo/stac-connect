@@ -894,6 +894,11 @@
             font-size: 14px;
         }
 
+        .news-detail-page {
+          padding: 40px 0px;
+          max-width: 900px;
+        }
+
         /* Detail Page Styles */
         .detail-page {
             display: none;
@@ -1028,6 +1033,11 @@
             .detail-page {
                 padding: 20px;
             }
+
+            .news-detail-page {
+               padding: 20px;
+            }
+
 
             .detail-title {
                 font-size: 28px;
