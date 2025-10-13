@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+</head>
+<body>
+
+  <!-- Header -->
+   <header class="site-header">
+    <!--<div class="topbar-inner">-->
+      <div class="logo" aria-label="STAC Connect">
+        <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="whatsNew()">WHAT'S NEW
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="whatsNewMenu">
+            <h2>What's New</h2>
+            <div class="dropdown-grid">
+               <div class="dropdown-column">
+                  <h4>All local news</h4>
+                  <a href="#">Nigeria</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>SMO Community</h4>
+                  <a href="#">Yammer</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>More News</h4>
+                  <a href="https://stacmarine.com/" target="_blank">Company Website</a>
+                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">SMO LinkedIn</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">
+              WHAT WE DO
+            </button>
+            <div class="dropdown-content" id="whatWeDoMenu">
+              <h2>What We Do</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Working at SMO – Our Safety Culture</h4>
+                    <a href="#">Organization Charts</a>
+                    <a href="#">Zero Harm</a>
+                    <a href="#">Cultural Programme</a>
+                    <a href="employee-resources.html">Employee Resources</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Company Standards and Sustainability</h4>
+                    <a href="#">Corporate Governance</a>
+                    <a href="#">Ethics & Business Conduct</a>
+                    <a href="#">Data Protection</a>
+                    <a href="#">Commitment to ESG Principles</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <a href="#home">MANAGEMENT SYSTEM</a>
+        <a href="#news">RESOURCES & TOOLS</a>
+        <a href="#news">WHERE WE ARE</a>
+       
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Search" aria-label="Search" />
+      </div>
+    <!--</div>-->
+  </header>
+
+  <!-- Content -->
+  <div class="container-body">
+    <!-- Main content -->
+    <div class="main-content">
+      <h2>News</h2>
+      <div class="section-divider"></div>
+        <div class="containers">
+            <!-- List Page -->
+            <div id="listPage" class="list-page">
+                <!-- Filter Section -->
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <h3>News filters options</h3>
+                        <span class="hide-toggle" onclick="toggleFilters()">( Hide )</span>
+                    </div>
+
+                    <div id="filterContent">
+                        <div class="filter-tabs">
+                            <div class="filter-tab active" onclick="showFilterTab('category')">Category ✚</div>
+                            <div class="filter-tab" onclick="showFilterTab('location')">Locations ✚</div>
+                            <div class="filter-tab" onclick="showFilterTab('years')">Years ✚</div>
+                        </div>
+
+                        <div id="categoryFilters" class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="policy" value="policy" onchange="applyFilters()">
+                                <label for="policy">Policy updates</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="procedure" value="procedure" onchange="applyFilters()">
+                                <label for="procedure">Procedures</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="markets" value="markets" onchange="applyFilters()">
+                                <label for="markets">Global Market</label>
+                            </div>
+                        </div>
+
+                        <div id="locationFilters" class="filter-options" style="display: none;">
+                            <div class="filter-option">
+                                <input type="checkbox" id="nigeria" value="nigeria" onchange="applyFilters()">
+                                <label for="nigeria">Nigeria</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="global" value="global" onchange="applyFilters()">
+                                <label for="global">Global news</label>
+                            </div>
+                        </div>
+
+                        <div id="yearsFilters" class="filter-options" style="display: none;">
+                            <div class="filter-option">
+                                <input type="checkbox" id="year2024q4" value="2024-q4" onchange="applyFilters()">
+                                <label for="year2024q4">2024 Q4</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="year2024q3" value="2024-q3" onchange="applyFilters()">
+                                <label for="year2024q3">2024 Q3</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="year2024q2" value="2024-q2" onchange="applyFilters()">
+                                <label for="year2024q2">2024 Q2</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="year2024q1" value="2024-q1" onchange="applyFilters()">
+                                <label for="year2024q1">2024 Q1</label>
+                            </div>
+                        </div>
+
+                        <div id="selectedFilters" class="selected-filters" style="display: none;">
+                            <span class="selected-filters-label">Selected filters:</span>
+                            <div id="selectedFilterTags"></div>
+                            <span class="clear-filters" onclick="clearAllFilters()">Clear</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q4 2024 Section -->
+                <div class="quarter-header">
+                    <h3>Published 2024 Q4</h3>
+                </div>
+                
+                <div class="update-row" data-id="1" data-category="travel,procedure" data-location="nigeria,global" data-year="2024-q4" onclick="showDetail(1)">
+                    <div class="update-content">
+                        <div class="update-date">12 December 2024</div>
+                        <div class="update-title">Travel booking routines</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                            Please take note of the following routines when booking your travels with ATPI.
+                        </div>
+                    </div>
+                    <div class="update-image">
+                        <img src="img/img_travel_news1.jpg" alt="Travel illustration">
+                    </div>
+                </div>
+
+                <!-- Q3 2024 Section -->
+                <div class="quarter-header">
+                    <h3>Published 2024 Q3</h3>
+                </div>
+                
+                <div class="update-row" data-id="2" data-category="travel,procedure" data-location="nigeria,global" data-year="2024-q3" onclick="showDetail(2)">
+                    <div class="update-content">
+                        <div class="update-date">20 September 2024</div>
+                        <div class="update-title">Travel booking – new procedure</div>
+                        <div class="update-tags">- Nigeria, Global</div>
+                        <div class="update-description">
+                            Good News, you can now book your own travels! This is applicable for employees in Norway, France &amp;...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                        <img src="img/img_travel_news2.jpg" alt="Travel illustration">
+                    </div>
+                </div>
+
+                <!-- Additional example row -->
+                <div class="update-row" data-id="3" data-category="travel,policy" data-location="nigeria,global" data-year="2024-q3" onclick="showDetail(3)">
+                    <div class="update-content">
+                        <div class="update-date">15 September 2024</div>
+                        <div class="update-title">Corporate travel policy updates</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/img_travel_news3.jpg" alt="Travel illustration">
+                    </div>
+                </div>
+
+                <!-- Q2 2024 Section -->
+                <div class="quarter-header">
+                    <h3>Published 2024 Q2</h3>
+                </div>
+                
+                <div class="update-row" data-id="4" data-category="markets" data-location="global" data-year="2024-q2">
+                    <div class="update-content">
+                        <div class="update-date">2 August 2024</div>
+                        <div class="update-title">Brent Crude Oil Price Crash</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                            Good News, you can now book your own travels! This is applicable for employees in Norway, France &amp;...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                        
+                    </div>
+                </div>
+
+                <!-- Additional example row -->
+                <div class="update-row" data-id="5" data-category="markets" data-location="global" data-year="2024-q2">
+                    <div class="update-content">
+                        <div class="update-date">18 June 2024</div>
+                        <div class="update-title">OPEC+ Agree on Daily Output</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                        
+                    </div>
+                </div>
+
+                <!-- Q1 2024 Section -->
+                <div class="quarter-header">
+                    <h3>Published 2024 Q1</h3>
+                </div>
+                
+                <div class="update-row" data-id="6" data-category="markets,policy" data-location="nigeria" data-year="2024-q1">
+                    <div class="update-content">
+                        <div class="update-date">25 April 2024</div>
+                        <div class="update-title">NNPC Shareholders Meeting</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                            Good News, you can now book your own travels! This is applicable for employees in Nigeria &amp;...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                        
+                    </div>
+                </div>
+
+                <!-- Additional example row -->
+                <div class="update-row" data-id="7" data-category="procedure,policy" data-location="nigeria" data-year="2024-q1">
+                    <div class="update-content">
+                        <div class="update-date">10 April 2024</div>
+                        <div class="update-title">PENGASSEN meet FG</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                        
+                    </div>
+                </div>
+
+                <!-- Additional example row -->
+                <div class="update-row" data-id="8" data-category="markets,policy" data-location="nigeria,global" data-year="2024-q1">
+                    <div class="update-content">
+                        <div class="update-date">20 February 2024</div>
+                        <div class="update-title">Oando and Seplat on the rise</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Page 1 -->
+            <div id="detail1" class="detail-page">
+                <a class="back-button" onclick="showList()">Back to news list</a>
+                
+                <div class="detail-header">
+                    <div class="detail-date">12 December 2024</div>
+                    <h1 class="detail-title">Travel booking routines</h1>
+                    <div class="detail-tags">- Nigeria</div>
+                </div>
+
+                <div class="detail-image">
+                    <div class="placeholder-text"><img src="img/img_travel_news1.jpg" alt=""/></div>
+                </div>
+
+                <div class="detail-body">
+                    <p>Please take note of the following routines when booking your travels with ATPI. These updated procedures ensure smooth travel arrangements for all employees across our Norway, France, and Netherlands offices.</p>
+
+                    <h3>Booking Process</h3>
+                    <p>All travel bookings must be made through our designated travel partner ATPI. The booking system is accessible 24/7 through the company portal. Please ensure you have all necessary approvals before initiating your booking.</p>
+
+                    <h3>Key Requirements</h3>
+                    <ul>
+                        <li>Book flights at least 14 days in advance for domestic travel and 21 days for international trips</li>
+                        <li>Select economy class for flights under 6 hours duration</li>
+                        <li>Use preferred hotel partners when available at your destination</li>
+                        <li>Submit expense reports within 30 days of travel completion</li>
+                        <li>Retain all receipts and documentation for reimbursement</li>
+                    </ul>
+
+                    <h3>Approval Workflow</h3>
+                    <p>The approval process has been streamlined to ensure faster processing times. Your direct manager must approve all travel requests, with additional CFO approval required for international trips exceeding €2,000. Emergency travel requests should be flagged accordingly in the system.</p>
+
+                    <h3>Support and Assistance</h3>
+                    <p>If you encounter any issues or have questions about the booking process, please contact the ATPI support team at travel@company.com or call the dedicated helpline available in your region. The team is available Monday through Friday, 8:00 AM to 6:00 PM local time.</p>
+
+                    <p>Thank you for your cooperation in following these procedures. These guidelines help us manage travel costs effectively while ensuring your safety and comfort during business trips.</p>
+                </div>
+            </div>
+
+            <!-- Detail Page 2 -->
+            <div id="detail2" class="detail-page">
+                <a class="back-button" onclick="showList()">Back to news list</a>
+                
+                <div class="detail-header">
+                    <div class="detail-date">20 September 2024</div>
+                    <h1 class="detail-title">Travel booking – new procedure</h1>
+                    <div class="detail-tags">- Nigeria, Global</div>
+                </div>
+
+                <div class="detail-image">
+                    <div class="placeholder-text"><img src="img/img_travel_news2.jpg" alt=""/></div>
+                </div>
+
+                <div class="detail-body">
+                    <p>Good News! You can now book your own travels. This is applicable for employees in Norway, France, and the Netherlands. We're excited to announce this new self-service capability that gives you more control over your business travel arrangements.</p>
+
+                    <h3>What's New?</h3>
+                    <p>Previously, all travel bookings had to be processed through the central travel desk. Starting today, you can directly book your flights, hotels, and rental cars through our new online booking platform. This change is designed to give you more flexibility and speed up the booking process.</p>
+
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li>Access the new booking platform through the company intranet</li>
+                        <li>Log in using your standard company credentials</li>
+                        <li>Complete the quick 15-minute online training module (mandatory)</li>
+                        <li>Review the updated travel policy guidelines</li>
+                        <li>Start booking your next business trip!</li>
+                    </ul>
+
+                    <h3>Benefits of Self-Booking</h3>
+                    <p>The new system offers several advantages including instant booking confirmation, real-time price comparisons, access to preferred vendor rates, automatic expense integration, and mobile app access for booking on the go. You'll also receive immediate notifications about any changes to your travel arrangements.</p>
+
+                    <h3>Policy Compliance</h3>
+                    <p>While you now have the freedom to book your own travel, all company travel policies still apply. The system includes built-in guardrails to ensure compliance with budget limits, preferred vendors, and advance booking requirements. Any exceptions will require manager approval before confirmation.</p>
+
+                    <h3>Training and Support</h3>
+                    <p>Live training sessions are scheduled for the next two weeks. Register through the HR portal to join a session convenient for your time zone. Additionally, comprehensive video tutorials and a detailed user guide are available on the travel portal.</p>
+
+                    <p>We're confident this new system will enhance your travel booking experience. Please don't hesitate to reach out to the support team if you need any assistance during the transition.</p>
+                </div>
+            </div>
+
+            <!-- Detail Page 3 -->
+            <div id="detail3" class="detail-page">
+                <a class="back-button" onclick="showList()">Back to news list</a>
+                
+                <div class="detail-header">
+                    <div class="detail-date">15 September 2024</div>
+                    <h1 class="detail-title">Corporate travel policy updates</h1>
+                    <div class="detail-tags">- Global</div>
+                </div>
+
+                <div class="detail-image">
+                    <div class="placeholder-text"><img src="img/img_travel_news3.jpg" alt=""/></div>
+                </div>
+
+                <div class="detail-body">
+                    <p>Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before booking their next business trip. These changes reflect our commitment to employee wellbeing, cost efficiency, and environmental responsibility.</p>
+
+                    <h3>Major Policy Changes</h3>
+                    <p>The updated policy introduces several significant changes to how we approach business travel globally. These modifications have been carefully considered based on employee feedback, industry best practices, and our corporate sustainability goals.</p>
+
+                    <h3>Updated Guidelines</h3>
+                    <ul>
+                        <li>Business class now approved for flights over 6 hours (previously 8 hours)</li>
+                        <li>Increased daily meal allowance by 15% across all regions</li>
+                        <li>New carbon offset program for all company-funded travel</li>
+                        <li>Flexible work arrangements available during extended business trips</li>
+                        <li>Enhanced travel insurance coverage including pandemic-related disruptions</li>
+                        <li>Rail travel encouraged for routes under 4 hours as a sustainable alternative</li>
+                    </ul>
+
+                    <h3>Sustainability Initiatives</h3>
+                    <p>As part of our commitment to reducing our environmental footprint, we're introducing new guidelines that encourage sustainable travel choices. When rail travel is a viable option for journeys under 4 hours, it should be selected as the preferred mode of transportation. The company will also offset 100% of carbon emissions from all business flights through certified environmental programs.</p>
+
+                    <h3>Duty of Care</h3>
+                    <p>Employee safety and wellbeing remain our top priority. The enhanced travel insurance now covers a wider range of scenarios including pandemic-related travel disruptions, political unrest, and natural disasters. All travelers will receive pre-trip safety briefings for high-risk destinations.</p>
+
+                    <h3>Expense Reimbursement</h3>
+                    <p>The reimbursement process has been simplified with higher daily allowances that eliminate the need for individual meal receipts in most cases. Employees can now claim the standard daily rate without submitting itemized meal receipts, reducing administrative burden.</p>
+
+                    <p>These policy updates will take effect on October 1, 2022. Please review the complete policy document available on the company portal and contact HR with any questions or concerns.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+        <div class="logo"><img src="img/stac_logo_new.jpg" height="50px"/></div>
+        <div class="quick-finder">
+            <h3>Quick Finder</h3>
+            <ul>
+                <li><a href="#">IT Support Information</a></li>
+                <li><a href="#">IT Support email</a></li>
+                <li><a href="#">My settings</a></li>
+            </ul>
+        </div>
+        <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function whatsNew() {
+  document.getElementById("whatsNewMenu").classList.toggle("show");
+}
+
+function whatWeDo() {
+  document.getElementById("whatWeDoMenu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+
+
+  }
+}
+</script>
+
+<script>
+        let currentTab = 'category';
+
+          function showDetail(id) {
+            document.getElementById('listPage').classList.add('hidden');
+            document.getElementById('detail' + id).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showList() {
+            document.querySelectorAll('.detail-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('listPage').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        function showFilterTab(tab) {
+            currentTab = tab;
+            
+            // Hide all filter options
+            document.getElementById('categoryFilters').style.display = 'none';
+            document.getElementById('locationFilters').style.display = 'none';
+            document.getElementById('yearsFilters').style.display = 'none';
+            
+            // Show selected tab
+            if (tab === 'category') {
+                document.getElementById('categoryFilters').style.display = 'flex';
+            } else if (tab === 'location') {
+                document.getElementById('locationFilters').style.display = 'flex';
+            } else if (tab === 'years') {
+                document.getElementById('yearsFilters').style.display = 'flex';
+            }
+            
+            // Update active tab styling
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function toggleFilters() {
+            const content = document.getElementById('filterContent');
+            const toggle = document.querySelector('.hide-toggle');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                toggle.textContent = '( Hide )';
+            } else {
+                content.style.display = 'none';
+                toggle.textContent = '( Show )';
+            }
+        }
+
+        function applyFilters() {
+            const selectedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value);
+            const selectedLocations = Array.from(document.querySelectorAll('#locationFilters input:checked')).map(cb => cb.value);
+            const selectedYears = Array.from(document.querySelectorAll('#yearsFilters input:checked')).map(cb => cb.value);
+            
+            const rows = document.querySelectorAll('.update-row');
+            
+            rows.forEach(row => {
+                const rowCategories = row.dataset.category.split(',');
+                const rowLocations = row.dataset.location.split(',');
+                const rowYear = row.dataset.year;
+                
+                let showRow = true;
+                
+                
+                // Check category filter
+                if (selectedCategories.length > 0) {
+                    showRow = selectedCategories.some(cat => rowCategories.includes(cat));
+                }
+                
+                // Check location filter
+                if (showRow && selectedLocations.length > 0) {
+                    showRow = selectedLocations.some(loc => rowLocations.includes(loc));
+                }
+                
+                // Check year filter
+                if (showRow && selectedYears.length > 0) {
+                    showRow = selectedYears.includes(rowYear);
+                }
+
+                console.log(showRow);
+                
+                if (showRow) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+            });
+            
+            updateSelectedFilters();
+        }
+
+        function updateSelectedFilters() {
+            const allChecked = document.querySelectorAll('.filter-options input:checked');
+            const selectedFiltersDiv = document.getElementById('selectedFilters');
+            const tagsDiv = document.getElementById('selectedFilterTags');
+            
+            if (allChecked.length > 0) {
+                selectedFiltersDiv.style.display = 'flex';
+                tagsDiv.innerHTML = '';
+                
+                allChecked.forEach(checkbox => {
+                    const tag = document.createElement('span');
+                    tag.className = 'filter-tag';
+                    tag.textContent = checkbox.nextElementSibling.textContent;
+                    tagsDiv.appendChild(tag);
+                });
+            } else {
+                selectedFiltersDiv.style.display = 'none';
+            }
+        }
+
+        function clearAllFilters() {
+            const allCheckboxes = document.querySelectorAll('.filter-options input[type="checkbox"]');
+            allCheckboxes.forEach(cb => cb.checked = false);
+            applyFilters();
+        }
+    </script>
+</body>
+</html>
