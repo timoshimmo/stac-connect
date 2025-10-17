@@ -197,8 +197,9 @@
     }
     .hero-img{position:absolute; inset:0; background:
       radial-gradient(1200px 300px at 50% 100%, rgba(0,0,0,.6), transparent 60%),
-      url('../img/news_item2.jpeg');
-      background-size:cover; background-position:center; filter:saturate(.9) contrast(.95)
+      url('../img/ship_image.jpg');
+      background-size:cover; background-position:center; filter:saturate(.9) contrast(.95);
+      background-repeat: no-repeat;
     }
     .bw-watermark{position:absolute; right:14%; top:50%; transform:translateY(-50%); font-size:180px; font-weight:800; color:rgba(255,255,255,.6); letter-spacing:-6px}
     .hero-label{position:absolute; left:18px; bottom:18px; background:rgba(57, 188, 60,.9); color:#fff; padding:6px 10px; font-size:12px; border-radius:6px; letter-spacing:.3px}
@@ -236,7 +237,7 @@
 .new-joiners-tasks .container {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 20px;
+  gap: 40px;
 }
 .new-joiners h2, .tasks-apps h2 {
   color: #022e5d;
@@ -317,6 +318,18 @@
 .career-opportunities {
   padding: 60px;
   font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
 }
 .career-box {
   background: #f5f5f5;
@@ -342,6 +355,10 @@
   font-size: 14px;
   color: #555;
   margin-bottom: 5px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .career-deadline {
   font-weight: bold;
@@ -374,7 +391,7 @@
   padding: 60px;
   background: linear-gradient(to right, #39bc3c, #022e5d);
   font-family: Arial, sans-serif;
-  margin-top: 60px;
+  margin-top: 180px;
 }
 .integrity-grid {
   display: grid;
@@ -390,7 +407,7 @@
 }
 .integrity-card img {
   width: 100%;
-  height: auto;
+  height: 305px;
   border-radius: 6px;
   margin-bottom: 10px;
 }
@@ -688,7 +705,7 @@
     }
 
     .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
             background-color: white;
         }
@@ -1048,5 +1065,34 @@
             }
         }
 
+
+.features-btn-area {
+  margin-top: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  text-decoration: none;
+  padding: 20px 60px;
+  border-radius: 10px;
+  background-color: var(--bw-primary);
+  color: #FFFFFF;
+  font-size: 1em;
+  font-weight: 600;
+  width: auto;
+}
+
+.btn-primary:hover {
+  text-decoration: none;
+  background-color: var(--bw-secondary);
+}
+
+.features-title {
+  color: var(--bw-secondary);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
 
         
