@@ -75,14 +75,135 @@
 </head>
 <body>
 
-  <header>
-    <h1>STAC Marine</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Vision</a>
-      <a href="#">Mission</a>
-      <a href="#">Culture Code</a>
-    </nav>
+   <!-- Top Gradient Nav topbar -->
+  <header class="site-header">
+    <!--<div class="topbar-inner">-->
+      <div class="logo" aria-label="STAC Connect">
+         <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="whatsNew()">WHAT'S NEW
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="whatsNewMenu">
+            <h2>What's New</h2>
+            <div class="dropdown-grid">
+               <div class="dropdown-column">
+                  <h4>All local news</h4>
+                  <a href="news.html">Nigeria</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>SMO Community</h4>
+                  <a href="#">Yammer</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>More News</h4>
+                  <a href="https://stacmarine.com/" target="_blank">Company Website</a>
+                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">SMO LinkedIn</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">
+              WHAT WE DO
+            </button>
+            <div class="dropdown-content" id="whatWeDoMenu">
+              <h2>What We Do</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Working at SMO – Our Safety Culture</h4>
+                    <a href="#">Organization Charts</a>
+                    <a href="#">Zero Harm</a>
+                    <a href="#">Cultural Programme</a>
+                    <a href="employee-resources.html">Employee Resources</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Company Standards and Sustainability</h4>
+                    <a href="#">Corporate Governance</a>
+                    <a href="#">Ethics & Business Conduct</a>
+                    <a href="#">Data Protection</a>
+                    <a href="#">Commitment to ESG Principles</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="manageSystem()">
+              MANAGEMENT SYSTEM
+            </button>
+            <div class="dropdown-content" id="manageSystemMenu">
+              <h2>Management System</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Management System Onshore</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HR</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Omega 365</a>
+                    <a href="#">Operations & Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Management System Offshore</h4>
+                    <a href="#">Mayo ABO</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="resourceTools()">
+              RESOURCES & TOOLS
+            </button>
+            <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid">
+                  <div class="dropdown-column">
+                    <h4>References</h4>
+                    <a href="#">Cyber Security</a>
+                    <a href="#">Travel Advisory</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>BI</h4>
+                    <a href="#">Daily Offshore Report</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>IT Support</h4>
+                    <a href="#">IT Guides (A-Z)</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>SharePoint Sites</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">HR</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                    <p>Mayo ABO</p>
+                    <div class="drop-sub">
+                      <a href="#">DocOrgABO</a>
+                      <a href="#">Operations & Maintenance</a>
+                      <a href="#">Project 4266</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <!-- <a href="#news">WHERE WE ARE</a> -->
+       
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Search" aria-label="Search" />
+      </div>
+    <!--</div>-->
   </header>
 
   <div class="hero">

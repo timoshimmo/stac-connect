@@ -10,11 +10,11 @@
 </head>
 <body>
 
-  <!-- Header -->
-   <header class="site-header">
+ <!-- Top Gradient Nav topbar -->
+  <header class="site-header">
     <!--<div class="topbar-inner">-->
       <div class="logo" aria-label="STAC Connect">
-        <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
+         <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
       </div>
       <div class="navbar">
         <div class="dropdown">
@@ -64,9 +64,75 @@
               </div>
             </div>
         </div> 
-        <a href="#home">MANAGEMENT SYSTEM</a>
-        <a href="#news">RESOURCES & TOOLS</a>
-        <a href="#news">WHERE WE ARE</a>
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="manageSystem()">
+              MANAGEMENT SYSTEM
+            </button>
+            <div class="dropdown-content" id="manageSystemMenu">
+              <h2>Management System</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Management System Onshore</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HR</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Omega 365</a>
+                    <a href="#">Operations & Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Management System Offshore</h4>
+                    <a href="#">Mayo ABO</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="resourceTools()">
+              RESOURCES & TOOLS
+            </button>
+            <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid">
+                  <div class="dropdown-column">
+                    <h4>References</h4>
+                    <a href="#">Cyber Security</a>
+                    <a href="#">Travel Advisory</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>BI</h4>
+                    <a href="#">Daily Offshore Report</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>IT Support</h4>
+                    <a href="#">IT Guides (A-Z)</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>SharePoint Sites</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">HR</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                    <p>Mayo ABO</p>
+                    <div class="drop-sub">
+                      <a href="#">DocOrgABO</a>
+                      <a href="#">Operations & Maintenance</a>
+                      <a href="#">Project 4266</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <!-- <a href="#news">WHERE WE ARE</a> -->
        
       </div>
       <div class="search">
@@ -183,7 +249,7 @@
         <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
     </footer>
 
-    <script>
+ <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function whatsNew() {
@@ -194,11 +260,21 @@ function whatWeDo() {
   document.getElementById("whatWeDoMenu").classList.toggle("show");
 }
 
+function manageSystem() {
+  document.getElementById("manageSystemMenu").classList.toggle("show");
+}
+
+function resourceTools() {
+  document.getElementById("resourceToolsMenu").classList.toggle("show");
+}
+
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
   if (!e.target.matches('.dropbtn')) {
     var whatsNewMenu = document.getElementById("whatsNewMenu");
     var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+    var manageSystemMenu = document.getElementById("manageSystemMenu");
+    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
 
     if (whatsNewMenu.classList.contains('show')) {
       whatsNewMenu.classList.remove('show');
@@ -208,7 +284,13 @@ window.onclick = function(e) {
       whatWeDoMenu.classList.remove('show');
     }
 
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
 
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
 
   }
 }

@@ -101,7 +101,7 @@
   z-index: 1;
   left: 0;
   right: 0;
-  padding: 30px;
+  padding: 30px 60px;
 }
 
 .dropdown-content a {
@@ -112,6 +112,13 @@
   display: block;
   text-align: left;
   height: auto !important;
+}
+
+.dropdown-content p {
+  color: var(--bw-primary);
+  padding: 12px 16px 12px 0px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .dropdown-content h2 {
@@ -144,6 +151,10 @@
   gap: 20px;
 }
 
+.drop-sub {
+  padding: 0px 20px;
+}
+
 .show {
   display: block;
 }
@@ -159,7 +170,10 @@
     .nav a:hover{opacity:.9; text-decoration:underline}
     .search{margin-left:auto; opacity:.95}
     .search input{border:none; padding:8px 10px; border-radius:6px; min-width:180px}
-
+     .culture-code img {
+        width: 650px;
+        margin-top: 20px;
+      }
     /* Shell */
     .shell{margin:60px auto; display:grid; grid-template-columns:280px 1fr 450px; gap:22px; padding:0 60px}
     @media (max-width:1160px){
@@ -196,8 +210,10 @@
       position:relative; height:290px; overflow:hidden; background:linear-gradient(180deg, #bfe3ff 0%, #cfe9ff 30%, #eef6ff 100%);
       display:flex; align-items:center; justify-content:center;
     }
-    .hero-img{position:absolute; inset:0; background:
-      radial-gradient(1200px 300px at 50% 100%, rgba(0,0,0,.6), transparent 60%),
+    .hero-img{
+      position:absolute; 
+      inset:0; 
+      background: radial-gradient(1200px 300px at 50% 100%, rgba(0,0,0,.6), transparent 60%),
       url('../img/ship_image.jpg');
       background-size:cover; background-position:center; filter:saturate(.9) contrast(.95);
       background-repeat: no-repeat;
@@ -207,6 +223,18 @@
     .hero-title{position:relative; z-index:1; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.35); width:90%; max-width:720px}
     .hero-title h1{margin:0; font-weight:800; font-size:42px}
     .hero-title .date{font-size:12px; opacity:.95}
+
+
+     @media (min-width:2560px){
+      .shell{grid-template-columns:500px 1fr 800px;}
+      .hero{
+          height:500px;
+      }
+      .culture-code img {
+        width: 100%;
+      }
+
+    }
 
     .spot-text{padding:18px 20px 22px}
     .spot-text h2{margin:0 0 8px 0; font-size:26px; line-height:1.25; color:var(--bw-secondary)}

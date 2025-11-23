@@ -62,9 +62,75 @@
               </div>
             </div>
         </div> 
-        <a href="#home">MANAGEMENT SYSTEM</a>
-        <a href="#news">RESOURCES & TOOLS</a>
-        <a href="#news">WHERE WE ARE</a>
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="manageSystem()">
+              MANAGEMENT SYSTEM
+            </button>
+            <div class="dropdown-content" id="manageSystemMenu">
+              <h2>Management System</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Management System Onshore</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HR</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Omega 365</a>
+                    <a href="#">Operations & Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Management System Offshore</h4>
+                    <a href="#">Mayo ABO</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="resourceTools()">
+              RESOURCES & TOOLS
+            </button>
+            <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid">
+                  <div class="dropdown-column">
+                    <h4>References</h4>
+                    <a href="#">Cyber Security</a>
+                    <a href="#">Travel Advisory</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>BI</h4>
+                    <a href="#">Daily Offshore Report</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>IT Support</h4>
+                    <a href="#">IT Guides (A-Z)</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>SharePoint Sites</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">HR</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                    <p>Mayo ABO</p>
+                    <div class="drop-sub">
+                      <a href="#">DocOrgABO</a>
+                      <a href="#">Operations & Maintenance</a>
+                      <a href="#">Project 4266</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <!-- <a href="#news">WHERE WE ARE</a> -->
        
       </div>
       <div class="search">
@@ -113,6 +179,7 @@
             </div>
         </a>
       </article>
+      <div class="culture-code"><a href="#"><img src="img/stac_culture_code_edited.png"/></a></div>
     </section>
 
     <!-- Right Rail -->
@@ -168,28 +235,28 @@
   <div class="container">
     <!-- Left: New Joiners -->
     <div class="new-joiners">
-      <h2>New joiners</h2>
+      <h2>New Joiners</h2>
       
      <div class="joiner-card">
         <img src="img/female_avatar.jpg" alt="Profile" height="120">
         <div class="details">
-          <a href="#">Jules Garidou</a>
-          <p><strong>Position:</strong> Summer Assistant</p>
-          <p><strong>Office/Unit:</strong> Singapore</p>
-          <p><strong>Reports to:</strong> Harpreet Kaur, Manager Talent Development</p>
+          <a href="#">Kosisochukuw Divine Eboh</a>
+          <p><strong>Position:</strong> Operations Intern</p>
+          <p><strong>Office/Unit:</strong> Lagos</p>
+          <p><strong>Reports to:</strong> Echezonachukuw Obiekwe, Senior Planner</p>
         </div>
-        <span class="started">Started: 30 June 2025</span>
+        <span class="started">Started: August 2025</span>
       </div>
 
       <div class="joiner-card">
          <img src="img/male_avatar.jpg" alt="Profile" height="120">
         <div class="details">
-          <a href="#">Louis Garidou</a>
-          <p><strong>Position:</strong> Summer Assistant</p>
-          <p><strong>Office/Unit:</strong> Singapore</p>
-          <p><strong>Reports to:</strong> Harpreet Kaur, Manager Talent Development</p>
+          <a href="#">Boirose Iroegbu</a>
+          <p><strong>Position:</strong> Operations Intern</p>
+          <p><strong>Office/Unit:</strong> Lagos</p>
+          <p><strong>Reports to:</strong> Echezonachukuw Obiekwe, Senior Planner</p>
         </div>
-        <span class="started">Started: 30 June 2025</span>
+        <span class="started">Started: November 2025</span>
       </div>
 
        <!-- <div class="joiner-card">
@@ -210,7 +277,7 @@
 
     <!-- Right: My Tasks + Apps -->
     <div class="tasks-apps">
-      <h2>My tasks</h2>
+      <h2>My Tasks</h2>
       <div class="task-box">
         <p>Welcome to the Tasks application. Please sign in using your Stac Connect Microsoft account.</p>
         <a href="https://stacmarine-webapp.vercel.app/" class="btn-primary-small">Sign in</a>
@@ -219,12 +286,13 @@
 
       <h3>Apps</h3>
       <div class="apps-grid">
-        <div class="app"><a href="https://www.office.com/" target="_blank"><img src="img/office_365_logo.png" alt="Office 365"></a></div>
-        <div class="app"><a href="https://www.microsoft.com/en-us/power-platform/products/power-bi" target="_blank"><img src="img/power_bi_logo.png" alt="App"></a></div>
-        <div class="app"><a href="https://www.microsoft.com/en-us/microsoft-teams/log-in" target="_blank"><img src="img/microsoft_teams.png" alt="App"></a></div>
-        <div class="app"><a href=" https://slack.com/get-started" target="_blank"><img src="img/Slack-logo.png" alt="App"></a></div>
-        <div class="app"><a href="https://www.erpodoostacmarine.com/web/login?redirect=%2Fodoo%2Fhr.leave%2F156%3F" target="_blank"><img src="img/odoo_logo.png" alt="App"></a></div>
-        <div class="app"><a href="https://www.microsoft.com/en-us/microsoft-365/outlook/log-in" target="_blank"><img src="img/outlook_logo.jpg" alt="App"></a></div>
+        <div class="app"><a href="https://m365.cloud.microsoft/" target="_blank"><img src="img/office_365_logo.png" alt="Office 365"></a></div>
+        <div class="app"><a href="https://app.powerbi.com/" target="_blank"><img src="img/power_bi_logo.png" alt="App"></a></div>
+        <div class="app"><a href="https://teams.microsoft.com/" target="_blank"><img src="img/microsoft_teams.png" alt="App"></a></div>
+        <div class="app"><a href="https://erp-stac-marine-offshore.odoo.com/web/login" target="_blank"><img src="img/odoo_logo_medium.png" alt="App"></a></div>
+        <div class="app"><a href="https://outlook.office.com/" target="_blank"><img src="img/outlook_logo.jpg" alt="App"></a></div>
+        <div class="app"><a href="https://www.erpodoostacmarine.com/web/login" target="_blank"><img src="img/odoo_logo.png" alt="App"></a></div>
+        <div class="app"><a href="https://vsoa.omega365.com/login" target="_blank"><img src="img/Omega365_Logo.png" alt="App"></a></div>
         <div class="app"><a href="https://community.zammad.org/login" target="_blank"><img src="img/zammad_logo.png" alt="App"></a></div>
         
         <!--<div class="app"><img src="img/zoom-logo-png.png" alt="App"></div>-->
@@ -422,11 +490,21 @@ function whatWeDo() {
   document.getElementById("whatWeDoMenu").classList.toggle("show");
 }
 
+function manageSystem() {
+  document.getElementById("manageSystemMenu").classList.toggle("show");
+}
+
+function resourceTools() {
+  document.getElementById("resourceToolsMenu").classList.toggle("show");
+}
+
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
   if (!e.target.matches('.dropbtn')) {
     var whatsNewMenu = document.getElementById("whatsNewMenu");
     var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+    var manageSystemMenu = document.getElementById("manageSystemMenu");
+    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
 
     if (whatsNewMenu.classList.contains('show')) {
       whatsNewMenu.classList.remove('show');
@@ -436,7 +514,13 @@ window.onclick = function(e) {
       whatWeDoMenu.classList.remove('show');
     }
 
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
 
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
 
   }
 }
