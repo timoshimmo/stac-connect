@@ -28,7 +28,7 @@
                 </div>
                 <div class="dropdown-column">
                   <h4>SMO Community</h4>
-                  <a href="#">Yammer</a>
+                  <a href="https://engage.cloud.microsoft/">Viva Engage</a>
                 </div>
                 <div class="dropdown-column">
                   <h4>More News</h4>
@@ -93,7 +93,7 @@
             </button>
             <div class="dropdown-content" id="resourceToolsMenu">
               <h2>Resources & Tools</h2>
-              <div class="dropdown-grid">
+              <div class="dropdown-grid-sm">
                   <div class="dropdown-column">
                     <h4>References</h4>
                     <a href="#">Cyber Security</a>
@@ -120,12 +120,12 @@
                     <a href="#">IT</a>
                     <a href="#">Operations and Maintenance</a>
                     <a href="#">Supply Chain</a>
-                    <p>Mayo ABO</p>
-                    <div class="drop-sub">
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Mayo ABO</h4>
                       <a href="#">DocOrgABO</a>
-                      <a href="#">Operations & Maintenance</a>
+                      <a href="#">Mayo ABO Operations & Maintenance</a>
                       <a href="#">Project 4266</a>
-                    </div>
                   </div>
               </div>
             </div>
@@ -138,17 +138,28 @@
       </div>
     <!--</div>-->
   </header>
-
+  <div class="announcement">
+    <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
+    <div>
+      <h2 class="announcement-title">Announcements</h2>
+      <h2 class="announcement-title">(1/1)</h2>
+    </div>
+    <div>
+      <a href="#" class="announcement-link">Join the MDM Group</a>
+      <p class="announcement-subtitle"> - Be part of the Future of Secure Mobility</p>
+    </div>
+  </div>
   <!-- Page Shell -->
   <main class="shell">
     <!-- Left rail -->
     <aside class="leftnav">
-      <h3>Our Behaviour Values</h3>
+      <h3>Our Behaviour Ethics</h3>
       <nav class="culture-list" aria-label="Culture Programme">
         <div class="culture-item"><span class="bar" style="background:#bc6239"></span><span>Sustainability</span></div>
         <div class="culture-item"><span class="bar" style="background:#2d4f9b"></span><span>Teamwork</span></div>
         <div class="culture-item"><span class="bar" style="background:#be3a3a"></span><span>Accountability</span></div>
         <div class="culture-item"><span class="bar" style="background:#8fbe21"></span><span>Competence</span></div>
+        <div class="culture-item"><span class="bar" style="background:#7c4918"></span><span>Our Behaviour Values</span></div>
         <div class="culture-item"><span class="bar" style="background:#27bdc2"></span><span>Honesty and Integrity</span></div>
         <div class="culture-item"><span class="bar" style="background:#9739bc"></span><span>Fairness and Equity</span></div>
         <div class="culture-item"><span class="bar" style="background:#39bc3c"></span><span>Compliance With Laws and Regulations</span></div>
@@ -161,24 +172,51 @@
     <!-- Main -->
     <section class="main">
       <div class="section-title">Spotlight</div>
-      <article class="spotlight" aria-labelledby="hero-title">
-        <a href="unlocking-the-future-together.html">
-            <!--<div class="spotlight-header">&nbsp;</div>-->
-            <div class="hero">
-              <div class="hero-img" aria-hidden="true"></div>
-              <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
-              <div class="hero-title">
-                <div class="date">23 June 2025</div>
-                <h1 id="hero-title">Strategy Town Hall</h1>
-              </div>-->
-              <div class="hero-label">Stac Connect</div>
-            </div>
-            <div class="spot-text">
-              <h2>June Strategy Townhall: Unlocking the Future Together</h2>
-              <p>A unified vision for growth, innovation, and collaboration.</p>
-            </div>
-        </a>
-      </article>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+             <article class="spotlight" aria-labelledby="hero-title">
+              <a href="unlocking-the-future-together.html">
+                  <!--<div class="spotlight-header">&nbsp;</div>-->
+                  <div class="hero">
+                    <div class="hero-img" aria-hidden="true"></div>
+                    <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
+                    <div class="hero-title">
+                      <div class="date">23 June 2025</div>
+                      <h1 id="hero-title">Strategy Town Hall</h1>
+                    </div>-->
+                    <div class="hero-label">Stac Connect</div>
+                  </div>
+                  <div class="spot-text">
+                    <h2>June Strategy Townhall: Unlocking the Future Together</h2>
+                    <p>A unified vision for growth, innovation, and collaboration.</p>
+                  </div>
+              </a>
+            </article>
+        </div>
+
+        <div class="mySlides fade">
+          <article class="spotlight" aria-labelledby="hero-title">
+              <a href="team-congratulations.html">
+                  <!--<div class="spotlight-header">&nbsp;</div>-->
+                  <div class="hero">
+                    <div class="hero-img-2" aria-hidden="true"></div>
+                    <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
+                    <div class="hero-title">
+                      <div class="date">23 June 2025</div>
+                      <h1 id="hero-title">Strategy Town Hall</h1>
+                    </div>-->
+                    <div class="hero-label">Stac Connect</div>
+                  </div>
+                  <div class="spot-text">
+                    <h2>HUGE CONGRATULATIONS TO OUR TEAM!</h2>
+                    <p>We have received the most compliant taxpayer award from  FIRS </p>
+                  </div>
+              </a>
+            </article>
+        </div>
+
+      </div>
       <div class="culture-code"><a href="#"><img src="img/stac_culture_code_edited.png"/></a></div>
     </section>
 
@@ -411,7 +449,6 @@
     <div class="features-btn-area">
       <a href="https://stacmarine-webapp.vercel.app/" class="btn-primary">Get Started</a>
     </div>
-    
 </section>
 
   <section class="integrity-section">
@@ -523,6 +560,56 @@ window.onclick = function(e) {
     }
 
   }
+}
+</script>
+<script>
+window.onload = function () {
+    let slides = 
+        document.getElementsByClassName('carousel-item');
+
+    function addActive(slide) {
+        slide.classList.add('active');
+    }
+
+    function removeActive(slide) {
+        slide.classList.remove('active');
+    }
+
+    addActive(slides[0]);
+    setInterval(function () {
+        for (let i = 0; i < slides.length; i++) {
+            if (i + 1 == slides.length) {
+                addActive(slides[0]);
+                setTimeout(removeActive, 350, slides[i]);
+                break;
+            }
+            if (slides[i].classList.contains('active')) {
+                setTimeout(removeActive, 350, slides[i]);
+                addActive(slides[i + 1]);
+                break;
+            }
+        }
+    }, 5000);
+};
+</script>
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  
+  slides[slideIndex-1].style.display = "block";  
+  
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 </script>
 </body>
