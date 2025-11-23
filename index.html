@@ -159,7 +159,7 @@
         <div class="culture-item"><span class="bar" style="background:#2d4f9b"></span><span>Teamwork</span></div>
         <div class="culture-item"><span class="bar" style="background:#be3a3a"></span><span>Accountability</span></div>
         <div class="culture-item"><span class="bar" style="background:#8fbe21"></span><span>Competence</span></div>
-        <div class="culture-item"><span class="bar" style="background:#7c4918"></span><span>Our Behaviour Values</span></div>
+        <h3 style="margin: 10px 0px;">Our Behaviour Values</h3>
         <div class="culture-item"><span class="bar" style="background:#27bdc2"></span><span>Honesty and Integrity</span></div>
         <div class="culture-item"><span class="bar" style="background:#9739bc"></span><span>Fairness and Equity</span></div>
         <div class="culture-item"><span class="bar" style="background:#39bc3c"></span><span>Compliance With Laws and Regulations</span></div>
@@ -519,29 +519,82 @@
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
+
+ var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+    var manageSystemMenu = document.getElementById("manageSystemMenu");
+    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
+
+
 function whatsNew() {
+
+  if (whatWeDoMenu.classList.contains('show')) {
+    whatWeDoMenu.classList.remove('show');
+  }
+
+  if (manageSystemMenu.classList.contains('show')) {
+    manageSystemMenu.classList.remove('show');
+  }
+
+  if (resourceToolsMenu.classList.contains('show')) {
+    resourceToolsMenu.classList.remove('show');
+  }
   document.getElementById("whatsNewMenu").classList.toggle("show");
+
 }
 
 function whatWeDo() {
-  document.getElementById("whatWeDoMenu").classList.toggle("show");
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+    document.getElementById("whatWeDoMenu").classList.toggle("show");
 }
 
 function manageSystem() {
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+
   document.getElementById("manageSystemMenu").classList.toggle("show");
 }
 
 function resourceTools() {
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
   document.getElementById("resourceToolsMenu").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
   if (!e.target.matches('.dropbtn')) {
-    var whatsNewMenu = document.getElementById("whatsNewMenu");
-    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
-    var manageSystemMenu = document.getElementById("manageSystemMenu");
-    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
 
     if (whatsNewMenu.classList.contains('show')) {
       whatsNewMenu.classList.remove('show');

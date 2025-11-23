@@ -38,6 +38,13 @@
   height: 65px;
   gap: 150px;
 }
+
+@media (min-width:2560px) {
+  .site-header {
+    padding: 0px 450px;
+  }
+}
+
 .navbar {
   display: flex;
   overflow: hidden;
@@ -213,7 +220,7 @@
     .spotlight{background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; height: 100%;}
     .spotlight-header{background:var(--bw-secondary); color:#fff; padding:14px 18px; font-weight:700; letter-spacing:.2px;}
     .hero{
-      position:relative; height:290px; overflow:hidden; background:linear-gradient(180deg, #bfe3ff 0%, #cfe9ff 30%, #eef6ff 100%);
+      position:relative; height:350px; overflow:hidden; background:linear-gradient(180deg, #bfe3ff 0%, #cfe9ff 30%, #eef6ff 100%);
       display:flex; align-items:center; justify-content:center;
     }
     .hero-img{
@@ -241,10 +248,10 @@
     .hero-title .date{font-size:12px; opacity:.95}
 
 
-     @media (min-width:2560px){
-      .shell{grid-template-columns:500px 1fr 800px;}
+    @media (min-width:2560px){
+      .shell{margin:60px 400px;}
       .hero{
-          height:500px;
+          height:450px;
       }
       .culture-code img {
         width: 100%;
@@ -314,6 +321,13 @@
   font-size: 12px;
   color: #555;
 }
+
+@media (min-width:2560px) { 
+  .new-joiners-tasks {
+    padding: 30px 450px 20px;
+  }
+}
+
 .tasks-apps .task-box {
   border: 1px solid #ddd;
   padding: 10px;
@@ -369,6 +383,12 @@
   flex-direction: column;
   align-items: center;
   margin-top: 120px;
+}
+
+@media (min-width:2560px) { 
+  .career-opportunities {
+      padding: 20px 450px;
+  }
 }
 
 .tools {
@@ -488,6 +508,12 @@
   text-decoration: none;
 }
 
+@media (min-width:2560px) { 
+  .integrity-section {
+    padding: 20px 450px;
+  }
+}
+
 .site-footer {
   margin-top: 120px;
   background: linear-gradient(to right, #39bc3c, #022e5d);
@@ -500,6 +526,13 @@
     color: #34d399;
     margin-bottom: 10px;
 }
+
+@media (min-width:2560px) { 
+  .site-footer {
+    padding: 60px 450px;
+  }
+}
+
 .quick-finder {
     margin-bottom: 10px;
 }
@@ -546,6 +579,13 @@
 
 .container-body {
   padding: 60px 80px;
+}
+
+@media (min-width:2560px) { 
+  .container-main {
+    padding: 60px 450px;
+  }
+
 }
 
 .subtitle {
@@ -1335,5 +1375,11 @@
 .announcement img {
   width: 50px;
   height: 50px;
+}
+
+@media (min-width:2560px) {
+  .announcement {
+    margin: 0px 450px;
+  }
 }
         

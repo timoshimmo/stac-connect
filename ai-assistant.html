@@ -207,32 +207,85 @@
         <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
     </footer>
 
-   <script>
+  <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
+
+ var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+    var manageSystemMenu = document.getElementById("manageSystemMenu");
+    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
+
+
 function whatsNew() {
+
+  if (whatWeDoMenu.classList.contains('show')) {
+    whatWeDoMenu.classList.remove('show');
+  }
+
+  if (manageSystemMenu.classList.contains('show')) {
+    manageSystemMenu.classList.remove('show');
+  }
+
+  if (resourceToolsMenu.classList.contains('show')) {
+    resourceToolsMenu.classList.remove('show');
+  }
   document.getElementById("whatsNewMenu").classList.toggle("show");
+
 }
 
 function whatWeDo() {
-  document.getElementById("whatWeDoMenu").classList.toggle("show");
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+    document.getElementById("whatWeDoMenu").classList.toggle("show");
 }
 
 function manageSystem() {
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+
   document.getElementById("manageSystemMenu").classList.toggle("show");
 }
 
 function resourceTools() {
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
   document.getElementById("resourceToolsMenu").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
   if (!e.target.matches('.dropbtn')) {
-    var whatsNewMenu = document.getElementById("whatsNewMenu");
-    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
-    var manageSystemMenu = document.getElementById("manageSystemMenu");
-    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
 
     if (whatsNewMenu.classList.contains('show')) {
       whatsNewMenu.classList.remove('show');
