@@ -236,8 +236,8 @@
       position:absolute; 
       inset:0; 
        background: radial-gradient(1200px 300px at 50% 100%, rgba(0,0,0,.6), transparent 60%),
-      url('../img/spotlight_2.jpg');
-      background-size:cover; background-position:center; filter:saturate(.9) contrast(.95);
+      url('../img/award_pic1.jpg');
+      background-size:cover; background-position: top center; filter:saturate(.9) contrast(.95);
       background-repeat: no-repeat;
     }
 
@@ -583,6 +583,10 @@
 
 @media (min-width:2560px) { 
   .container-main {
+    padding: 60px 450px;
+  }
+
+  .container-body {
     padding: 60px 450px;
   }
 
@@ -1085,7 +1089,8 @@
         .detail-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+
         }
 
         .detail-body {
