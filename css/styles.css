@@ -1366,6 +1366,8 @@
 
 .announcement-title {
   font-size: 17px;
+  margin: 0px;
+  padding-bottom: 5px;
 }
 
 .announcement-link {
@@ -1375,11 +1377,13 @@
 
 .announcement-subtitle {
   font-size: 15px;
+  margin: 0px;
+  padding-top: 5px;
 }
 
 .announcement img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 @media (min-width:2560px) {
