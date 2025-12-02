@@ -1392,3 +1392,19 @@
   }
 }
         
+.open-sign-styles {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.apps-grid .app .img-opensign {
+  height: 40px;
+  width: 40px;
+}
+
+.open-sign-styles span {
+  font-size: 1.3rem;
+  font-weight: 800;
+
+}
