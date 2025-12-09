@@ -1,0 +1,28 @@
+{
+  "event": "account_funded",
+  "data": {
+    "type": "STATIC",
+    "userId": "c5e4524d-baa9-4cf3-a54f-4e31bfc55d8c",
+    "paidAt": "2025-12-02T12:15:12.028Z",
+    "amount": "100.00",
+    "walletId": "e4be7e1a-b593-4077-840e-e197aa7c5fff",
+    "narration": "TOKMANG TIMO Trf for Customer/AT68_TRF2MPT5v4vg1995829092928696320",
+    "reference": "AT68_TRF2MPT5v4vg1995829092928696320",
+    "sessionID": "090405251202131511978590296654",
+    "channelCode": "1",
+    "status": "success",
+    "beneficiaryAccountName": "Timothy Wang",
+    "beneficiaryAccountNumber": "8881573763",
+    "beneficiaryBankVerificationNumber": "22000000045",
+    "destinationInstitutionCode": "100040",
+    "originatorAccountName": "TOKMANG TIMOTHY WANG",
+    "originatorAccountNumber": "5672332575",
+    "originatorBankVerificationNumber": "22000000045",
+    "accountName": "TOKMANG TIMOTHY WANG",
+    "accountNumber": "5672332575",
+    "BankVerificationCode": "22000000045"
+  }
+}
+
+
+print_r($output); 
