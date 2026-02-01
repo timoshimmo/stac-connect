@@ -11,7 +11,7 @@
 <body>
   <!-- Top Gradient Nav topbar -->
   <header class="site-header">
-    <!--<div class="topbar-inner">-->
+    <div class="topbar-inner">
       <div class="logo" aria-label="STAC Connect">
          <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
       </div>
@@ -147,7 +147,7 @@
       <div class="search">
         <input type="search" placeholder="Search" aria-label="Search" />
       </div>
-    <!--</div>-->
+    </div>
   </header>
   <div class="announcement">
     <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
@@ -681,6 +681,8 @@ window.onclick = function(e) {
     }
 
   }
+
+  if (event.target == modal) closePopup();
 }
 </script>
 <script>
@@ -752,11 +754,6 @@ function showSlides() {
       modal.style.display = "none";
       popupVideo.pause();
       previewVideo.play(); // Resume preview
-  }
-
-  // Close when clicking outside the video
-  window.onclick = function(event) {
-      if (event.target == modal) closePopup();
   }
   
 </script>
