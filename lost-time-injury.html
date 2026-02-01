@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+</head>
+<body>
+
+   <!-- Top Gradient Nav topbar -->
+  <header class="site-header">
+    <!--<div class="topbar-inner">-->
+      <div class="logo" aria-label="STAC Connect">
+         <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="whatsNew()">WHAT'S NEW
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="whatsNewMenu">
+            <h2>What's New</h2>
+            <div class="dropdown-grid">
+               <div class="dropdown-column">
+                  <h4>All local news</h4>
+                  <a href="news.html">Nigeria</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>SMO Community</h4>
+                  <a href="https://engage.cloud.microsoft/">Viva Engage</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>More News</h4>
+                  <a href="https://stacmarine.com/" target="_blank">Company Website</a>
+                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">SMO LinkedIn</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">
+              WHAT WE DO
+            </button>
+            <div class="dropdown-content" id="whatWeDoMenu">
+              <h2>What We Do</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Working at SMO – Our Safety Culture</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:p:/s/HumanResources/IQCmUVjMsYxVRZhkOJQt4U17AcXOuDbUwXJXMmYeqOcM4g4?e=tVyCv4">Organization Charts</a>
+                    <a href="zero-harm.html">Zero Harm</a>
+                    <a href="#">Cultural Programme</a>
+                    <a href="employee-resources.html">Employee Resources</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Company Standards and Sustainability</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content%2FSTAC%5F%20Sustainability%20Policy%20Statement%2Edotx%2Epdf&parent=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1">Corporate Governance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content%2FStac%20Marine%20Code%20of%20Conduct%2Epdf&parent=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1">Ethics & Business Conduct</a>
+                    <a href="#">Data Protection</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content%2FStac%20Marine%20%20ESG%20Materiality%20Framework%2Epdf&parent=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1">Commitment to ESG Principles</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="manageSystem()">
+              MANAGEMENT SYSTEM
+            </button>
+            <div class="dropdown-content" id="manageSystemMenu">
+              <h2>Management System</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Management System Onshore</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HR</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Omega 365</a>
+                    <a href="#">Operations & Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Management System Offshore</h4>
+                    <a href="#">Mayo ABO</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="resourceTools()">
+              RESOURCES & TOOLS
+            </button>
+            <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid-sm">
+                  <div class="dropdown-column">
+                    <h4>References</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK/SitePages/Cyber-Security-Learning-Portal.aspx?e=4%3Af7609e54cd494c1f83cc98ecfd2c90b4&web=1&sharingv2=true&fromShare=true&at=9&CID=2a755509-ba2e-4ebc-b248-b9bec5f9ec2b">Cyber Security</a>
+                    <a href="#">Travel Advisory</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>HSE</h4>
+                    <a href="control-work-procedure.html">Control of Work Procedure</a>
+                    <a href="standard-operating-procedures.html">SOPs</a>
+                    <a href="emergency-preparedness-procedure.html">Emergency Preparedness Procedures</a>
+                    <a href="#">Monthly Safety Meeting</a>
+                    <a href="#">E-Learning</a>
+                    <a href="#">Corporate Policies</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>BI</h4>
+                    <a href="#">Daily Offshore Report</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>IT Support</h4>
+                    <a href="#">IT Guides (A-Z)</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>SharePoint Sites</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent">Compliance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/FinanceDepartment">Finance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HSE30">HSE</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources">HR</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/IT">IT</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/PROJECTS">Operations and Maintenance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/SupplyChain">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Mayo ABO</h4>
+                      <a href="#">DocOrgABO</a>
+                      <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx">Mayo ABO Operations & Maintenance</a>
+                      <a href="#">Project 4266</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <!-- <a href="#news">WHERE WE ARE</a> -->
+       
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Search" aria-label="Search" />
+      </div>
+    <!--</div>-->
+  </header>
+  
+  <!-- Content -->
+  <div class="container-body">
+    <!-- Main content -->
+    <div class="main-content">
+      <h2>News</h2>
+      <div class="section-divider"></div>
+        <div class="containers">
+           
+            <!-- Detail Page 1 -->
+            <div id="detail1" class="news-detail-page">
+                <a class="back-button" onclick="window.history.back()">Back Home</a>
+                
+                <div class="detail-header">
+                    <div class="detail-date">12 January 2026</div>
+                    <h1 class="detail-title">FPSO Mayo Abo Surpasses 8,300 LTI-Free Days: A Testament to STAC Marine’s Unwavering Safety Culture</h1>
+                    <div class="detail-tags">- Corporate</div>
+                </div>
+
+                <div class="detail-image">
+                    <div class="placeholder-text"><img src="img/img_lti_1.png" alt="Lost Time Injury 1"/></div>
+                </div>
+
+                <div class="detail-body">
+                    <p>FPSO Mayo Abo has proudly achieved over 8,300 Lost Time Injury (LTI)–free days and counting, a remarkable milestone accomplished despite the execution of rigorous, high-risk offshore activities and an average of 30 work permits issued daily. This achievement reflects the unwavering commitment of STAC Marine to ensuring safety remains the cornerstone of all offshore operation and maintenance activities. At STAC Marine, work only proceeds when it is confirmed safe, and all identified risks have been reduced to As Low As Reasonably Practicable (ALARP).</p>
+
+                    <h3>Leadership Quote</h3>
+                    <p><i>“This milestone is not just a number—it represents thousands of individual decisions made every day to put safety first. Every team member has played a role by planning work thoroughly, following procedures, and looking out for one another. Safety is a shared responsibility, and this achievement proves what we can accomplish when we live our safety values consistently.”</i></p>
+
+                    <h3>Call to Action</h3>
+                    <p>Every one of us has both an obligation and a right to ensure jobs are executed safely. We must continue to exercise our Stop Work Authority whenever conditions become unsafe or unclear. This action may be the last and most critical barrier before an accident occurs. Let us remain vigilant, speak up without hesitation, and continue to protect ourselves, our colleagues, and our assets—because no job is so important that it cannot be done safely.</p>
+                    <br />
+                    <img style="width: 100%; max-width: 100%;" src="img/img_lti_2.png" alt="Lost Time Injury 2"/>
+                  </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+        <div class="logo"><img src="img/stac_logo_new.jpg" height="50px"/></div>
+        <div class="quick-finder">
+            <h3>Quick Finder</h3>
+            <ul>
+                <li><a href="#">IT Support Information</a></li>
+                <li><a href="#">IT Support email</a></li>
+                <li><a href="#">My settings</a></li>
+            </ul>
+        </div>
+        <div class="copyright">© 2025 Stac Connect Offshore. All Rights Reserved.</div>
+    </footer>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+ var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+    var manageSystemMenu = document.getElementById("manageSystemMenu");
+    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
+
+
+function whatsNew() {
+
+  if (whatWeDoMenu.classList.contains('show')) {
+    whatWeDoMenu.classList.remove('show');
+  }
+
+  if (manageSystemMenu.classList.contains('show')) {
+    manageSystemMenu.classList.remove('show');
+  }
+
+  if (resourceToolsMenu.classList.contains('show')) {
+    resourceToolsMenu.classList.remove('show');
+  }
+  document.getElementById("whatsNewMenu").classList.toggle("show");
+
+}
+
+function whatWeDo() {
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+    document.getElementById("whatWeDoMenu").classList.toggle("show");
+}
+
+function manageSystem() {
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+
+  document.getElementById("manageSystemMenu").classList.toggle("show");
+}
+
+function resourceTools() {
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+  document.getElementById("resourceToolsMenu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+
+  }
+}
+</script>
+</body>
+</html>

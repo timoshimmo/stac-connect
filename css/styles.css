@@ -1422,3 +1422,104 @@ a.open-sign-styles:hover {
   font-weight: 400;
   color: #070707;
 }
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    /* Creates responsive columns: auto-fit tries to fit as many columns of at least 200px as possible */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem; /* Space between grid items */
+}
+
+/* Grid Item Styling and Hover Effect */
+.grid-item {
+    position: relative;
+    overflow: hidden; /* Ensures hover effect stays within bounds */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.grid-item img {
+  position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without stretching */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.grid-item:hover img {
+    transform: scale(1.05); /* Slightly scales the image on hover */
+}
+
+/* Optional: Add text overlay on hover */
+.grid-item::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover::after {
+    opacity: 1;
+}
+
+/* Media Queries for different screen sizes (example breakpoints) */
+@media (max-width: 768px) {
+    .grid-container {
+        /* On medium screens, show two columns */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        /* On small screens, stack images vertically in a single column */
+        grid-template-columns: 1fr;
+    }
+}
+
+#background-video {
+    position: fixed; /* Fixes the video relative to the viewport */
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1; /* Sends the video behind other content */
+    /* Ensure the video covers the entire screen while maintaining aspect ratio */
+    object-fit: cover; 
+}
+
+.video-preview { position: relative; cursor: pointer; width: 100%; height: 100%;}
+.video-preview video { width: 100%; border-radius: 8px; }
+
+/* The Modal (Background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px; right: 0;
+    color: white; font-size: 40px; cursor: pointer;
+}
