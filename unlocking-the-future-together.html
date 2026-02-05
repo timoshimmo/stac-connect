@@ -27,8 +27,8 @@
             <div class="dropdown-grid">
                <div class="dropdown-column">
                   <h4>Global &amp; Nigeria News</h4>
-                  <a href="news.html">Global</a>
-                  <a href="news.html">Nigeria</a>
+                  <a href="news">Global</a>
+                  <a href="news">Nigeria</a>
                 </div>
                 <div class="dropdown-column">
                   <h4>SMO Community</h4>
@@ -50,11 +50,11 @@
               <h2>What We Do</h2>
               <div class="dropdown-grid">
                 <div class="dropdown-column">
-                    <h4>Working at SMO – Our Safety Culture</h4>
+                    <h4>Working at STAC – Our Safety Culture</h4>
                     <a href="https://stacmarineoffshore.sharepoint.com/:p:/s/HumanResources/IQCmUVjMsYxVRZhkOJQt4U17AcXOuDbUwXJXMmYeqOcM4g4?e=tVyCv4">Organization Charts</a>
-                    <a href="zero-harm.html">Zero Harm</a>
+                    <a href="zero-harm">Zero Harm</a>
                     <a href="#">Cultural Programme</a>
-                    <a href="employee-resources.html">Employee Resources</a>
+                    <a href="employee-resources">Employee Resources</a>
                   </div>
                   <div class="dropdown-column">
                     <h4>Company Standards and Sustainability</h4>
@@ -105,12 +105,12 @@
                   </div>
                   <div class="dropdown-column">
                     <h4>HSE</h4>
-                    <a href="control-work-procedure.html">Control of Work Procedure</a>
-                    <a href="standard-operating-procedures.html">SOPs</a>
-                    <a href="emergency-preparedness-procedure.html">Emergency Preparedness Procedures</a>
+                    <a href="control-work-procedure">Control of Work Procedure</a>
+                    <a href="standard-operating-procedures">SOPs</a>
+                    <a href="emergency-preparedness-procedure">Emergency Preparedness Procedures</a>
                     <a href="https://stacmarineoffshore.sharepoint.com/:p:/r/sites/HSE30/_layouts/15/Doc.aspx?sourcedoc=%7B5952BABF-75E9-435C-91D1-43E145067968%7D&file=SEPTEMBER%202025%20HSE%20MEETING%20%26%20PERSONNEL%20ENGAGEMENT.pptx&action=edit&mobileredirect=true">Monthly Safety Meeting</a>
                     <a href="#">E-Learning</a>
-                    <a href="corporate-policies.html">Corporate Policies</a>
+                    <a href="corporate-policies">Corporate Policies</a>
                   </div>
                   <div class="dropdown-column">
                     <h4>BI</h4>
@@ -173,7 +173,7 @@
                 <div class="detail-image">
                     <div class="video-preview" onclick="openPopup()">
                       <video autoplay muted playsinline loop>
-                            <source src="https://www.stacmarine.com/videos/STAC_Marine_Offshore_Brand_Video_Compressed.mp4" type="video/mp4">
+                            <source src="https://res.cloudinary.com/stansonlycloud/video/upload/v1770220079/stacconnect/general/zam9n51z6uwuhpvwntwn.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                       </video>
                     </div>
@@ -208,8 +208,8 @@
 <div id="videoModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
-         <video controls style="width: 100%; height: 400px;">
-            <source src="https://www.stacmarine.com/videos/STAC_Marine_Offshore_Brand_Video_Compressed.mp4" type="video/mp4">
+         <video controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; height: 400px;">
+            <source src="https://res.cloudinary.com/stansonlycloud/video/upload/v1770220079/stacconnect/general/zam9n51z6uwuhpvwntwn.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
          <!-- <iframe 
@@ -327,6 +327,9 @@ window.onclick = function(e) {
   const modal = document.getElementById("videoModal");
   const popupVideo = document.getElementById("popupVideo");
   const previewVideo = document.getElementById("previewVideo");
+  
+  document.querySelector('video').setAttribute("controlslist", "nodownload");
+document.querySelector('video').setAttribute("oncontextmenu", "return false;");
 
   function openPopup() {
       modal.style.display = "block";
