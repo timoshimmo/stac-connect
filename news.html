@@ -12,7 +12,7 @@
 <body>
 
     <!-- Top Gradient Nav topbar -->
-   <header class="site-header">
+<header class="site-header">
     <div class="topbar-inner">
       <div class="logo" aria-label="STAC Connect">
          <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
@@ -31,13 +31,13 @@
                   <a href="news">Nigeria</a>
                 </div>
                 <div class="dropdown-column">
-                  <h4>SMO Community</h4>
+                  <h4>STAC Community</h4>
                   <a href="https://engage.cloud.microsoft/">Viva Engage</a>
                 </div>
                 <div class="dropdown-column">
                   <h4>More News</h4>
                   <a href="https://stacmarine.com/" target="_blank">Company Website</a>
-                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">SMO LinkedIn</a>
+                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">STAC LinkedIn</a>
                 </div>
             </div>
           </div>
@@ -101,6 +101,7 @@
                   <div class="dropdown-column">
                     <h4>References</h4>
                     <a href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK/SitePages/Cyber-Security-Learning-Portal.aspx?e=4%3Af7609e54cd494c1f83cc98ecfd2c90b4&web=1&sharingv2=true&fromShare=true&at=9&CID=2a755509-ba2e-4ebc-b248-b9bec5f9ec2b">Cyber Security</a>
+                    <a href="#">E-Learning</a>
                     <a href="#">Travel Advisory</a>
                   </div>
                   <div class="dropdown-column">
@@ -109,7 +110,6 @@
                     <a href="standard-operating-procedures">SOPs</a>
                     <a href="emergency-preparedness-procedure">Emergency Preparedness Procedures</a>
                     <a href="https://stacmarineoffshore.sharepoint.com/:p:/r/sites/HSE30/_layouts/15/Doc.aspx?sourcedoc=%7B5952BABF-75E9-435C-91D1-43E145067968%7D&file=SEPTEMBER%202025%20HSE%20MEETING%20%26%20PERSONNEL%20ENGAGEMENT.pptx&action=edit&mobileredirect=true">Monthly Safety Meeting</a>
-                    <a href="#">E-Learning</a>
                     <a href="corporate-policies">Corporate Policies</a>
                   </div>
                   <div class="dropdown-column">
@@ -146,8 +146,15 @@
         <!-- <a href="#news">WHERE WE ARE</a> -->
        
       </div>
+     
       <div class="search">
-        <input type="search" placeholder="Search" aria-label="Search" />
+         <form action="https://google.com/search" method="get" class="search-box">
+          <!-- 'q' is the standard name for search queries -->
+          <input type="text" id="site-search" name="q" placeholder="Search Intranet" />
+          <!-- This hidden input restricts the search to your domain -->
+          <input type="hidden" name="sitesearch" value="connect.stacmarine.com | stacmarineoffshore.sharepoint.com" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </div>
     </div>
   </header>
