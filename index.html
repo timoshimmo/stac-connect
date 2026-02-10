@@ -200,7 +200,7 @@
 
                   <div class="hero">
                     <div class="video-preview" onclick="openPopup()">
-                       <video autoplay muted playsinline loop>
+                       <video id="previewVideo" autoplay muted playsinline loop>
                             <source src="https://res.cloudinary.com/vou-ai/video/upload/v1770220079/stacconnect/general/zam9n51z6uwuhpvwntwn.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -582,17 +582,17 @@
 <div id="videoModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
-        <!--<video controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; height: 400px;">
-            <source src="video/STAC_Marine_Offshore_Brand_Video_Compressed.mp4" type="video/mp4">
+        <video id="popupVideo" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; height: 400px;">
+            <source src="https://res.cloudinary.com/vou-ai/video/upload/v1770220079/stacconnect/general/zam9n51z6uwuhpvwntwn.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video> -->
-        <iframe 
+        </video> 
+        <!-- <iframe 
             src="https://res.cloudinary.com/vou-ai/video/upload/v1770220079/stacconnect/general/zam9n51z6uwuhpvwntwn.mp4" 
             width="100%" 
             height="350" 
             style="border: 0"
             allowfullscreen>
-        </iframe> 
+        </iframe> -->
     </div>
 </div>
 
