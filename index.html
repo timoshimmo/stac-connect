@@ -331,6 +331,47 @@
           </article>
         </a>
       </div>
+      <div class="news-index">
+        <div class="oil-widget">
+          <div class="widget-header">
+            Brent Crude
+          </div>
+
+          <div class="price-section">
+            <div>$87.45 / bbl</div>
+          </div>
+          <div class="price-change price-up">▲ +1.25%</div>
+          <canvas id="sparkline" class="sparkline" width="100" height="50"></canvas>
+          <div class="timestamp">As Of: 23 Feb 2026, 09:30am</div>
+        </div>
+
+        <div class="oil-widget">
+          <div class="widget-header">
+            Bonny Light
+          </div>
+
+          <div class="price-section">
+            <div>$87.45 / bbl</div>
+          </div>
+          <div class="price-change price-up">▲ +1.25%</div>
+          <canvas id="sparkline2" class="sparkline" width="100" height="50"></canvas>
+          <div class="timestamp">As Of:23 Feb 2026, 09:30am</div>
+        </div>
+
+        <div class="oil-widget">
+          <div class="widget-header">
+            NFEM
+          </div>
+
+          <div class="price-section">
+            <div>$85.15 / bbl</div>
+          </div>
+          <div class="price-change price-up">▲ +1.25%</div>
+          <canvas id="sparkline" class="sparkline" width="100" height="50"></canvas>
+          <div class="timestamp">As Of:23 Feb 2026, 09:30am</div>
+        </div>
+
+      </div>
     </aside>
   </main>
   <section class="new-joiners-tasks">
@@ -778,6 +819,54 @@ document.querySelector('video').setAttribute("oncontextmenu", "return false;");
       previewVideo.play(); // Resume preview
   }
   
+</script>
+<script>
+
+  // Sample sparkline data
+
+  const data = [85, 86, 85.5, 86.2, 87, 86.8, 87.45];
+  const canvas = document.getElementById('sparkline');
+  const canvas2 = document.getElementById('sparkline2');
+  
+  const ctx = canvas.getContext('2d');
+  const ctx2 = canvas2.getContext('2d');
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+
+  // Draw sparkline
+  ctx.beginPath();
+  ctx.strokeStyle = '#2196F3';
+  ctx.lineWidth = 2;
+
+  ctx2.beginPath();
+  ctx2.strokeStyle = '#2196F3';
+  ctx2.lineWidth = 2;
+
+  const step = canvas.width / (data.length - 1);
+  const max = Math.max(...data);
+  const min = Math.min(...data);
+
+  const step2 = canvas2.width / (data.length - 1);
+  const max2 = Math.max(...data);
+  const min2 = Math.min(...data);
+
+  data.forEach((value, index) => {
+    const x = index * step;
+    const y = canvas.height - ((value - min) / (max - min)) * canvas.height;
+    if(index === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+
+    const x2 = index * step2;
+    const y2 = canvas2.height - ((value - min2) / (max2 - min2)) * canvas2.height;
+    if(index === 0) ctx2.moveTo(x2, y2);
+    else ctx2.lineTo(x2, y2);
+
+  });
+
+  ctx.stroke();
+  ctx2.stroke();
+
 </script>
 </body>
 </html>

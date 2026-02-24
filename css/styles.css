@@ -1572,3 +1572,68 @@ a.open-sign-styles:hover {
     top: -40px; right: 0;
     color: white; font-size: 40px; cursor: pointer;
 }
+
+.news-index {
+  grid-template-columns: repeat(3, 130px);
+  gap: 15px;
+  margin-top: 20px;
+  display: grid;
+}
+
+ .oil-widget {
+    width: 130px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    color: #1E2A38;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+
+  .widget-header {
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .widget-header img {
+    width: 15px;
+    margin-right: 8px;
+  }
+
+ 
+
+  .price-section {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .price-change {
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  .price-up {
+    color: #4CAF50;
+  }
+
+  .price-down {
+    color: #F44336;
+  }
+
+  .sparkline {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .timestamp {
+    font-size: 11px;
+    color: #868686;
+    text-align: right;
+  }
