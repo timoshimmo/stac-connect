@@ -256,8 +256,9 @@
     }
 
     /* Left navigation */
-    .leftnav{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px}
+    .leftnav{background:var(--card); }
     .leftnav h3{margin:0 0 10px 0; font-size:14px; text-transform:uppercase; letter-spacing:.8px; color:var(--muted)}
+    .left-menu { height: auto; border:1px solid var(--border); border-radius:12px; padding:16px; }
     .culture-list{display:flex; flex-direction:column; gap:6px}
     .culture-item{display:grid; grid-template-columns:8px 1fr; gap:10px; align-items:center; padding:6px 8px; border-radius:8px}
     .culture-item:hover{background:#f7fafc}
@@ -1574,17 +1575,17 @@ a.open-sign-styles:hover {
 }
 
 .news-index {
-  grid-template-columns: repeat(3, 130px);
+  grid-template-columns: repeat(2, 200px);
   gap: 15px;
   margin-top: 20px;
   display: grid;
 }
 
  .oil-widget {
-    width: 130px;
-    background-color: #f0f0f0;
+    width: 200px;
     border-radius: 10px;
-    color: #1E2A38;
+    background-color: #022e5d;
+    color: #ffffff;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
@@ -1634,6 +1635,6 @@ a.open-sign-styles:hover {
 
   .timestamp {
     font-size: 11px;
-    color: #868686;
-    text-align: right;
+     color: #e2e2e2;
+    text-align: center;
   }
