@@ -256,9 +256,8 @@
     }
 
     /* Left navigation */
-    .leftnav{background:var(--card); }
+    .leftnav{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; }
     .leftnav h3{margin:0 0 10px 0; font-size:14px; text-transform:uppercase; letter-spacing:.8px; color:var(--muted)}
-    .left-menu { height: auto; border:1px solid var(--border); border-radius:12px; padding:16px; }
     .culture-list{display:flex; flex-direction:column; gap:6px}
     .culture-item{display:grid; grid-template-columns:8px 1fr; gap:10px; align-items:center; padding:6px 8px; border-radius:8px}
     .culture-item:hover{background:#f7fafc}
@@ -1575,14 +1574,14 @@ a.open-sign-styles:hover {
 }
 
 .news-index {
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-top: 20px;
   display: grid;
 }
 
  .oil-widget {
-    width: 200px;
+    width: 100%;
     border-radius: 10px;
     background-color: #022e5d;
     color: #ffffff;
