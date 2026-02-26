@@ -1752,10 +1752,9 @@ a.open-sign-styles:hover {
 /* ── Grid ── */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "brent bonny"
-    "nfem  nfem";
+    "brent bonny nfem";
   gap: 1.2rem;
 }
 
@@ -1803,7 +1802,7 @@ a.open-sign-styles:hover {
 
 .card-label {
   font-family: var(--mono);
-  font-size: 1.0rem;
+  font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--dim);
@@ -1837,7 +1836,7 @@ a.open-sign-styles:hover {
 .price-val {
   font-family: var(--mono);
   font-weight: 500;
-  font-size: 2.9rem;
+  font-size: 1.4rem;
   line-height: 1;
   letter-spacing: -0.03em;
   color: #dceeff;
@@ -1891,13 +1890,11 @@ canvas.spark {
 
 /* ── NFEM layout ── */
 .nfem-body {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
+  display: block;
   align-items: start;
 }
 
-.nfem-price-block .price-val { font-size: 2.6rem; }
+.nfem-price-block .price-val { font-size: 1.4rem; }
 
 .nfem-table-wrap {
   overflow-x: auto;
@@ -1982,7 +1979,7 @@ table.fx tbody tr:nth-child(even) td { background: rgba(48,130,255,0.02); }
 @media (max-width: 660px) {
   .grid { grid-template-columns: 1fr; grid-template-areas: "brent" "bonny" "nfem"; }
   .nfem-body { grid-template-columns: 1fr; }
-  .price-val { font-size: 2.2rem; }
+  .price-val { font-size: 1.4rem; }
   header { flex-direction: column; align-items: flex-start; }
 }
 

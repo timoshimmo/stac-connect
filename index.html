@@ -356,89 +356,93 @@
     <div class="grid">
 
     <!-- Brent Crude -->
-    <div class="oil-card card-brent">
-      <div class="card-watermark">🛢</div>
-      <div class="card-head">
-        <div>
-           <div class="widget-header">
-            <img src="img/petrol-barrel.png" alt="oil icon">
-            <div class="card-label">Brent Crude</div>
+     <a href="https://www.eia.gov/dnav/pet/hist/RBRTED.htm">
+      <div class="oil-card card-brent">
+        <div class="card-watermark">🛢</div>
+        <div class="card-head">
+          <div>
+            <div class="widget-header">
+              <img src="img/petrol-barrel.png" alt="oil icon">
+              <div class="card-label">Brent Crude</div>
+            </div>
           </div>
-          <div class="card-source" id="brentSrc">EIA · Europe North Sea</div>
+          <span class="badge badge-flat shim" id="brentBadge">——</span>
         </div>
-        <span class="badge badge-flat shim" id="brentBadge">——</span>
-      </div>
-      <div class="price-val shim" id="brentPrice">$00.00</div>
-      <div class="price-unit">USD / Barrel</div>
-      <div class="chart-wrap">
-        <div class="chart-meta">
-          <span class="chart-lbl">14-Day Trend</span>
-          <span class="chart-range" id="brentRange"></span>
+        <div class="price-val shim" id="brentPrice">$00.00</div>
+        <div class="price-unit">USD / Barrel</div>
+        <div class="chart-wrap">
+          <div class="chart-meta">
+            <span class="chart-lbl">14-Day Trend</span>
+            <span class="chart-range" id="brentRange"></span>
+          </div>
+          <canvas class="spark" id="brentChart"></canvas>
         </div>
-        <canvas class="spark" id="brentChart"></canvas>
+        <div class="updated" id="brentUpdated"></div>
       </div>
-      <div class="updated" id="brentUpdated"></div>
-    </div>
+     </a>
 
     <!-- Bonny Light -->
-    <div class="oil-card card-bonny">
-      <div class="card-watermark">🛢</div>
-      <div class="card-head">
-        <div>
-          <div class="widget-header">
-            <img src="img/petrol-barrel.png" alt="oil icon">
-            <div class="card-label">Bonny Light</div>
+     <a href="https://www.cbn.gov.ng/rates/crudeoil.html">
+      <div class="oil-card card-bonny">
+        <div class="card-watermark">🛢</div>
+        <div class="card-head">
+          <div>
+            <div class="widget-header">
+              <img src="img/petrol-barrel.png" alt="oil icon">
+              <div class="card-label">Bonny Light</div>
+            </div>
           </div>
-          <div class="card-source" id="bonnySrc">CBN · Nigerian Crude</div>
+          <span class="badge badge-flat shim" id="bonnyBadge">——</span>
         </div>
-        <span class="badge badge-flat shim" id="bonnyBadge">——</span>
-      </div>
-      <div class="price-val shim" id="bonnyPrice">$00.00</div>
-      <div class="price-unit">USD / Barrel</div>
-      <div class="chart-wrap">
-        <div class="chart-meta">
-          <span class="chart-lbl">Recent Trend</span>
-          <span class="chart-range" id="bonnyRange"></span>
+        <div class="price-val shim" id="bonnyPrice">$00.00</div>
+        <div class="price-unit">USD / Barrel</div>
+        <div class="chart-wrap">
+          <div class="chart-meta">
+            <span class="chart-lbl">Recent Trend</span>
+            <span class="chart-range" id="bonnyRange"></span>
+          </div>
+          <canvas class="spark" id="bonnyChart"></canvas>
         </div>
-        <canvas class="spark" id="bonnyChart"></canvas>
+        <div class="updated" id="bonnyUpdated"></div>
       </div>
-      <div class="updated" id="bonnyUpdated"></div>
-    </div>
-
+     </a>
+    
     <!-- NFEM -->
-    <div class="oil-card card-nfem">
-      <div class="card-head">
-        <div>
-          <div class="card-label">NFEM · Nigerian Foreign Exchange Market</div>
-          <div class="card-source">CBN · Daily Volume Weighted Average Rate</div>
+     <a href="https://www.cbn.gov.ng/rates/ExchRateByCurrency.html">
+         <div class="oil-card card-nfem">
+          <div class="card-head">
+            <div>
+              <div class="card-label">NFEM</div>
+            </div>
+            <span class="badge badge-flat shim" id="nfemBadge">——</span>
+          </div>
+          <div class="nfem-body">
+            <div class="nfem-price-block">
+              <div class="price-val shim" id="nfemRate">₦0000</div>
+              <div class="price-unit">₦ per US$1</div>
+            </div>
+            <div class="nfem-table-wrap">
+              <table class="fx">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>NFEM Rate</th>
+                    <!-- <th>Highest</th>
+                    <th>Lowest</th>
+                    <th>Closing</th>
+                    <th>Mean</th> -->
+                  </tr>
+                </thead>
+                <tbody id="nfemBody">
+                  <tr><td colspan="6" style="text-align:center;padding:1.2rem;color:var(--dim)">Loading…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="updated" id="nfemUpdated"></div>
         </div>
-        <span class="badge badge-flat shim" id="nfemBadge">——</span>
-      </div>
-      <div class="nfem-body">
-        <div class="nfem-price-block">
-          <div class="price-val shim" id="nfemRate">₦0000</div>
-          <div class="price-unit">₦ per US$1</div>
-        </div>
-        <div class="nfem-table-wrap">
-          <table class="fx">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>NFEM Rate</th>
-                <th>Highest</th>
-                <th>Lowest</th>
-                <th>Closing</th>
-                <th>Mean</th>
-              </tr>
-            </thead>
-            <tbody id="nfemBody">
-              <tr><td colspan="6" style="text-align:center;padding:1.2rem;color:var(--dim)">Loading…</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="updated" id="nfemUpdated"></div>
-    </div>
+     </a>
+   
 
   </div>
   <!-- /grid -->
@@ -859,37 +863,6 @@ window.onclick = function(e) {
   if (event.target == modal) closePopup();
 }
 </script>
-<script>
-window.onload = function () {
-    let slides = 
-        document.getElementsByClassName('carousel-item');
-
-    function addActive(slide) {
-        slide.classList.add('active');
-    }
-
-    function removeActive(slide) {
-        slide.classList.remove('active');
-    }
-
-    addActive(slides[0]);
-    setInterval(function () {
-        for (let i = 0; i < slides.length; i++) {
-            if (i + 1 == slides.length) {
-                addActive(slides[0]);
-                setTimeout(removeActive, 350, slides[i]);
-                break;
-            }
-            if (slides[i].classList.contains('active')) {
-                setTimeout(removeActive, 350, slides[i]);
-                addActive(slides[i + 1]);
-                break;
-            }
-        }
-    }, 60000);
-};
-</script>
-
 
 <script>
 let slideIndex = 0;
@@ -949,7 +922,7 @@ function drawSpark(canvasId, history, strokeColor, fillColor) {
 
   const dpr = window.devicePixelRatio || 1;
   const W   = canvas.parentElement.clientWidth || 400;
-  const H   = 72;
+  const H   = 50;
   canvas.width  = W * dpr;
   canvas.height = H * dpr;
   canvas.style.width  = W + 'px';
@@ -1047,6 +1020,7 @@ const errors = new Set();
 function showErr(msg) {
   errors.add(msg);
   const b = $('errBanner');
+  if (!b) { console.error('[Dashboard]', msg); return; }
   b.style.display = 'block';
   b.innerHTML = [...errors].map(m => `⚠ ${m}`).join('<br>');
 }
@@ -1057,18 +1031,23 @@ function renderOil({ prefix, data, stroke, fill }) {
   clearShim(`${p}Price`, `${p}Badge`);
 
   if (!data || data.error) {
-    $(`${p}Price`).textContent = '—';
-    $(`${p}Badge`).className = 'badge badge-flat';
-    $(`${p}Badge`).textContent = 'Error';
-    $(`${p}Updated`).textContent = data?.error ?? 'Unavailable';
+    const priceEl   = $(`${p}Price`);
+    const badgeEl   = $(`${p}Badge`);
+    const updatedEl = $(`${p}Updated`);
+    if (priceEl)   priceEl.textContent = '—';
+    if (badgeEl)   { badgeEl.className = 'badge badge-flat'; badgeEl.textContent = 'Error'; }
+    if (updatedEl) updatedEl.textContent = data?.error ?? 'Unavailable';
     showErr(`${prefix}: ${data?.error ?? 'Failed to load'}`);
     return;
   }
 
-  $(`${p}Price`).textContent = `$${fmt(data.current)}`;
-  if ($(`${p}Src`) && data.source) $(`${p}Src`).textContent = data.source;
+  const priceEl   = $(`${p}Price`);
+  const srcEl     = $(`${p}Src`);
+  const updatedEl = $(`${p}Updated`);
+  if (priceEl)              priceEl.textContent = `$${fmt(data.current)}`;
+  if (srcEl && data.source) srcEl.textContent = data.source;
   applyBadge(`${p}Badge`, data.change, data.changePct);
-  $(`${p}Updated`).textContent = `↻ Last Updated: ${fmtD(data.lastDate)}`;
+  if (updatedEl) updatedEl.textContent = `↻ Last data: ${fmtD(data.lastDate)}`;
 
   if (data.history?.length > 1) {
     const prices = data.history.map(h => h.price);
@@ -1081,39 +1060,58 @@ function renderOil({ prefix, data, stroke, fill }) {
 
 function renderNFEM(data) {
   clearShim('nfemRate', 'nfemBadge');
+  const rateEl    = $('nfemRate');
+  const badgeEl   = $('nfemBadge');
+  const updatedEl = $('nfemUpdated');
+  const bodyEl    = $('nfemBody');
+
   if (!data || data.error) {
-    $('nfemRate').textContent = '—';
-    $('nfemBadge').className = 'badge badge-flat';
-    $('nfemBadge').textContent = 'Error';
-    $('nfemUpdated').textContent = data?.error ?? 'Unavailable';
-    $('nfemBody').innerHTML = `<tr><td colspan="6" style="text-align:center;padding:1rem;color:var(--dim)">Data unavailable</td></tr>`;
+    if (rateEl)    rateEl.textContent = '—';
+    if (badgeEl)   { badgeEl.className = 'badge badge-flat'; badgeEl.textContent = 'Error'; }
+    if (updatedEl) updatedEl.textContent = data?.error ?? 'Unavailable';
+    if (bodyEl)    bodyEl.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:1rem;color:var(--dim)">Data unavailable</td></tr>`;
     showErr(`NFEM: ${data?.error ?? 'Failed'}`);
     return;
   }
 
-  $('nfemRate').textContent = `₦${fmt(data.current)}`;
+  if (rateEl)    rateEl.textContent = `₦${fmt(data.current)}`;
   applyBadge('nfemBadge', data.change, data.changePct);
-  $('nfemUpdated').textContent = `↻ Last Updated: ${data.latest?.date ?? '—'}`;
+  if (updatedEl) updatedEl.textContent = `↻ Last data: ${data.latest?.date ?? '—'}`;
 
-  $('nfemBody').innerHTML = (data.history ?? []).map(r => `
-    <tr>
-      <td>${r.date ?? '—'}</td>
-      <td class="fx-nfem">₦${fmt(r.nfem)}</td>
-      <td>${fmt(r.highest)}</td>
-      <td>${fmt(r.lowest)}</td>
-      <td>${fmt(r.closing)}</td>
-      <td>${fmt(r.mean)}</td>
-    </tr>`).join('') ||
-    `<tr><td colspan="6" style="text-align:center;color:var(--dim);padding:0.8rem">No rows</td></tr>`;
+/*
+
+if (bodyEl) {
+    bodyEl.innerHTML = (data.history ?? []).map(r => `
+      <tr>
+        <td>${r.date ?? '—'}</td>
+        <td class="fx-nfem">₦${fmt(r.nfem)}</td> 
+        <td>${fmt(r.highest)}</td>
+        <td>${fmt(r.lowest)}</td>
+        <td>${fmt(r.closing)}</td>
+        <td>${fmt(r.mean)}</td>
+      </tr>`).join('') ||
+      `<tr><td colspan="6" style="text-align:center;color:var(--dim);padding:0.8rem">No rows</td></tr>`;
+  }
+*/
+
+
+  if (bodyEl) {
+    bodyEl.innerHTML = (data.history ?? []).slice(0, 2).map(r => `
+      <tr>
+        <td>${r.date ?? '—'}</td>
+        <td class="fx-nfem">₦${fmt(r.nfem)}</td> 
+      </tr>`).join('') ||
+      `<tr><td colspan="6" style="text-align:center;color:var(--dim);padding:0.8rem">No rows</td></tr>`;
+  }
 }
 
 // ─── Main fetch ───────────────────────────────────────────────────────────────
 async function fetchAll() {
   const btn = $('refreshBtn');
-  btn.disabled = true;
-  btn.classList.add('spinning');
+  const banner = $('errBanner');
+  if (btn) { btn.disabled = true; btn.classList.add('spinning'); }
   errors.clear();
-  $('errBanner').style.display = 'none';
+  if (banner) banner.style.display = 'none';
 
   // Re-add shimmer
   ['brentPrice','brentBadge','bonnyPrice','bonnyBadge','nfemRate','nfemBadge']
@@ -1128,14 +1126,14 @@ async function fetchAll() {
     renderOil({ prefix: 'bonny', data: data.bonny, stroke: '#00b89e', fill: '#00b89e' });
     renderNFEM(data.nfem);
 
-    $('fetchTime').textContent = `Last refreshed: ${new Date(data.fetchedAt ?? Date.now()).toLocaleTimeString()}`;
+    const fetchTimeEl = $('fetchTime');
+    if (fetchTimeEl) fetchTimeEl.textContent = `Last refreshed: ${new Date(data.fetchedAt ?? Date.now()).toLocaleTimeString()}`;
   } catch (e) {
     showErr(`Cannot reach backend at ${API}. Is the server running? (${e.message})`);
     ['brentPrice','brentBadge','bonnyPrice','bonnyBadge','nfemRate','nfemBadge']
       .forEach(id => { const el=$(id); if(el){el.classList.remove('shim');el.textContent='—';} });
   } finally {
-    btn.disabled = false;
-    btn.classList.remove('spinning');
+    if (btn) { btn.disabled = false; btn.classList.remove('spinning'); }
   }
 }
 
