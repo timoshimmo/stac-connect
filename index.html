@@ -334,7 +334,116 @@
     </aside>
   </main>
   <section class="new-joiners-tasks">
-     <div class="news-index">
+    <div class="oil-header">
+      <div class="brand">
+        <div class="brand-text">
+          <h1>Nigeria Energy Updates</h1>
+          <p>Real-time oil prices &amp; FX intelligence</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="pill-live"><span class="pulse-dot"></span>Live</div>
+        <button class="btn" id="refreshBtn" onclick="fetchAll()">
+          <span class="ico">↻</span> Refresh
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Error ── -->
+    <div id="errBanner"></div>
+
+    <!-- ── Grid ── -->
+    <div class="grid">
+
+    <!-- Brent Crude -->
+    <div class="oil-card card-brent">
+      <div class="card-watermark">🛢</div>
+      <div class="card-head">
+        <div>
+           <div class="widget-header">
+            <img src="img/petrol-barrel.png" alt="oil icon">
+            <div class="card-label">Brent Crude</div>
+          </div>
+          <div class="card-source" id="brentSrc">EIA · Europe North Sea</div>
+        </div>
+        <span class="badge badge-flat shim" id="brentBadge">——</span>
+      </div>
+      <div class="price-val shim" id="brentPrice">$00.00</div>
+      <div class="price-unit">USD / Barrel</div>
+      <div class="chart-wrap">
+        <div class="chart-meta">
+          <span class="chart-lbl">14-Day Trend</span>
+          <span class="chart-range" id="brentRange"></span>
+        </div>
+        <canvas class="spark" id="brentChart"></canvas>
+      </div>
+      <div class="updated" id="brentUpdated"></div>
+    </div>
+
+    <!-- Bonny Light -->
+    <div class="oil-card card-bonny">
+      <div class="card-watermark">🛢</div>
+      <div class="card-head">
+        <div>
+          <div class="widget-header">
+            <img src="img/petrol-barrel.png" alt="oil icon">
+            <div class="card-label">Bonny Light</div>
+          </div>
+          <div class="card-source" id="bonnySrc">CBN · Nigerian Crude</div>
+        </div>
+        <span class="badge badge-flat shim" id="bonnyBadge">——</span>
+      </div>
+      <div class="price-val shim" id="bonnyPrice">$00.00</div>
+      <div class="price-unit">USD / Barrel</div>
+      <div class="chart-wrap">
+        <div class="chart-meta">
+          <span class="chart-lbl">Recent Trend</span>
+          <span class="chart-range" id="bonnyRange"></span>
+        </div>
+        <canvas class="spark" id="bonnyChart"></canvas>
+      </div>
+      <div class="updated" id="bonnyUpdated"></div>
+    </div>
+
+    <!-- NFEM -->
+    <div class="oil-card card-nfem">
+      <div class="card-head">
+        <div>
+          <div class="card-label">NFEM · Nigerian Foreign Exchange Market</div>
+          <div class="card-source">CBN · Daily Volume Weighted Average Rate</div>
+        </div>
+        <span class="badge badge-flat shim" id="nfemBadge">——</span>
+      </div>
+      <div class="nfem-body">
+        <div class="nfem-price-block">
+          <div class="price-val shim" id="nfemRate">₦0000</div>
+          <div class="price-unit">₦ per US$1</div>
+        </div>
+        <div class="nfem-table-wrap">
+          <table class="fx">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>NFEM Rate</th>
+                <th>Highest</th>
+                <th>Lowest</th>
+                <th>Closing</th>
+                <th>Mean</th>
+              </tr>
+            </thead>
+            <tbody id="nfemBody">
+              <tr><td colspan="6" style="text-align:center;padding:1.2rem;color:var(--dim)">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="updated" id="nfemUpdated"></div>
+    </div>
+
+  </div>
+  <!-- /grid -->
+
+     <!-- <div class="news-index">
         <div class="oil-widget">
           <div class="widget-header">
             <img src="img/petrol-barrel.png" alt="oil icon">
@@ -377,7 +486,7 @@
           <div class="timestamp">Last Updated: 23 Feb 2026, 09:30am</div>
         </div>
 
-      </div>
+      </div> -->
   </section>
   <section class="new-joiners-tasks">
   <div class="container">
@@ -825,10 +934,226 @@ document.querySelector('video').setAttribute("oncontextmenu", "return false;");
   }
   
 </script>
+
+<script>
+// ─── Config ──────────────────────────────────────────────────────────────────
+const API = 'https://oil-price-backend.onrender.com/api';
+const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 min
+
+// ─── Sparkline renderer ──────────────────────────────────────────────────────
+function drawSpark(canvasId, history, strokeColor, fillColor) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas || !history?.length) return;
+  const prices = history.map(h => h.price ?? h);
+  if (prices.length < 2) return;
+
+  const dpr = window.devicePixelRatio || 1;
+  const W   = canvas.parentElement.clientWidth || 400;
+  const H   = 72;
+  canvas.width  = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width  = W + 'px';
+  canvas.style.height = H + 'px';
+
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const pad = { t: 10, b: 6, l: 2, r: 2 };
+  const aw = W - pad.l - pad.r;
+  const ah = H - pad.t - pad.b;
+
+  const min = Math.min(...prices);
+  const max = Math.max(...prices);
+  const range = (max - min) || 1;
+
+  const pts = prices.map((v, i) => ({
+    x: pad.l + (i / (prices.length - 1)) * aw,
+    y: pad.t + (1 - (v - min) / range) * ah,
+  }));
+
+  // Dashed gridline at midpoint
+  ctx.setLineDash([3, 5]);
+  ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(pad.l, pad.t + ah / 2);
+  ctx.lineTo(pad.l + aw, pad.t + ah / 2);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Gradient fill
+  const grad = ctx.createLinearGradient(0, pad.t, 0, H);
+  grad.addColorStop(0, fillColor + '30');
+  grad.addColorStop(0.7, fillColor + '08');
+  grad.addColorStop(1, fillColor + '00');
+
+  ctx.beginPath();
+  ctx.moveTo(pts[0].x, H);
+  for (let i = 0; i < pts.length; i++) {
+    if (i === 0) ctx.lineTo(pts[i].x, pts[i].y);
+    else {
+      const cpx = (pts[i-1].x + pts[i].x) / 2;
+      ctx.bezierCurveTo(cpx, pts[i-1].y, cpx, pts[i].y, pts[i].x, pts[i].y);
+    }
+  }
+  ctx.lineTo(pts.at(-1).x, H);
+  ctx.closePath();
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Stroke
+  ctx.beginPath();
+  ctx.moveTo(pts[0].x, pts[0].y);
+  for (let i = 1; i < pts.length; i++) {
+    const cpx = (pts[i-1].x + pts[i].x) / 2;
+    ctx.bezierCurveTo(cpx, pts[i-1].y, cpx, pts[i].y, pts[i].x, pts[i].y);
+  }
+  ctx.strokeStyle = strokeColor;
+  ctx.lineWidth = 1.75;
+  ctx.lineJoin = 'round';
+  ctx.stroke();
+
+  // End dot with glow
+  const last = pts.at(-1);
+  ctx.shadowColor = strokeColor;
+  ctx.shadowBlur  = 8;
+  ctx.beginPath();
+  ctx.arc(last.x, last.y, 3.5, 0, Math.PI * 2);
+  ctx.fillStyle = strokeColor;
+  ctx.fill();
+  ctx.shadowBlur = 0;
+}
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+const fmt  = (n, d = 2) => n != null && !isNaN(n) ? Number(n).toFixed(d) : '—';
+const fmtD = s => { try { return new Date(s).toLocaleDateString('en-GB', {day:'2-digit',month:'short',year:'numeric'}); } catch { return s; } };
+const $    = id => document.getElementById(id);
+
+function applyBadge(id, change, pct) {
+  const el = $(id);
+  if (!el) return;
+  el.classList.remove('shim', 'badge-flat', 'badge-up', 'badge-down');
+  if (change == null) { el.className = 'badge badge-flat'; el.textContent = 'N/A'; return; }
+  const dir = change >= 0 ? 'up' : 'down';
+  const arrow = change >= 0 ? '▲' : '▼';
+  const sign  = change >= 0 ? '+' : '';
+  el.className = `badge badge-${dir}`;
+  el.textContent = `${arrow} ${sign}${fmt(pct)}%`;
+}
+
+function clearShim(...ids) { ids.forEach(id => $(id)?.classList.remove('shim')); }
+
+const errors = new Set();
+function showErr(msg) {
+  errors.add(msg);
+  const b = $('errBanner');
+  b.style.display = 'block';
+  b.innerHTML = [...errors].map(m => `⚠ ${m}`).join('<br>');
+}
+
+// ─── Render ──────────────────────────────────────────────────────────────────
+function renderOil({ prefix, data, stroke, fill }) {
+  const p = prefix.toLowerCase();
+  clearShim(`${p}Price`, `${p}Badge`);
+
+  if (!data || data.error) {
+    $(`${p}Price`).textContent = '—';
+    $(`${p}Badge`).className = 'badge badge-flat';
+    $(`${p}Badge`).textContent = 'Error';
+    $(`${p}Updated`).textContent = data?.error ?? 'Unavailable';
+    showErr(`${prefix}: ${data?.error ?? 'Failed to load'}`);
+    return;
+  }
+
+  $(`${p}Price`).textContent = `$${fmt(data.current)}`;
+  if ($(`${p}Src`) && data.source) $(`${p}Src`).textContent = data.source;
+  applyBadge(`${p}Badge`, data.change, data.changePct);
+  $(`${p}Updated`).textContent = `↻ Last Updated: ${fmtD(data.lastDate)}`;
+
+  if (data.history?.length > 1) {
+    const prices = data.history.map(h => h.price);
+    const lo = Math.min(...prices).toFixed(2);
+    const hi = Math.max(...prices).toFixed(2);
+    if ($(`${p}Range`)) $(`${p}Range`).textContent = `$${lo} – $${hi}`;
+    drawSpark(`${p}Chart`, data.history, stroke, fill);
+  }
+}
+
+function renderNFEM(data) {
+  clearShim('nfemRate', 'nfemBadge');
+  if (!data || data.error) {
+    $('nfemRate').textContent = '—';
+    $('nfemBadge').className = 'badge badge-flat';
+    $('nfemBadge').textContent = 'Error';
+    $('nfemUpdated').textContent = data?.error ?? 'Unavailable';
+    $('nfemBody').innerHTML = `<tr><td colspan="6" style="text-align:center;padding:1rem;color:var(--dim)">Data unavailable</td></tr>`;
+    showErr(`NFEM: ${data?.error ?? 'Failed'}`);
+    return;
+  }
+
+  $('nfemRate').textContent = `₦${fmt(data.current)}`;
+  applyBadge('nfemBadge', data.change, data.changePct);
+  $('nfemUpdated').textContent = `↻ Last Updated: ${data.latest?.date ?? '—'}`;
+
+  $('nfemBody').innerHTML = (data.history ?? []).map(r => `
+    <tr>
+      <td>${r.date ?? '—'}</td>
+      <td class="fx-nfem">₦${fmt(r.nfem)}</td>
+      <td>${fmt(r.highest)}</td>
+      <td>${fmt(r.lowest)}</td>
+      <td>${fmt(r.closing)}</td>
+      <td>${fmt(r.mean)}</td>
+    </tr>`).join('') ||
+    `<tr><td colspan="6" style="text-align:center;color:var(--dim);padding:0.8rem">No rows</td></tr>`;
+}
+
+// ─── Main fetch ───────────────────────────────────────────────────────────────
+async function fetchAll() {
+  const btn = $('refreshBtn');
+  btn.disabled = true;
+  btn.classList.add('spinning');
+  errors.clear();
+  $('errBanner').style.display = 'none';
+
+  // Re-add shimmer
+  ['brentPrice','brentBadge','bonnyPrice','bonnyBadge','nfemRate','nfemBadge']
+    .forEach(id => $(id)?.classList.add('shim'));
+
+  try {
+    const res  = await fetch(`${API}/all`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    renderOil({ prefix: 'brent', data: data.brent, stroke: '#3082ff', fill: '#3082ff' });
+    renderOil({ prefix: 'bonny', data: data.bonny, stroke: '#00b89e', fill: '#00b89e' });
+    renderNFEM(data.nfem);
+
+    $('fetchTime').textContent = `Last refreshed: ${new Date(data.fetchedAt ?? Date.now()).toLocaleTimeString()}`;
+  } catch (e) {
+    showErr(`Cannot reach backend at ${API}. Is the server running? (${e.message})`);
+    ['brentPrice','brentBadge','bonnyPrice','bonnyBadge','nfemRate','nfemBadge']
+      .forEach(id => { const el=$(id); if(el){el.classList.remove('shim');el.textContent='—';} });
+  } finally {
+    btn.disabled = false;
+    btn.classList.remove('spinning');
+  }
+}
+
+fetchAll();
+setInterval(fetchAll, REFRESH_INTERVAL);
+window.addEventListener('resize', () => {
+  // Redraw sparklines on resize without re-fetching
+  const brent = window.__lastData?.brent;
+  const bonny = window.__lastData?.bonny;
+  if (brent?.history) drawSpark('brentChart', brent.history, '#3082ff', '#3082ff');
+  if (bonny?.history) drawSpark('bonnyChart', bonny.history, '#00b89e', '#00b89e');
+});
+</script>
+
 <script>
 
   // Sample sparkline data
-
+/*
   const data = [85, 86, 85.5, 86.2, 87, 86.8, 87.45];
   const canvas = document.getElementById('sparkline');
   const canvas2 = document.getElementById('sparkline2');
@@ -871,7 +1196,7 @@ document.querySelector('video').setAttribute("oncontextmenu", "return false;");
 
   ctx.stroke();
   ctx2.stroke();
-
+*/
 </script>
 </body>
 </html>

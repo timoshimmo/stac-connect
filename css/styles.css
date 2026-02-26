@@ -6,7 +6,21 @@
       --bg:#f4f7fb;
       --bgwhite: #ffffff;
       --card:#ffffff;
-      --border:#e5e7eb;
+      --blue:       #3082ff;
+      --cyan:       #00cfea;
+      --teal:       #00b89e;
+      --green:      #00dfa2;
+      --red:        #ff4060;
+      --amber:      #ffaa00;
+      --text:       #c4d6ef;
+      --dim:        #ebf5ff;
+      --dimmer:     #c4cad1;
+      --mono: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+      --sans:'Familjen Grotesk', sans-serif;
+      --surface:    #022e5d;
+  --surface-hi: #022e5d;
+  --border:     rgba(120, 174, 255, 0.13);
+  --border-hi:  rgba(48, 130, 255, 0.32);
     }
     
     *{box-sizing:border-box}
@@ -1637,3 +1651,347 @@ a.open-sign-styles:hover {
      color: #e2e2e2;
     text-align: center;
   }
+
+  /* ── Header ── */
+.oil-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #d6d6d6;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.barrel-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(140deg, #1a3a6a 0%, #0b1e3a 100%);
+  border: 1px solid rgba(48,130,255,0.3);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 16px rgba(48,130,255,0.15);
+}
+
+.brand-text h1 {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--bw-secondary);
+}
+
+.brand-text p {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #3a587a;
+  margin-top: 2px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pill-live {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.28rem 0.75rem;
+  background: rgba(0, 192, 141, 0.2);
+  border: 1px solid rgba(0,223,162,0.18);
+  border-radius: 7px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bw-primary);
+}
+
+.pulse-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--bw-primary);
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,100% { opacity: 1; box-shadow: 0 0 4px var(--bw-primary); }
+  50%      { opacity: 0.3; box-shadow: none; }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 1rem;
+  background: transparent;
+  border: 1px solid var(--bw-secondary);
+  border-radius: 7px;
+  color: var(--bw-secondary);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s;
+}
+.btn:hover:not(:disabled) { background: rgba(2, 46, 93, 0.2); border-color: var(--bw-secondary); }
+.btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.btn.spinning .ico { animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "brent bonny"
+    "nfem  nfem";
+  gap: 1.2rem;
+}
+
+.card-brent { grid-area: brent; }
+.card-bonny { grid-area: bonny; }
+.card-nfem  { grid-area: nfem; }
+
+/* ── Oil Card ── */
+.oil-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.6rem 1.7rem 1.3rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.22s;
+  display: flex;
+  flex-direction: column;
+}
+
+.oil-card:hover { border-color: rgba(48,130,255,0.28); }
+
+/* top accent line per card */
+.oil-card-brent::before { content:''; position:absolute; top:0;left:0;right:0;height:2px; background: linear-gradient(90deg, transparent, #3082ff 40%, #00cfea, transparent); opacity:.55; }
+.oil-card-bonny::before { content:''; position:absolute; top:0;left:0;right:0;height:2px; background: linear-gradient(90deg, transparent, #00b89e 40%, #00cfea, transparent); opacity:.55; }
+.oil-card-nfem::before  { content:''; position:absolute; top:0;left:0;right:0;height:2px; background: linear-gradient(90deg, transparent, #ffaa00 40%, #ff8c00, transparent); opacity:.45; }
+
+/* corner watermark */
+.card-watermark {
+  position: absolute;
+  bottom: -12px; right: -8px;
+  font-size: 6rem;
+  line-height: 1;
+  opacity: 0.025;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.card-label {
+  font-family: var(--mono);
+  font-size: 1.0rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.card-source {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  color: var(--dimmer);
+  letter-spacing: 0.08em;
+  margin-top: 3px;
+}
+
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 0.25rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.22rem 0.55rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+.badge-up   { background: rgba(0,223,162,0.1); color: var(--green); border: 1px solid rgba(0,223,162,0.2); }
+.badge-down { background: rgba(255,64,96,0.1);  color: var(--red);   border: 1px solid rgba(255,64,96,0.2); }
+.badge-flat { background: rgba(255,170,0,0.08); color: var(--amber); border: 1px solid rgba(255,170,0,0.18); }
+
+/* ── Price ── */
+.price-val {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 2.9rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #dceeff;
+  margin-bottom: 0.2rem;
+}
+
+.price-unit {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 1rem;
+}
+
+/* ── Sparklines ── */
+.chart-wrap {
+  margin-top: auto;
+  padding-top: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.chart-lbl {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dimmer);
+}
+
+.chart-range {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--dimmer);
+}
+
+canvas.spark {
+  width: 100%;
+  height: 72px;
+  display: block;
+}
+
+/* ── NFEM layout ── */
+.nfem-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.nfem-price-block .price-val { font-size: 2.6rem; }
+
+.nfem-table-wrap {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+table.fx {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+table.fx thead tr {
+  background: rgba(48,130,255,0.05);
+  border-bottom: 1px solid var(--border);
+}
+
+table.fx th {
+  padding: 0.55rem 0.85rem;
+  text-align: left;
+  font-size: 0.54rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  font-weight: 400;
+}
+
+table.fx td {
+  padding: 0.5rem 0.85rem;
+  border-bottom: 1px solid rgba(48,130,255,0.05);
+  color: var(--text);
+}
+
+table.fx tr:last-child td { border-bottom: none; }
+table.fx td:not(:first-child),
+table.fx th:not(:first-child) { text-align: right; }
+
+.fx-nfem { color: var(--cyan) !important; font-weight: 500; }
+
+/* alternating row tint */
+table.fx tbody tr:nth-child(even) td { background: rgba(48,130,255,0.02); }
+
+/* ── Updated line ── */
+.updated {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--dimmer);
+  letter-spacing: 0.08em;
+  margin-top: 0.85rem;
+}
+
+/* ── Shimmer ── */
+.shim {
+  background: linear-gradient(90deg, var(--surface-hi) 25%, rgba(48,130,255,0.06) 50%, var(--surface-hi) 75%);
+  background-size: 300% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  border-radius: 4px;
+  color: transparent !important;
+  user-select: none;
+}
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* ── Error banner ── */
+#errBanner {
+  display: none;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255,170,0,0.06);
+  border: 1px solid rgba(255,170,0,0.2);
+  border-radius: 9px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--amber);
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 660px) {
+  .grid { grid-template-columns: 1fr; grid-template-areas: "brent" "bonny" "nfem"; }
+  .nfem-body { grid-template-columns: 1fr; }
+  .price-val { font-size: 2.2rem; }
+  header { flex-direction: column; align-items: flex-start; }
+}
+
+/* staggered card entrance */
+.oil-card { animation: cardIn 0.5s ease both; }
+.card-brent { animation-delay: 0.05s; }
+.card-bonny { animation-delay: 0.12s; }
+.card-nfem  { animation-delay: 0.19s; }
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
