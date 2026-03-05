@@ -1773,6 +1773,7 @@ a.open-sign-styles:hover {
   transition: border-color 0.22s;
   display: flex;
   flex-direction: column;
+  height: 260px;
 }
 
 .oil-card:hover { border-color: rgba(48,130,255,0.28); }
