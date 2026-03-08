@@ -1,7 +1,9 @@
 // app.js
-const msalInstance = new msal.PublicClientApplication(msalConfig);
+window.addEventListener('DOMContentLoaded', () => {
+    // Your MSAL initialization code here
+    const msalInstance = new msal.PublicClientApplication(msalConfig);
 
-function handleRedirectCallback() {
+    function handleRedirectCallback() {
     msalInstance.handleRedirectPromise().then((tokenResponse) => {
         // Handle the response after redirect
         if (tokenResponse) {
@@ -49,3 +51,6 @@ function updateUI(account) {
 
 // Call this on page load
 handleRedirectCallback();
+});
+
+
