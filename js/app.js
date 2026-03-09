@@ -27,6 +27,16 @@ window.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    const loginButton = document.getElementById("loginButton");
+    
+    loginButton.addEventListener("click", async () => {
+        try {
+            msalInstance.loginRedirect();
+        } catch (err) {
+            console.error("Login failed", err);
+        }
+    });
+
 function signIn() {
     // Use loginRedirect for full page redirects (common in vanilla JS)
     msalInstance.loginRedirect(loginRequest);
