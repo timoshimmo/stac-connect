@@ -178,7 +178,15 @@
   </div>
   <div class="auth-page">
     <div id="app">
-        <!-- UI elements will be rendered here by JavaScript -->
+      <div id="lt-signout" style="display: none;">
+         <p>Welcome, ${account.name}!</p>
+        <button onclick="signOut()">Sign Out</button>
+      </div>
+      <div id="lt-signIn" style="display: none;">
+         <p>Please sign in to continue.</p>
+          <button onclick="signIn()">Sign In</button>
+      </div>
+           
     </div>
   </div>
   <!-- Page Shell -->
