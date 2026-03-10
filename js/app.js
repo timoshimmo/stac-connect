@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 if (currentAccounts && currentAccounts.length > 0) {
                     updateUI(currentAccounts[0]);
                 } else {
+                    msalInstance.loginRedirect(loginRequest);
                     updateUI(null);
                 }
             }
@@ -31,7 +32,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     
     loginButton.addEventListener("click", async () => {
         try {
-            msalInstance.loginRedirect();
+            //msalInstance.loginRedirect({scopes: ["user.read", "openid", "profile"]});
+            msalInstance.loginRedirect(loginRequest);
         } catch (err) {
             console.error("Login failed", err);
         }
