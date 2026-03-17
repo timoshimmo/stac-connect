@@ -169,15 +169,35 @@
       </div>
     </div>
   </header>
+  
   <div class="announcement">
-    <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
-    <div>
-      <h2 class="announcement-title">Announcements</h2>
-      <h2 class="announcement-title">(1/1)</h2>
-    </div>
-    <div>
-      <a href="growth-friday" class="announcement-link">Growth Friday</a>
-      <p class="announcement-subtitle"> - Learn. Reflect. Grow.</p>
+    <div class="slideshow-container">
+      <div class="annSlides fade">
+        <div class="annBody">
+          <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
+          <div>
+            <h2 class="announcement-title">Announcements</h2>
+            <h2 class="announcement-title">(1/2)</h2>
+          </div>
+          <div>
+            <a href="growth-friday" class="announcement-link">Growth Friday</a>
+            <p class="announcement-subtitle"> - Learn. Reflect. Grow.</p>
+          </div>
+        </div>
+      </div>
+      <div class="annSlides fade">
+        <div class="annBody">
+          <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
+          <div>
+            <h2 class="announcement-title">Announcements</h2>
+            <h2 class="announcement-title">(2/2)</h2>
+          </div>
+          <div>
+            <a href="public-holiday" class="announcement-link">Public Holiday - Eid-el-Fitr</a>
+            <p class="announcement-subtitle">Thursday, 19th Feb 2026 and Friday, 20th Feb 2026</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Page Shell -->
@@ -889,6 +909,26 @@ function showSlides() {
   setTimeout(showSlides, 10000); // Change image every 2 seconds
 }
 </script>
+
+<script>
+let slideIdx = 0;
+announcementSlides();
+
+function announcementSlides() {
+  let i;
+  let slides = document.getElementsByClassName("annSlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIdx++;
+  if (slideIdx > slides.length) {slideIdx = 1}    
+  
+  slides[slideIdx-1].style.display = "block";  
+  
+  setTimeout(announcementSlides, 5000); // Change image every 2 seconds
+}
+</script>
+
 <script>
   
   const modal = document.getElementById("videoModal");
