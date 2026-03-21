@@ -2004,3 +2004,48 @@ table.fx tbody tr:nth-child(even) td { background: rgba(48,130,255,0.02); }
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* Core tooltip CSS */
+.tip {
+  position: relative;
+}
+
+.tip .bubble {
+  position: absolute;
+  background: #1e1e1e;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+
+  /* hidden by default */
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+
+  /* position: top */
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+}
+
+/* show on hover */
+.tip:hover .bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  white-space: normal;  /* was: nowrap */
+  max-width: 700px;     /* wraps at this width */
+  line-height: 1.4;
+}
+
+/* arrow */
+.tip .bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1e1e1e;
+}
