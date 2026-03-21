@@ -2020,23 +2020,28 @@ table.fx tbody tr:nth-child(even) td { background: rgba(48,130,255,0.02); }
   white-space: nowrap;
   pointer-events: none;
 
+  width: 700px; 
+
   /* hidden by default */
   opacity: 0;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  visibility: hidden;                        /* add this */
+  transition: opacity 0.15s ease,
+              visibility 0.15s ease,         /* add this */
+              transform 0.15s ease;
 
   /* position: top */
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(4px);
+
+  white-space: normal;  /* was: nowrap */ 
+  line-height: 1.4;
 }
 
 /* show on hover */
 .tip:hover .bubble {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  white-space: normal;  /* was: nowrap */
-  max-width: 700px;     /* wraps at this width */
-  line-height: 1.4;
+  visibility: visible;      
 }
 
 /* arrow */
