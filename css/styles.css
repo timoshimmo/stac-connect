@@ -2008,6 +2008,7 @@ table.fx tbody tr:nth-child(even) td { background: rgba(48,130,255,0.02); }
 /* Core tooltip CSS */
 .tip {
   position: relative;
+  cursor: pointer;
 }
 
 .tip .bubble {
@@ -2019,7 +2020,6 @@ table.fx tbody tr:nth-child(even) td { background: rgba(48,130,255,0.02); }
   border-radius: 6px;
   white-space: nowrap;
   pointer-events: none;
-
   width: 700px; 
 
   /* hidden by default */
