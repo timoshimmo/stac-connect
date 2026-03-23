@@ -95,7 +95,9 @@
             <button class="dropbtn" onclick="resourceTools()">
               RESOURCES & TOOLS
             </button>
-             <div class="dropdown-grid-sm">
+             <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid-sm">
                   <div class="dropdown-column">
                     <h4>References</h4>
                     <a href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK/SitePages/Cyber-Security-Learning-Portal.aspx?e=4%3Af7609e54cd494c1f83cc98ecfd2c90b4&web=1&sharingv2=true&fromShare=true&at=9&CID=2a755509-ba2e-4ebc-b248-b9bec5f9ec2b">Cyber Security</a>
@@ -213,21 +215,22 @@
                         </div>
 
                         <div id="yearsFilters" class="filter-options" style="display: none;">
-                            <div class="filter-option">
-                                <input type="checkbox" id="year2024q4" value="2024-q4" onchange="applyFilters()">
-                                <label for="year2024q4">2024 Q4</label>
+                           <div class="filter-option">
+                                <input type="checkbox" id="year2026q4" value="2026-q4" onchange="applyFilters()">
+                                <label for="year2026q4">2026 Q4</label>
                             </div>
                             <div class="filter-option">
-                                <input type="checkbox" id="year2024q3" value="2024-q3" onchange="applyFilters()">
-                                <label for="year2024q3">2024 Q3</label>
+                                <input type="checkbox" id="year2026q3" value="2026-q3" onchange="applyFilters()">
+                                <label for="year2026q3">2026 Q3</label>
                             </div>
                             <div class="filter-option">
-                                <input type="checkbox" id="year2024q2" value="2024-q2" onchange="applyFilters()">
-                                <label for="year2024q2">2024 Q2</label>
+                                <input type="checkbox" id="year2026q2" value="2026-q2" onchange="applyFilters()">
+                                <label for="year2026q2">2026 Q2</label>
                             </div>
+                            
                             <div class="filter-option">
-                                <input type="checkbox" id="year2024q1" value="2024-q1" onchange="applyFilters()">
-                                <label for="year2024q1">2024 Q1</label>
+                                <input type="checkbox" id="year2026q1" value="2026-q1" onchange="applyFilters()">
+                                <label for="year2026q1">2026 Q1</label>
                             </div>
                         </div>
 
@@ -239,11 +242,12 @@
                     </div>
                 </div>
                 <!-- Q4 2024 Section -->
+                 <!--
                 <div class="quarter-header">
-                    <h3>Published 2024 Q4</h3>
+                    <h3>Q4 2026</h3>
                 </div>
                 
-                <div class="update-row" data-id="1" data-category="travel,procedure" data-location="nigeria,global" data-year="2024-q4" onclick="showDetail(1)">
+                <div class="update-row" data-id="1" data-category="travel,procedure" data-location="nigeria,global" data-year="2026-q4" onclick="showDetail(1)">
                     <div class="update-content">
                         <div class="update-date">12 December 2024</div>
                         <div class="update-title">Travel booking routines</div>
@@ -256,13 +260,15 @@
                         <img src="img/img_travel_news1.jpg" alt="Travel illustration">
                     </div>
                 </div>
+            -->
 
                 <!-- Q3 2024 Section -->
+                 <!--
                 <div class="quarter-header">
-                    <h3>Published 2024 Q3</h3>
+                    <h3>Q3 2026</h3>
                 </div>
                 
-                <div class="update-row" data-id="2" data-category="travel,procedure" data-location="nigeria,global" data-year="2024-q3" onclick="showDetail(2)">
+                <div class="update-row" data-id="2" data-category="travel,procedure" data-location="nigeria,global" data-year="2026-q3" onclick="showDetail(2)">
                     <div class="update-content">
                         <div class="update-date">20 September 2024</div>
                         <div class="update-title">Travel booking – new procedure</div>
@@ -275,9 +281,10 @@
                         <img src="img/img_travel_news2.jpg" alt="Travel illustration">
                     </div>
                 </div>
+            
 
-                <!-- Additional example row -->
-                <div class="update-row" data-id="3" data-category="travel,policy" data-location="nigeria,global" data-year="2024-q3" onclick="showDetail(3)">
+                
+                <div class="update-row" data-id="3" data-category="travel,policy" data-location="nigeria" data-year="2026-q3" onclick="showDetail(3)">
                     <div class="update-content">
                         <div class="update-date">15 September 2024</div>
                         <div class="update-title">Corporate travel policy updates</div>
@@ -290,13 +297,15 @@
                          <img src="img/img_travel_news3.jpg" alt="Travel illustration">
                     </div>
                 </div>
+                -->
 
                 <!-- Q2 2024 Section -->
+                <!-- 
                 <div class="quarter-header">
-                    <h3>Published 2024 Q2</h3>
+                    <h3>Q2 2026</h3>
                 </div>
                 
-                <div class="update-row" data-id="4" data-category="markets" data-location="global" data-year="2024-q2">
+                <div class="update-row" data-id="4" data-category="markets" data-location="global" data-year="2026-q2">
                     <div class="update-content">
                         <div class="update-date">2 August 2024</div>
                         <div class="update-title">Brent Crude Oil Price Crash</div>
@@ -308,8 +317,8 @@
                    
                 </div>
 
-                <!-- Additional example row -->
-                <div class="update-row" data-id="5" data-category="markets" data-location="global" data-year="2024-q2">
+                
+                <div class="update-row" data-id="5" data-category="markets" data-location="global" data-year="2026-q2">
                     <div class="update-content">
                         <div class="update-date">18 June 2024</div>
                         <div class="update-title">OPEC+ Agree on Daily Output</div>
@@ -320,52 +329,118 @@
                     </div>
                     
                 </div>
+            -->
 
-                <!-- Q1 2024 Section -->
+                <!-- Q1 Section -->
                 <div class="quarter-header">
-                    <h3>Published 2024 Q1</h3>
+                    <h3>Q1 2026</h3>
                 </div>
+
+                <!-- Additional example row -->
+                <a href="https://thenationonlineng.net/oil-exports-nigeria-others-to-benefit-from-rising-crude-oil-prices-says-imf/" class="update-row" data-id="1" data-category="markets" data-location="nigeria" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">23 March 2026</div>
+                        <div class="update-title">Oil exports: Nigeria, others to benefit from rising crude oil prices, says IMF</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           The International Monetary Fund (IMF) at the weekend, predicted significant recovery in Nigeria’s Balance of Payment (BoP) following ongoing surge in crude oil prices ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/International_Monetary_Fund_logo.png" alt="Oil exports: Nigeria, others to benefit from rising crude oil prices">
+                    </div>
+                </a>
+
+                <!-- Additional example row -->
+                <a href="https://hallmarknews.com/opl-245-nigerias-oil-sector-set-for-major-leap/" class="update-row" data-id="2" data-category="markets" data-location="nigeria" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">23 March 2026</div>
+                        <div class="update-title">OPL 245: Nigeria’s oil sector set for major leap</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           Exploration and production activities are about to commence at one of Nigeria’s biggest oil fields, OPL 245 popularly known around the world as Malabu ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/opl24-malabu-news.jpeg" alt="OPL 24 Malabu">
+                    </div>
+                </a>
+
+                <a href="https://www.businesswire.com/news/home/20260306732402/en/SingaporeBased-WPH-Digital-Among-the-First-AIFocused-Digital-Companies-in-Asia-to-Achieve-ISOIEC-420012023-Setting-a-Global-First-for-Oil-Gas-AI-Governance" class="update-row" data-id="3" data-category="policy,procedure" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">23 March 2026</div>
+                        <div class="update-title">Singapore‑Based WPH Digital Among the First AI‑Focused Digital Companies in Asia to Achieve ISO/IEC 42001:2023, Setting a Global First for Oil & Gas AI Governance</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           SINGAPORE--(BUSINESS WIRE)--WPH Digital PTE. LTD., a Singapore-based AI and Digital Service Provider, announced today that it has become one of the first AI and Digital Service Providers ...
+                        </div>
+                    </div>
+                    <!--
+                    <div class="update-image">
+                         <img src="img/ship_oil_news.jpg" alt="U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise">
+                    </div>
+                -->
+                </a>
+
+                <a href="https://www.reuters.com/business/energy/oil-prices-rise-after-us-iran-threaten-hit-energy-targets-middle-east-2026-03-22/" class="update-row" data-id="4" data-category="markets" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">22 March 2026</div>
+                        <div class="update-title">Oil prices plunge 10% on US-Iran talks to resolve the hostilities in the Middle East</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           NEW YORK, March 23 (Reuters) - Oil prices dropped about 10% to a one-week low on Monday after U.S. President Donald Trump said ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/ship_oil_news.jpg" alt="U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise">
+                    </div>
+                </a>
+
+                <a href="https://www.worldoil.com/news/2026/3/20/brazil-mexico-weigh-petrobras-pemex-tie-up-for-offshore-oil-exploration/" class="update-row" data-id="5" data-category="markets" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">22 March 2026</div>
+                        <div class="update-title">U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           (Bloomberg) - U.S. officials signaled an intensifying military campaign against Iran focused on securing access to the Strait of Hormuz ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/strait-of-hormuz-close-up.jpg" alt="U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise">
+                    </div>
+                </a>
+
+                <a href="https://www.worldoil.com/news/2026/3/20/brazil-mexico-weigh-petrobras-pemex-tie-up-for-offshore-oil-exploration/" class="update-row" data-id="6" data-category="markets" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">20 March 2026</div>
+                        <div class="update-title">Brazil, Mexico weigh Petrobras–Pemex tie-up for offshore oil exploration</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           (Bloomberg) – Brazil President Luiz Inacio Lula da Silva said he spoke with Mexican leader Claudia Sheinbaum about a possible exploration ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/newsletter-petrobras-drillship.jpg" alt="Brazil, Mexico weigh Petrobras–Pemex tie-up for offshore oil exploration">
+                    </div>
+                </a>
                 
-                <div class="update-row" data-id="6" data-category="markets,policy" data-location="nigeria" data-year="2024-q1">
+                <a href="https://businessday.ng/energy/oilandgas/article/nigerias-oil-output-drops-for-seven-consecutive-months-to-1-46m-bpd/#google_vignette" class="update-row" data-id="7" data-category="markets" data-location="nigeria" data-year="2026-q1">
                     <div class="update-content">
-                        <div class="update-date">25 April 2024</div>
-                        <div class="update-title">NNPC Shareholders Meeting</div>
+                        <div class="update-date">11 March 2026</div>
+                        <div class="update-title">Nigeria’s oil output drops for seven consecutive months to 1.46m bpd</div>
                         <div class="update-tags">- Nigeria</div>
                         <div class="update-description">
-                            Good News, you can now book your own travels! This is applicable for employees in Nigeria &amp;...
+                           Nigeria has missed its oil production quota for the seventh consecutive month, with crude output falling to 1.46 million barrels per day (bpd) in January 2026 ...
                         </div>
                     </div>
-                    
-                </div>
-
-                <!-- Additional example row -->
-                <div class="update-row" data-id="7" data-category="procedure,policy" data-location="nigeria" data-year="2024-q1">
-                    <div class="update-content">
-                        <div class="update-date">10 April 2024</div>
-                        <div class="update-title">PENGASSEN meet FG</div>
-                        <div class="update-tags">- Nigeria</div>
-                        <div class="update-description">
-                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
-                        </div>
+                    <div class="update-image">
+                         <img src="img/crude-oil-prices.png" alt="Crude Oil Prices">
                     </div>
-                   
-                </div>
-
-                <!-- Additional example row -->
-                <div class="update-row" data-id="8" data-category="markets,policy" data-location="nigeria,global" data-year="2024-q1">
-                    <div class="update-content">
-                        <div class="update-date">20 February 2024</div>
-                        <div class="update-title">Oando and Seplat on the rise</div>
-                        <div class="update-tags">- Nigeria</div>
-                        <div class="update-description">
-                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
-                        </div>
-                    </div>
-                   
-                </div>
+                </a>
             </div>
 
             <!-- Detail Page 1 -->
+            <!--
             <div id="detail1" class="detail-page">
                 <a class="back-button" onclick="showList()">Back to news list</a>
                 
@@ -403,8 +478,9 @@
                     <p>Thank you for your cooperation in following these procedures. These guidelines help us manage travel costs effectively while ensuring your safety and comfort during business trips.</p>
                 </div>
             </div>
-
+        -->
             <!-- Detail Page 2 -->
+             <!--
             <div id="detail2" class="detail-page">
                 <a class="back-button" onclick="showList()">Back to news list</a>
                 
@@ -445,8 +521,9 @@
                     <p>We're confident this new system will enhance your travel booking experience. Please don't hesitate to reach out to the support team if you need any assistance during the transition.</p>
                 </div>
             </div>
-
+        -->
             <!-- Detail Page 3 -->
+             <!--
             <div id="detail3" class="detail-page">
                 <a class="back-button" onclick="showList()">Back to news list</a>
                 
@@ -488,6 +565,7 @@
                     <p>These policy updates will take effect on October 1, 2022. Please review the complete policy document available on the company portal and contact HR with any questions or concerns.</p>
                 </div>
             </div>
+        -->
 
         </div>
     </div>
