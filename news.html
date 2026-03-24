@@ -188,6 +188,7 @@
                             <div class="filter-tab" onclick="showFilterTab('years')">Years ✚</div>
                         </div>
 
+                        <!--
                         <div id="categoryFilters" class="filter-options">
                             <div class="filter-option">
                                 <input type="checkbox" id="policy" value="policy" onchange="applyFilters()">
@@ -202,8 +203,9 @@
                                 <label for="markets">Global Market</label>
                             </div>
                         </div>
+                    -->
 
-                        <div id="locationFilters" class="filter-options" style="display: none;">
+                        <div id="locationFilters" class="filter-options">
                             <div class="filter-option">
                                 <input type="checkbox" id="nigeria" value="nigeria" onchange="applyFilters()">
                                 <label for="nigeria">Nigeria</label>
@@ -684,7 +686,7 @@ window.onclick = function(e) {
 </script>
 
 <script>
-        let currentTab = 'category';
+        let currentTab = 'location';
 
           function showDetail(id) {
             document.getElementById('listPage').classList.add('hidden');
@@ -704,14 +706,17 @@ window.onclick = function(e) {
             currentTab = tab;
             
             // Hide all filter options
-            document.getElementById('categoryFilters').style.display = 'none';
+            /* document.getElementById('categoryFilters').style.display = 'none'; */
             document.getElementById('locationFilters').style.display = 'none';
             document.getElementById('yearsFilters').style.display = 'none';
             
             // Show selected tab
+            /*
             if (tab === 'category') {
                 document.getElementById('categoryFilters').style.display = 'flex';
-            } else if (tab === 'location') {
+            }
+            */ 
+            if (tab === 'location') {
                 document.getElementById('locationFilters').style.display = 'flex';
             } else if (tab === 'years') {
                 document.getElementById('yearsFilters').style.display = 'flex';
@@ -737,14 +742,14 @@ window.onclick = function(e) {
         }
 
         function applyFilters() {
-            const selectedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value);
+            /* const selectedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value); */
             const selectedLocations = Array.from(document.querySelectorAll('#locationFilters input:checked')).map(cb => cb.value);
             const selectedYears = Array.from(document.querySelectorAll('#yearsFilters input:checked')).map(cb => cb.value);
             
             const rows = document.querySelectorAll('.update-row');
             
             rows.forEach(row => {
-                const rowCategories = row.dataset.category.split(',');
+               /* const rowCategories = row.dataset.category.split(','); */
                 const rowLocations = row.dataset.location.split(',');
                 const rowYear = row.dataset.year;
                 
