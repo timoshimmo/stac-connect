@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <title>Control Work Procedures</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+</head>
+<body>
+
+    <!-- Top Gradient Nav topbar -->
+   <header class="site-header">
+    <div class="topbar-inner">
+      <div class="logo" aria-label="STAC Connect">
+         <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="whatsNew()">
+            WHAT'S NEW
+          </button>
+          <div class="dropdown-content" id="whatsNewMenu">
+            <h2>What's New</h2>
+            <div class="dropdown-grid">
+               <div class="dropdown-column">
+                  <h4>Global &amp; Nigeria News</h4>
+                  <a href="news">Global</a>
+                  <a href="news">Nigeria</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>STAC Community</h4>
+                  <a href="https://engage.cloud.microsoft/">Viva Engage</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>More News</h4>
+                  <a href="https://stacmarine.com/" target="_blank">Company Website</a>
+                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">STAC LinkedIn</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">
+              WHAT WE DO
+            </button>
+            <div class="dropdown-content" id="whatWeDoMenu">
+              <h2>What We Do</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Working at STAC – Our Safety Culture</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:p:/s/HumanResources/IQCmUVjMsYxVRZhkOJQt4U17AcXOuDbUwXJXMmYeqOcM4g4?e=tVyCv4">Organization Charts</a>
+                    <a href="zero-harm">Zero Harm</a>
+                    <a href="#">Cultural Programme</a>
+                    <a href="employee-resources">Employee Resources</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Company Standards and Sustainability</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQBH7dukjfrKR7dryvRsr96UAVwdJ-pLndd4TsfZ-DX-q7Q?isSPOFile=1&xsdata=MDV8MDJ8fDA0MTcyN2E2ODUxMDQ3MGEzYzRkMDhkZTZhZWQ2NTA4fGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQ5NjgwMjEwNjl8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFk1TkRVMU5nPT18OTUzZmZjYzI3YmExNDExODNjNGQwOGRlNmFlZDY1MDh8YWJhMWVhNzg0ZDNlNDVjMTlkZTQ0MmZiYjk2N2IwMzk%3D&sdata=RFFLMHBtVU51TTBkSzZuTi91WlNodGJEdXFiblE2YmZrdXlBcG1rVFkybz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Corporate Governance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQAe6RN2iulrQLzt-B60DVoQAWT3Z0_DLHtyglI1kDPU954?isSPOFile=1&xsdata=MDV8MDJ8fDU5MjczMzIyNDlmNjQzMzkyMGI0MDhkZTZhZWQzYjhhfGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQyNzE4OTA2MTJ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFl5TlRJNU13PT18MGM1MWVlOTlkN2YyNGVjNzIwYjQwOGRlNmFlZDNiOGF8OGQ0YjhkZmJmNjI3NGEwNGJiMzRlYWM0YzIzMjdlOTk%3D&sdata=Mnh4SlhmM285SU1kMEZJVys1VE1YSTRVU3hIYTYrYXBlc1pUV3VjVmJKaz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Ethics & Business Conduct</a>
+                    <a href="#">Data Protection</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQCnHfZL33p2Ro1tKpYycMg0AXysqEGfS0-hJrupQ4A_utU?isSPOFile=1&xsdata=MDV8MDJ8fDQzNmM4ZWE1NGE0YjRmYjU1NGQ0MDhkZTZhZWQwMDZifGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjMyODAwMTY1OTZ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFV5TlRVMU9RPT18NTgwN2JkNmQ1ZTc2NGU4ODU0ZDQwOGRlNmFlZDAwNmJ8Yjk1MDc1MmViYTMyNDA2NThkYTVkMGNjYzI4ZTkxNDQ%3D&sdata=Vm1VTzN5ZUJVcWhGc01EQlByMXkvNGY5TWdSbEhFeDE4YUFBa3VwQTZyWT0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Commitment to ESG Principles</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="manageSystem()">
+              MANAGEMENT SYSTEM
+            </button>
+            <div class="dropdown-content" id="manageSystemMenu">
+              <h2>Management System</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Management System Onshore</h4>
+                    <a href="#">Compliance</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HR</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Omega 365</a>
+                    <a href="#">Operations & Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Management System Offshore</h4>
+                    <a href="#">Mayo ABO</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="resourceTools()">
+              RESOURCES & TOOLS
+            </button>
+            <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid-sm">
+                  <div class="dropdown-column">
+                    <h4>References</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK/SitePages/Cyber-Security-Learning-Portal.aspx?e=4%3Af7609e54cd494c1f83cc98ecfd2c90b4&web=1&sharingv2=true&fromShare=true&at=9&CID=2a755509-ba2e-4ebc-b248-b9bec5f9ec2b">Cyber Security</a>
+                    <a href="#">E-Learning</a>
+                    <a href="#">Travel Advisory</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:f:/s/IT/IgDlF24jEQmgT4-_zs-BP0K0AQzMcSBILPAVLkPZC39-c1w">IT Guides (A-Z)</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>HSE</h4>
+                    <a href="control-work-procedure">Control of Work Procedure</a>
+                    <a href="standard-operating-procedures">SOPs</a>
+                    <a href="emergency-preparedness-procedure">Emergency Preparedness Procedures</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:p:/r/sites/HSE30/_layouts/15/Doc.aspx?sourcedoc=%7B5952BABF-75E9-435C-91D1-43E145067968%7D&file=SEPTEMBER%202025%20HSE%20MEETING%20%26%20PERSONNEL%20ENGAGEMENT.pptx&action=edit&mobileredirect=true">Monthly Safety Meeting</a>
+                    <a href="corporate-policies">Corporate Policies</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>BI</h4>
+                    <a href="#">Daily Offshore Report</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Business Applications</h4>
+                    <!-- <a href="https://stacmarineoffshore.sharepoint.com/sites/IT/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=GR8jC3&CID=0f331821%2Df88f%2D4f5c%2Dad41%2D37872df106f0&FolderCTID=0x012000DEE519753BDE714D96E1DECBF6ADEDD4&id=%2Fsites%2FIT%2FShared%20Documents%2FIT%20Guides">IT Guides (A-Z)</a> -->
+                    <a href="#">Action Tracker</a>
+                    <a href="https://workspace.stacmarine.com/portal/myworkspace">eXo</a>
+                    <a href="https://stacmarine-webapp.vercel.app/#/documents">DocuSeal</a>
+                    <a href="https://www.erpodoostacmarine.com/odoo">Odoo</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>SharePoint Sites</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent">Compliance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/FinanceDepartment">Finance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HSE30">HSE</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources">HR</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/IT">IT</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/PROJECTS">Operations and Maintenance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/SupplyChain">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Mayo ABO</h4>
+                      <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Fstacmarineoffshore%2Esharepoint%2Ecom%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FDocOrgABO%3Fcsf%3D1%26web%3D1%26e%3DSUA2Nq%26CID%3D7c445a38%2D227f%2D4150%2Db8ef%2D27e2b9eb7e77&correlation=cbc6f2a1%2Df001%2Df000%2D5bef%2D9afdb95eb5d1&Type=item&name=9355e69b%2Dbc35%2D4901%2Db4a0%2Da461d07ef00b&listItemId=19826&listItemUniqueId=93591f1e%2D8d38%2D49b7%2D981f%2D701d9da78b91">DocOrgABO</a>
+                      <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx">Mayo ABO Operations & Maintenance</a>
+                      <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx?csf=1&web=1&e=cc2Ima&CID=00690e88%2Daa78%2D4ad7%2D9f50%2Dd856368cc8e3&FolderCTID=0x0120003C5300E541C2B942B44E3DAF654E2069&id=%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FProject%204266">Project 4266</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <!-- <a href="#news">WHERE WE ARE</a> -->
+       
+      </div>
+     
+      <div class="search">
+         <form action="https://google.com/search" method="get" class="search-box">
+          <!-- 'q' is the standard name for search queries -->
+          <input type="text" id="site-search" name="q" placeholder="Search Intranet" />
+          <!-- This hidden input restricts the search to your domain -->
+          <input type="hidden" name="sitesearch" value="connect.stacmarine.com | stacmarineoffshore.sharepoint.com" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Content -->
+  <div class="container-main">
+    <!-- Main content -->
+    <div class="main-content">
+      <h2>Recruitment Process</h2>
+      <div class="section-divider"></div>
+      <article class="main-content-card">
+        <h3 class="section-subtitle">Purpose:</h3>
+        <p>
+          The purpose of this procedure is to ensure that recruitment is conducted in a consistent manner, and to ensure selection is fair, equitable and merit based.
+        </p>
+        <h3 class="section-subtitle">Scope:</h3>
+        <p>
+          This procedure covers all recruitment processes and actions at STAC Marine.
+        </p>
+        <div class="section-divider"></div>
+        <h2 style="text-align: left;">Process Activities</h2>
+        <h3 class="section-subtitle">1. Identify need for recruitment</h3>
+        <ul>
+          <li>a. All recruitment needs must be verified against the agreed headcount and manpower budgets. It shall be determined whether the request is for replacement or additional headcount.</li>
+          <li>b. The decision to employ ALL categories of staff must be approved by the head of
+corporate services in alignment with the requesting line manager, and the selection
+authorized by the Managing Director/ Chief Executive Officer (MD/CEO) or anyone
+appropriately delegated.</li>
+          <li>c. Organizational structure shall be reviewed to map if the position shall be recruited where
+the position shall be located and whether it is a permanent or a temporary / consultant
+position.</li>
+         <li>d. Line Manager shall ensure that a job description is in place and reviewed by corporate
+services department for relevance prior to initiation of the recruitment.</li>
+         <li>e. The recruitment Requisition form (RRF) shall be submitted by Line Manager and must be
+dully approved prior to any initiation of recruitment activities (for budgeted and additional
+headcount).</li>
+          <li>f. The RRF shall be submitted by the Line Manager and must be approved prior to any
+extensions of existing temporary contracts including that of direct contract employees and
+third-party contract employees (consultants).</li>
+          <li>g. Human Resources is responsible to ensure that the recruitment process is followed.</li>
+        </ul>
+        <div class="section-divider"></div>
+
+        <h3 class="section-subtitle">2. Sources</h3>
+        <p>
+        Involvement from recruitment agencies / Consultancy companies may be considered. Whether
+or not to outsource is decided by corporate services department. HR is responsible for quality
+assurance of the recruitment process.
+        </p>
+        <p><strong>· Internal: </strong>Unless otherwise informed by a change in process, direction or verified absence
+of required skills, internal sourcing shall be given priority over external recruitment</p>
+<br />
+ <p><strong>· External: </strong>Where there is absence of qualified candidates within the internal skill pool, the
+company will search externally for candidates with the right knowledge, skill, and attitude
+to fill a vacant position. This process would be completed through the below:</p>
+        <ul>
+          <li>a. Stac Marine would directly employ qualified candidates externally.</li>
+          <li>b. <strong>Recruitment Agencies: </strong> when required recruitment agencies may be selected based on their track record and specialty areas. Human Resources is responsible for ensuring that agreements are in place with preferred Recruitment Agencies prior to recruitment.</li>
+          <li>c. <strong>Consultancy Companies: </strong> HR is responsible for ensuring that standard consultancy agreements are established and maintained with dedicated consultancy companies for provision of temporary employees / consultants.</li>
+        </ul>
+        <p>If applicable, Human Resources shall send the relevant job description to the Recruitment Agencies or Consultancy Company to initiate the search for suitable candidates.</p>
+        <div class="section-divider"></div>
+
+         <h3 class="section-subtitle">3. Announcement</h3>
+        <p>
+       STAC Marine is an equal opportunity employer and welcomes applications from diverse
+candidates. We are committed to creating a workplace that is inclusive and respectful of all
+employees.
+        </p>
+        <ul>
+          <li>a. Announcements of vacant and approved positions shall be managed by Human Resources Personnel Responsible.</li>
+          <li>b. The announcement shall include detailed specification of tasks and responsibilities, competence requirements, contact person and closing date for applications.</li>
+          <li>c. Vacancies shall be announced on the intranet and company website where applicable.</li>
+          <li>d. The use of external recruitment agencies and / or additional advertisement should be
+considered in accordance with common practice, i.e. web-based recruitment portals,
+newspapers, educational institutions etc. Budget to be considered and activities approved
+by the management prior to initiation.</li>
+        </ul>
+       
+        <div class="section-divider"></div>
+        <h3 class="section-subtitle">4. Handling of applications – CV review</h3>
+        <ul>
+          <li>a. Application and updated curriculum vitae shall be submitted.</li>
+          <li>b. Candidates shall be evaluated towards job description and corresponding qualification requirements.</li>
+          <li>c. Corporate services department is responsible for candidates’ screening and shortlisting.</li>
+          <li>d. HR shall prepare a candidate report / nomination list of the most qualified applicants to the Line Manager</li>
+          <li>e. The line manager will review the candidate report and select the candidates for interview.</li>
+          <li>f. HR is responsible for coordinating feedback and information to candidates. HR shall:</li>
+          <ol>
+            <li>Provide feedback to all unqualified candidates.</li>
+            <li>Invite candidates eligible for interview.</li>
+          </ol>
+          <li>g. Human Resources shall instruct the candidates to bring the following documents to the
+interview for verification:</li>
+          <ol>
+            <li>Updated curriculum vitae</li>
+            <li>Certificates/Diplomas or other equivalent proof of completion of education.</li>
+          </ol>
+        </ul>
+        <div class="section-divider"></div>
+        <h3 class="section-subtitle">5. Interview</h3>
+        <ul>
+          <li>a. HR will arrange and facilitate the interviews together with the Line Manager.</li>
+          <li>b. In the spirit of full disclosure, any member of the Panel who already knows a candidate
+must declare it. The Human Resource Responsible must then decide whether the
+panelist will be retained or excluded from the interviewing team.
+          </li>
+          <li>c. The interview shall consist of the following elements:</li>
+          <ol>
+            <li>Short introduction of the Company.</li>
+            <li>Information about the position.</li>
+            <li>Evaluation of candidate work history, professional capability, job motivation and company fit.</li>
+            <li>Review of documents provided by the candidate.</li>
+          </ol>
+          <li>d. Telephone interview: if necessary, the first interview may be conducted via video or telephone.</li>
+          <li>e. Follow up interview: A second and or third interview (where applicable) shall be arranged for all personnel.</li>
+          <li>f. <u>Interview Report form</u> shall be completed and filed after each interview</li>
+          <li>g. Candidates shall be ranked upon completion of the interviews:</li>
+          <ol>
+            <li><u>Unqualified candidates</u> shall be given feedback by HR</li>
+            <li><u>Unsuccessful candidates</u> with potential for other/future roles shall be kept on file and informed accordingly.</li>
+            <li><u>Successful candidates:</u> HR shall progress employment process.</li>
+          </ol>
+          <li>h. HR shall discuss and get approval from management for meal and transportation support.</li>
+          <li>i. Involvement in the interview process shall be as follows:</li>
+        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Job Level</th>
+              <th>First Interview</th>
+              <th>Second Interview</th>
+              <th>Third Interview</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Junior Staff</td>
+              <td>Panel interview with HR and Line Manager</td>
+              <td>N/A</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Senior Staff</td>
+              <td>Telephone interview or email communication with HR rep.</td>
+              <td>2nd interview with HR and line manager/subject matter expert/another dept member as may be agreed.</td>
+              <td>Final interview with head of department and HR.</td>
+            </tr>
+            <tr>
+              <td>Middle/Snr. Management</td>
+              <td>Telephone interview or email communication with HR rep.</td>
+              <td>2nd interview with HR and HoD/subject matter expert/another dept member as may be agreed</td>
+              <td>Final interview with the HR/MD/CEO</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="section-divider"></div>
+       <h3 class="section-subtitle">6. Verification of employment (references) and documentation</h3>
+        <ul>
+          <li>a. Human Resource shall check at least one reference from the last employer before confirmation
+of employment. <u>Reference check form</u> shall be completed.</li>
+          <ol>
+            <li>References from friends and acquaintances shall not be taken into consideration.</li>
+            <li>Internal references shall not be taken into consideration.</li>
+            <li>Reference checks for consultants shall be conducted by the Consultancy Company.</li>
+            <li>If reference checks may not be conducted due to legislation and other reasons, character
+reference or other means of verifications will be used.</li>
+            <li>All formal education must be documented and randomly checked for authenticity (refer
+to employment guideline clause 2.0) before an offer is made.</li>
+          </ol>
+        </ul>
+        <div class="section-divider"></div>
+        <h3 class="section-subtitle">7. Verification of Age</h3>
+        <p>
+      During the recruitment process, all candidates shall provide proof of age, such as a birth
+certificate or age declaration affidavit, to ensure compliance with the Nigerian Labour Act.
+        </p>
+        <div class="section-divider"></div>
+
+        <h3 class="section-subtitle">8. Salary benchmarking</h3>
+        <p>
+      Human Resource shall conduct internal / external salary comparisons against other employees in
+a similar role and comparable background, to identify the correct salary band.
+<br />
+The recommendation shall be verified and approved by head of corporate services and chief
+financial officer prior to the offer being made.
+        </p>
+        <div class="section-divider"></div>
+
+        <h3 class="section-subtitle">9. Employment contract</h3>
+        <p>• Permanent Employees – Employment Contract</p>
+         <ul>
+            <li>a. When the candidate has been identified, HR shall prepare the employment contract.</li>
+            <li>b. Terms and conditions shall be in accordance with local practice in the country of employment.</li>
+            <li>c. Two signed contracts shall be presented to the candidate for signature and one copy returned to the corporate services department.</li>
+            <li>d. Upon acceptance of offer, the employment process shall be initiated.</li>
+            <li>e. If candidate is employed, all documents shall be transferred to the employee file.</li>
+          </ul>
+          <p>• Consultants – Frame agreement/Work order</p>
+          <ul>
+            <li>a. Terms and conditions are regulated in the specific frame agreement or work order issued by HR and shall be in accordance with local practice and regulatory requirement.</li>
+            <li>b. HR shall send the signed frame agreement to the consultancy company together with the Confidentiality agreement.</li>
+            <li>c. The consultancy company shall return the same documents – duly completed and signed – to HR for filing.</li>
+          </ul>
+
+           <div class="section-divider"></div>
+           <h3 class="section-subtitle">10. Recruitment of Ex-Staff</h3>
+           <p>STAC Marine may re-employ its former employees. However, this will be at the discretion of
+Senior Management. The following categories of ex-staff may be considered eligible for re-
+employment:</p>
+          <ol>
+            <li>Ex-staff who were on employment with the company for at least three (3) years before disengagement</li>
+            <li>Ex-staff who demonstrated high potential and performance during previous employment with the company</li>
+            <li>Ex-staff who resigned voluntarily for reasons other than fraud, irregularities, and other misdemeanors</li>
+            <li>Ex-staff who went on approved study leave or leave of absence provided their qualifications and expertise are suitable for the vacant positions.</li>
+          </ol>
+          <div class="section-divider"></div>
+
+        <h3 class="section-subtitle">11. Employment of Relatives</h3>
+        <p>STAC Marine prides itself as being an equal opportunity employer. However, the company is
+obliged to protect its interests and the continued success of the business in the markets in
+which it operates. It is also important to ensure that each individual staff is given a fair
+opportunity to develop and grow with the company without any perceived or actual fear of
+being disadvantaged because of their personal history.
+Consequently, the employment of relative of the STAC employees, or those that they may be
+emotionally involved, within the same function in the company is discouraged. Particularly,
+instances where the employment of a potential candidate can create any of the circumstances
+below are to be avoided:
+<br />
+Situations where:
+</p>
+ <ol>
+            <li>Staff members could, in fact or in appearance, benefit or suffer because of the relationship,</li>
+            <li>Internal conflicts of interest or issues of confidentiality may arise, or</li>
+            <li>Real or perceived nepotism and/or favoritism could result.</li>
+          </ol>
+
+           <div class="section-divider"></div>
+
+        <h3 class="section-subtitle">12. Child Labour Policy</h3>
+        <p>
+      STAC Marine Offshore Limited is committed to complying with the Nigerian Labour Act, which
+prohibits the employment of children below the age of 16. We do not employ children below
+the minimum age of employment as specified by the laws of Nigeria. All candidates must
+provide proof of age, such as a birth certificate or age declaration affidavit, during the
+recruitment process.
+        </p>
+        <div class="section-divider"></div>
+
+        <h3 class="section-subtitle">13. Prevention of Forced Labour Policy</h3>
+        <p>
+     STAC Marine Offshore Limited is committed to preventing forced labour in all its operations. We
+do not tolerate forced labour, including slavery, servitude, and human trafficking. All employees
+are free to leave their employment or terminate their contract with reasonable notice, as
+specified in their employment contract.
+<br /><br />
+This policy is subject to other Company policies of STAC Marine Offshore Limited and shall be
+interpreted and applied in accordance with the provisions of the Nigeria Labour Act and any
+other applicable laws and regulations. In the event of any conflict or inconsistency between this
+policy and any other policy or law, the provisions of the Nigeria Labour Act and other applicable
+laws shall prevail.
+        </p>
+      </article>
+    </div>
+  </div>
+  <footer class="site-footer">
+        <div class="logo"><img src="img/stac_logo_new.jpg" height="50px"/></div>
+        <div class="quick-finder">
+            <h3>Quick Finder</h3>
+            <ul>
+                <li><a href="#">IT Support Information</a></li>
+                <li><a href="mailto:itsupport@stac-marine.com">IT Support email</a></li>
+                <li><a href="#">My settings</a></li>
+            </ul>
+        </div>
+        <div class="copyright">© 2025 STAC Marine Offshore. All Rights Reserved.</div>
+    </footer>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+ var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+    var manageSystemMenu = document.getElementById("manageSystemMenu");
+    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
+
+
+function whatsNew() {
+
+  if (whatWeDoMenu.classList.contains('show')) {
+    whatWeDoMenu.classList.remove('show');
+  }
+
+  if (manageSystemMenu.classList.contains('show')) {
+    manageSystemMenu.classList.remove('show');
+  }
+
+  if (resourceToolsMenu.classList.contains('show')) {
+    resourceToolsMenu.classList.remove('show');
+  }
+  document.getElementById("whatsNewMenu").classList.toggle("show");
+
+}
+
+function whatWeDo() {
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+    document.getElementById("whatWeDoMenu").classList.toggle("show");
+}
+
+function manageSystem() {
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+
+  document.getElementById("manageSystemMenu").classList.toggle("show");
+}
+
+function resourceTools() {
+
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+  document.getElementById("resourceToolsMenu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+
+    if (manageSystemMenu.classList.contains('show')) {
+      manageSystemMenu.classList.remove('show');
+    }
+
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+
+  }
+}
+</script>
+</body>
+</html>
