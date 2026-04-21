@@ -173,6 +173,7 @@
   
   <div class="announcement">
     <div class="slideshow-container">
+      <button class="ann-arrow ann-arrow-left" onclick="changeSlide(-1)">&#8249;</button>
       <div class="annSlides fade">
         <div class="annBody">
           <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
@@ -269,7 +270,7 @@
           </div>
         </div>
       </div>
-
+      <button class="ann-arrow ann-arrow-right" onclick="changeSlide(1)">&#8250;</button>
     </div>
   </div>
   <!-- Page Shell -->
@@ -967,12 +968,15 @@ function showSlides() {
 </script>
 
 <script>
-let slideIdx = 0;
+/*let slideIdx = 0;
+let autoSlideTimer = setTimeout(announcementSlides, 5000);
+
 announcementSlides();
 
 function announcementSlides() {
   let i;
   let slides = document.getElementsByClassName("annSlides");
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
@@ -981,8 +985,47 @@ function announcementSlides() {
   
   slides[slideIdx-1].style.display = "block";  
   
-  setTimeout(announcementSlides, 5000); // Change image every 2 seconds
+  autoSlideTimer();
+  //setTimeout(announcementSlides, 5000); // Change image every 2 seconds
 }
+
+function changeSlide(direction) {
+  clearTimeout(autoSlideTimer);
+  slideIdx += direction;
+  showSlide(slideIdx);
+  autoSlideTimer = setTimeout(autoSlide, 5000); // Resume auto-slide after 5s
+}
+  */
+
+  let slideIdx = 0;
+
+function showSlide(n) {
+  let slides = document.getElementsByClassName("annSlides");
+  if (n >= slides.length) { slideIdx = 0; }
+  if (n < 0) { slideIdx = slides.length - 1; }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIdx].style.display = "block";
+}
+
+function changeSlide(direction) {
+  clearTimeout(autoSlideTimer);
+  slideIdx += direction;
+  showSlide(slideIdx);
+  autoSlideTimer = setTimeout(autoSlide, 5000); // Resume auto-slide after 5s
+}
+
+function autoSlide() {
+  slideIdx++;
+  if (slideIdx >= document.getElementsByClassName("annSlides").length) { slideIdx = 0; }
+  showSlide(slideIdx);
+  autoSlideTimer = setTimeout(autoSlide, 5000);
+}
+
+let autoSlideTimer = setTimeout(autoSlide, 5000);
+showSlide(slideIdx);
+
 </script>
 
 <script>
@@ -992,7 +1035,7 @@ function announcementSlides() {
   const previewVideo = document.getElementById("previewVideo");
   
   document.querySelector('video').setAttribute("controlslist", "nodownload");
-document.querySelector('video').setAttribute("oncontextmenu", "return false;");
+  document.querySelector('video').setAttribute("oncontextmenu", "return false;");
 
   function openPopup() {
       modal.style.display = "block";
