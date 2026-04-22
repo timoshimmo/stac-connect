@@ -313,9 +313,7 @@
       background-repeat: no-repeat;
     }
 
-<<<<<<< HEAD
-=======
-    .hero-img-4 {
+    .spotlight-2 {
       position:absolute; 
       inset:0; 
        background: radial-gradient(1200px 300px at 50% 100%, rgba(0,0,0,.6), transparent 60%),
@@ -324,7 +322,6 @@
       background-repeat: no-repeat;
     }
 
->>>>>>> e1a827aca09ad051f20197f51f3d40c8befb886d
     .bw-watermark{position:absolute; right:14%; top:50%; transform:translateY(-50%); font-size:180px; font-weight:800; color:rgba(255,255,255,.6); letter-spacing:-6px}
     .hero-label{position:absolute; left:18px; bottom:18px; background:rgba(57, 188, 60,.9); color:#fff; padding:6px 10px; font-size:12px; border-radius:6px; letter-spacing:.3px}
     .hero-title{position:relative; z-index:1; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.35); width:90%; max-width:720px}
@@ -1625,16 +1622,14 @@ a.open-sign-styles:hover {
     object-fit: cover; 
 }
 
+
 .video-preview { position: relative; cursor: pointer; width: 100%; height: 100%;}
 .video-preview video { width: 100%; border-radius: 8px; }
-
-<<<<<<< HEAD
-=======
 
 .video-preview-link { position: relative; cursor: pointer; width: 100%; height: 100%; margin: 0 auto; display: flex; justify-content: center; }
 .video-preview-link video { width: 80%; border-radius: 8px; }
 
->>>>>>> e1a827aca09ad051f20197f51f3d40c8befb886d
+
 /* The Modal (Background) */
 .modal {
     display: none; 
