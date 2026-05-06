@@ -273,6 +273,7 @@
           </div>
         </div>
       </div>
+
 <!--
       <div class="annSlides fade">
         <div class="annBody">
@@ -291,6 +292,38 @@
       <button class="ann-arrow ann-arrow-right" onclick="changeSlide(1)">&#8250;</button>
     </div>
   </div>
+   <div class="quiz-top-bar" id="topBar">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L4 5v6c0 5.25 3.5 10.15 8 11.35C16.5 21.15 20 16.25 20 11V5l-8-3z"/>
+        </svg>
+      </div>
+
+      <span class="notification-badge">Action Required</span>
+
+      <div class="quiz-content">
+        <div class="title">Cybersecurity Awareness Training — 2026</div>
+        <div class="subtitle">All STAC Marine Offshore staff must complete this mandatory training on STAC Academy.</div>
+      </div>
+
+      <div class="quiz-right">
+        <div class="deadline">Deadline: 30 May 2026</div>
+
+        <a href="https://stacmarine-cybersecurity-quiz.vercel.app/" class="cta" style="background-color:#16a34a !important; background:#16a34a !important; color:#fff !important;">
+          Start Training
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5l9 7-9 7V5z"/>
+          </svg>
+        </a>
+
+        <button class="quiz-close-btn" onclick="document.getElementById('topBar').style.display='none'" aria-label="Dismiss">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
   <!-- Page Shell -->
   <main class="shell">
     <!-- Left rail -->
