@@ -1479,7 +1479,7 @@
 }
 
 .announcement-link {
-  font-size: 22px;
+  font-size: 19px;
   text-decoration: underline;
 }
 
@@ -2306,3 +2306,112 @@ table.fx tbody tr:nth-child(even) td { background: rgba(48,130,255,0.02); }
     width: 15px;
     height: 15px;
   }
+
+  /* ── Alert Card ── */
+
+  .alert-card {
+      border: 2px solid #e05252;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      background: #ffffff;
+    }
+
+    .alert-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .alert-icon {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: #e05252;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .alert-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #e05252;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .alert-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0 0 8px;
+    }
+
+    .alert-description {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      margin: 0 0 14px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid;
+    }
+
+    .tag-green {
+      background: #f1f8e9;
+      color: #2e7d32;
+      border-color: #c8e6c9;
+    }
+
+    .tag-blue {
+      background: #e8f4fd;
+      color: #1565c0;
+      border-color: #b3d9f7;
+    }
+
+    .btn-learn-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px;
+      background: #e05252;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      box-sizing: border-box;
+      transition: background 0.2s ease;
+    }
+
+    .btn-learn-more:hover {
+      background: #c94444;
+    }
+
+    .btn-learn-more svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
