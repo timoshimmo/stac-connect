@@ -1,30 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/x-icon" href="img/favicon.png">
-  <title>STACconnect</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <!-- Top Gradient Nav topbar -->
-  <header class="site-header">
-    <div class="topbar-inner">
-      <div class="logo" aria-label="STAC Connect">
-         <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
-      </div>
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn" onclick="whatsNew()">
-            WHAT'S NEW
-          </button>
-          <div class="dropdown-content" id="whatsNewMenu">
-            <h2>What's New</h2>
-            <div class="dropdown-grid">
-               <div class="dropdown-column">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <title>STACconnect</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Top Gradient Nav topbar -->
+    <header class="site-header">
+      <div class="topbar-inner">
+        <div class="logo" aria-label="STAC Connect">
+          <a href="/"><img src="img/stac_logo_new.jpg" height="45px" /></a>
+        </div>
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn" onclick="whatsNew()">WHAT'S NEW</button>
+            <div class="dropdown-content" id="whatsNewMenu">
+              <h2>What's New</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
                   <h4>Global &amp; Nigeria News</h4>
                   <a href="news">Global</a>
                   <a href="news">Nigeria</a>
@@ -35,43 +39,59 @@
                 </div>
                 <div class="dropdown-column">
                   <h4>More News</h4>
-                  <a href="https://stacmarine.com/" target="_blank">Company Website</a>
-                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">STAC LinkedIn</a>
+                  <a href="https://stacmarine.com/" target="_blank"
+                    >Company Website</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all"
+                    target="_blank"
+                    >STAC LinkedIn</a
+                  >
                 </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="dropdownDo">
-            <button class="dropbtn" onclick="whatWeDo()">
-              WHAT WE DO
-            </button>
+          <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">WHAT WE DO</button>
             <div class="dropdown-content" id="whatWeDoMenu">
               <h2>What We Do</h2>
               <div class="dropdown-grid">
                 <div class="dropdown-column">
-                    <h4>Working at STAC – Our Safety Culture</h4>
-                    <a href="https://stacmarineoffshore.sharepoint.com/:p:/s/HumanResources/IQCmUVjMsYxVRZhkOJQt4U17AcXOuDbUwXJXMmYeqOcM4g4?e=tVyCv4">Organization Charts</a>
-                    <a href="zero-harm">Zero Harm</a>
-                    <a href="#">Cultural Programme</a>
-                    <a href="employee-resources">Employee Resources</a>
-                  </div>
-                  <div class="dropdown-column">
-                    <h4>Company Standards and Sustainability</h4>
-                    <!--
+                  <h4>Working at STAC – Our Safety Culture</h4>
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/:p:/s/HumanResources/IQCmUVjMsYxVRZhkOJQt4U17AcXOuDbUwXJXMmYeqOcM4g4?e=tVyCv4"
+                    >Organization Charts</a
+                  >
+                  <a href="zero-harm">Zero Harm</a>
+                  <a href="#">Cultural Programme</a>
+                  <a href="employee-resources">Employee Resources</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Company Standards and Sustainability</h4>
+                  <!--
                      <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content%2FSTAC%5F%20Sustainability%20Policy%20Statement%2Edotx%2Epdf&parent=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1">Corporate Governance</a>
                     <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content%2FStac%20Marine%20Code%20of%20Conduct%2Epdf&parent=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1">Ethics & Business Conduct</a>
                     <a href="#">Data Protection</a>
                     <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content%2FStac%20Marine%20%20ESG%20Materiality%20Framework%2Epdf&parent=%2Fsites%2FComplianceandNigerianContent%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1">Commitment to ESG Principles</a>
                     -->
-                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQBH7dukjfrKR7dryvRsr96UAVwdJ-pLndd4TsfZ-DX-q7Q?isSPOFile=1&xsdata=MDV8MDJ8fDA0MTcyN2E2ODUxMDQ3MGEzYzRkMDhkZTZhZWQ2NTA4fGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQ5NjgwMjEwNjl8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFk1TkRVMU5nPT18OTUzZmZjYzI3YmExNDExODNjNGQwOGRlNmFlZDY1MDh8YWJhMWVhNzg0ZDNlNDVjMTlkZTQ0MmZiYjk2N2IwMzk%3D&sdata=RFFLMHBtVU51TTBkSzZuTi91WlNodGJEdXFiblE2YmZrdXlBcG1rVFkybz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Corporate Governance</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQAe6RN2iulrQLzt-B60DVoQAWT3Z0_DLHtyglI1kDPU954?isSPOFile=1&xsdata=MDV8MDJ8fDU5MjczMzIyNDlmNjQzMzkyMGI0MDhkZTZhZWQzYjhhfGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQyNzE4OTA2MTJ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFl5TlRJNU13PT18MGM1MWVlOTlkN2YyNGVjNzIwYjQwOGRlNmFlZDNiOGF8OGQ0YjhkZmJmNjI3NGEwNGJiMzRlYWM0YzIzMjdlOTk%3D&sdata=Mnh4SlhmM285SU1kMEZJVys1VE1YSTRVU3hIYTYrYXBlc1pUV3VjVmJKaz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Ethics & Business Conduct</a>
-                    <a href="#">Data Protection</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQCnHfZL33p2Ro1tKpYycMg0AXysqEGfS0-hJrupQ4A_utU?isSPOFile=1&xsdata=MDV8MDJ8fDQzNmM4ZWE1NGE0YjRmYjU1NGQ0MDhkZTZhZWQwMDZifGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjMyODAwMTY1OTZ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFV5TlRVMU9RPT18NTgwN2JkNmQ1ZTc2NGU4ODU0ZDQwOGRlNmFlZDAwNmJ8Yjk1MDc1MmViYTMyNDA2NThkYTVkMGNjYzI4ZTkxNDQ%3D&sdata=Vm1VTzN5ZUJVcWhGc01EQlByMXkvNGY5TWdSbEhFeDE4YUFBa3VwQTZyWT0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Commitment to ESG Principles</a>
-                  </div>
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQBH7dukjfrKR7dryvRsr96UAVwdJ-pLndd4TsfZ-DX-q7Q?isSPOFile=1&xsdata=MDV8MDJ8fDA0MTcyN2E2ODUxMDQ3MGEzYzRkMDhkZTZhZWQ2NTA4fGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQ5NjgwMjEwNjl8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFk1TkRVMU5nPT18OTUzZmZjYzI3YmExNDExODNjNGQwOGRlNmFlZDY1MDh8YWJhMWVhNzg0ZDNlNDVjMTlkZTQ0MmZiYjk2N2IwMzk%3D&sdata=RFFLMHBtVU51TTBkSzZuTi91WlNodGJEdXFiblE2YmZrdXlBcG1rVFkybz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com"
+                    >Corporate Governance</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQAe6RN2iulrQLzt-B60DVoQAWT3Z0_DLHtyglI1kDPU954?isSPOFile=1&xsdata=MDV8MDJ8fDU5MjczMzIyNDlmNjQzMzkyMGI0MDhkZTZhZWQzYjhhfGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQyNzE4OTA2MTJ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFl5TlRJNU13PT18MGM1MWVlOTlkN2YyNGVjNzIwYjQwOGRlNmFlZDNiOGF8OGQ0YjhkZmJmNjI3NGEwNGJiMzRlYWM0YzIzMjdlOTk%3D&sdata=Mnh4SlhmM285SU1kMEZJVys1VE1YSTRVU3hIYTYrYXBlc1pUV3VjVmJKaz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com"
+                    >Ethics & Business Conduct</a
+                  >
+                  <a href="#">Data Protection</a>
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQCnHfZL33p2Ro1tKpYycMg0AXysqEGfS0-hJrupQ4A_utU?isSPOFile=1&xsdata=MDV8MDJ8fDQzNmM4ZWE1NGE0YjRmYjU1NGQ0MDhkZTZhZWQwMDZifGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjMyODAwMTY1OTZ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFV5TlRVMU9RPT18NTgwN2JkNmQ1ZTc2NGU4ODU0ZDQwOGRlNmFlZDAwNmJ8Yjk1MDc1MmViYTMyNDA2NThkYTVkMGNjYzI4ZTkxNDQ%3D&sdata=Vm1VTzN5ZUJVcWhGc01EQlByMXkvNGY5TWdSbEhFeDE4YUFBa3VwQTZyWT0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com"
+                    >Commitment to ESG Principles</a
+                  >
+                </div>
               </div>
             </div>
-        </div> 
-         <div class="dropdownDo">
+          </div>
+          <div class="dropdownDo">
             <button class="dropbtn" onclick="manageSystem()">
               MANAGEMENT SYSTEM
             </button>
@@ -79,164 +99,481 @@
               <h2>Management System</h2>
               <div class="dropdown-grid">
                 <div class="dropdown-column">
-                    <h4>Management System Onshore</h4>
-                    <a href="#">Compliance</a>
-                    <a href="#">Finance</a>
-                    <a href="#">HR</a>
-                    <a href="#">HSE</a>
-                    <a href="#">IT</a>
-                    <a href="#">Omega 365</a>
-                    <a href="#">Operations & Maintenance</a>
-                    <a href="#">Supply Chain</a>
-                  </div>
-                  <div class="dropdown-column">
-                    <h4>Management System Offshore</h4>
-                    <a href="#">Mayo ABO</a>
-                  </div>
+                  <h4>Management System Onshore</h4>
+                  <a href="#">Compliance</a>
+                  <a href="#">Finance</a>
+                  <a href="#">HR</a>
+                  <a href="#">HSE</a>
+                  <a href="#">IT</a>
+                  <a href="#">Omega 365</a>
+                  <a href="#">Operations & Maintenance</a>
+                  <a href="#">Supply Chain</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Management System Offshore</h4>
+                  <a href="#">Mayo ABO</a>
+                </div>
               </div>
             </div>
-        </div> 
-         <div class="dropdownDo">
+          </div>
+          <div class="dropdownDo">
             <button class="dropbtn" onclick="resourceTools()">
               RESOURCES & TOOLS
             </button>
             <div class="dropdown-content" id="resourceToolsMenu">
               <h2>Resources & Tools</h2>
               <div class="dropdown-grid-sm">
-                  <div class="dropdown-column">
-                    <h4>References</h4>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK/SitePages/Cyber-Security-Learning-Portal.aspx?e=4%3Af7609e54cd494c1f83cc98ecfd2c90b4&web=1&sharingv2=true&fromShare=true&at=9&CID=2a755509-ba2e-4ebc-b248-b9bec5f9ec2b">Cyber Security</a>
-                    <a href="#">E-Learning</a>
-                    <a href="#">Travel Advisory</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/:f:/s/IT/IgDlF24jEQmgT4-_zs-BP0K0AQzMcSBILPAVLkPZC39-c1w">IT Guides (A-Z)</a>
-                  </div>
-                  <div class="dropdown-column">
-                    <h4>HSE</h4>
-                    <a href="control-work-procedure">Control of Work Procedure</a>
-                    <a href="standard-operating-procedures">SOPs</a>
-                    <a href="emergency-preparedness-procedure">Emergency Preparedness Procedures</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/:p:/r/sites/HSE30/_layouts/15/Doc.aspx?sourcedoc=%7B5952BABF-75E9-435C-91D1-43E145067968%7D&file=SEPTEMBER%202025%20HSE%20MEETING%20%26%20PERSONNEL%20ENGAGEMENT.pptx&action=edit&mobileredirect=true">Monthly Safety Meeting</a>
-                    <a href="corporate-policies">Corporate Policies</a>
-                  </div>
-                  <div class="dropdown-column">
-                    <h4>BI</h4>
-                    <a href="#">Daily Offshore Report</a>
-                    <a href="#">Finance</a>
-                    <a href="#">HSE</a>
-                    <a href="#">IT</a>
-                    <a href="#">Operations and Maintenance</a>
-                    <a href="#">Supply Chain</a>
-                  </div>
-                  <div class="dropdown-column">
-                    <h4>Business Applications</h4>
-                    <!-- <a href="https://stacmarineoffshore.sharepoint.com/sites/IT/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=GR8jC3&CID=0f331821%2Df88f%2D4f5c%2Dad41%2D37872df106f0&FolderCTID=0x012000DEE519753BDE714D96E1DECBF6ADEDD4&id=%2Fsites%2FIT%2FShared%20Documents%2FIT%20Guides">IT Guides (A-Z)</a> -->
-                    <a href="#">Action Tracker</a>
-                    <a href="https://workspace.stacmarine.com/portal/myworkspace">eXo</a>
-                    <a href="https://stacmarine-webapp.vercel.app/#/documents">DocuSeal</a>
-                    <a href="https://www.erpodoostacmarine.com/odoo">Odoo</a>
-                  </div>
-                  <div class="dropdown-column">
-                    <h4>SharePoint Sites</h4>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent">Compliance</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/FinanceDepartment">Finance</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HSE30">HSE</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources">HR</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/IT">IT</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/PROJECTS">Operations and Maintenance</a>
-                    <a href="https://stacmarineoffshore.sharepoint.com/sites/SupplyChain">Supply Chain</a>
-                  </div>
-                  <div class="dropdown-column">
-                    <h4>Mayo ABO</h4>
-                      <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Fstacmarineoffshore%2Esharepoint%2Ecom%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FDocOrgABO%3Fcsf%3D1%26web%3D1%26e%3DSUA2Nq%26CID%3D7c445a38%2D227f%2D4150%2Db8ef%2D27e2b9eb7e77&correlation=cbc6f2a1%2Df001%2Df000%2D5bef%2D9afdb95eb5d1&Type=item&name=9355e69b%2Dbc35%2D4901%2Db4a0%2Da461d07ef00b&listItemId=19826&listItemUniqueId=93591f1e%2D8d38%2D49b7%2D981f%2D701d9da78b91">DocOrgABO</a>
-                      <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx">Mayo ABO Operations & Maintenance</a>
-                      <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx?csf=1&web=1&e=cc2Ima&CID=00690e88%2Daa78%2D4ad7%2D9f50%2Dd856368cc8e3&FolderCTID=0x0120003C5300E541C2B942B44E3DAF654E2069&id=%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FProject%204266">Project 4266</a>
-                  </div>
+                <div class="dropdown-column">
+                  <h4>References</h4>
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK/SitePages/Cyber-Security-Learning-Portal.aspx?e=4%3Af7609e54cd494c1f83cc98ecfd2c90b4&web=1&sharingv2=true&fromShare=true&at=9&CID=2a755509-ba2e-4ebc-b248-b9bec5f9ec2b"
+                    >Cyber Security</a
+                  >
+                  <a href="#">E-Learning</a>
+                  <a href="#">Travel Advisory</a>
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/:f:/s/IT/IgDlF24jEQmgT4-_zs-BP0K0AQzMcSBILPAVLkPZC39-c1w"
+                    >IT Guides (A-Z)</a
+                  >
+                </div>
+                <div class="dropdown-column">
+                  <h4>HSE</h4>
+                  <a href="control-work-procedure">Control of Work Procedure</a>
+                  <a href="standard-operating-procedures">SOPs</a>
+                  <a href="emergency-preparedness-procedure"
+                    >Emergency Preparedness Procedures</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/:p:/r/sites/HSE30/_layouts/15/Doc.aspx?sourcedoc=%7B5952BABF-75E9-435C-91D1-43E145067968%7D&file=SEPTEMBER%202025%20HSE%20MEETING%20%26%20PERSONNEL%20ENGAGEMENT.pptx&action=edit&mobileredirect=true"
+                    >Monthly Safety Meeting</a
+                  >
+                  <a href="corporate-policies">Corporate Policies</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>BI</h4>
+                  <a href="#">Daily Offshore Report</a>
+                  <a href="#">Finance</a>
+                  <a href="#">HSE</a>
+                  <a href="#">IT</a>
+                  <a href="#">Operations and Maintenance</a>
+                  <a href="#">Supply Chain</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Business Applications</h4>
+                  <!-- <a href="https://stacmarineoffshore.sharepoint.com/sites/IT/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=GR8jC3&CID=0f331821%2Df88f%2D4f5c%2Dad41%2D37872df106f0&FolderCTID=0x012000DEE519753BDE714D96E1DECBF6ADEDD4&id=%2Fsites%2FIT%2FShared%20Documents%2FIT%20Guides">IT Guides (A-Z)</a> -->
+                  <a href="#">Action Tracker</a>
+                  <a href="https://workspace.stacmarine.com/portal/myworkspace"
+                    >eXo</a
+                  >
+                  <a href="https://stacmarine-webapp.vercel.app/#/documents"
+                    >DocuSeal</a
+                  >
+                  <a href="https://www.erpodoostacmarine.com/odoo">Odoo</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>SharePoint Sites</h4>
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent"
+                    >Compliance</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/FinanceDepartment"
+                    >Finance</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/HSE30"
+                    >HSE</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources"
+                    >HR</a
+                  >
+                  <a href="https://stacmarineoffshore.sharepoint.com/sites/IT"
+                    >IT</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/PROJECTS"
+                    >Operations and Maintenance</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/SupplyChain"
+                    >Supply Chain</a
+                  >
+                </div>
+                <div class="dropdown-column">
+                  <h4>Mayo ABO</h4>
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Fstacmarineoffshore%2Esharepoint%2Ecom%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FDocOrgABO%3Fcsf%3D1%26web%3D1%26e%3DSUA2Nq%26CID%3D7c445a38%2D227f%2D4150%2Db8ef%2D27e2b9eb7e77&correlation=cbc6f2a1%2Df001%2Df000%2D5bef%2D9afdb95eb5d1&Type=item&name=9355e69b%2Dbc35%2D4901%2Db4a0%2Da461d07ef00b&listItemId=19826&listItemUniqueId=93591f1e%2D8d38%2D49b7%2D981f%2D701d9da78b91"
+                    >DocOrgABO</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx"
+                    >Mayo ABO Operations & Maintenance</a
+                  >
+                  <a
+                    href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx?csf=1&web=1&e=cc2Ima&CID=00690e88%2Daa78%2D4ad7%2D9f50%2Dd856368cc8e3&FolderCTID=0x0120003C5300E541C2B942B44E3DAF654E2069&id=%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FProject%204266"
+                    >Project 4266</a
+                  >
+                </div>
               </div>
             </div>
-        </div> 
-        <!-- <a href="#news">WHERE WE ARE</a> -->
-       
-      </div>
-     
-      <div class="search">
-         <form action="https://google.com/search" method="get" class="search-box">
-          <!-- 'q' is the standard name for search queries -->
-          <input type="text" id="site-search" name="q" placeholder="Search Intranet" />
-          <!-- This hidden input restricts the search to your domain -->
-          <input type="hidden" name="sitesearch" value="connect.stacmarine.com | stacmarineoffshore.sharepoint.com" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-  </header>
-  
-  <div class="announcement">
-    <div class="slideshow-container">
-      <div class="annSlides fade">
-        <div class="annBody">
-          <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
-          <div>
-            <h2 class="announcement-title">Announcements</h2>
-            <h2 class="announcement-title">(1/2)</h2>
           </div>
-          <div>
-            <a href="growth-friday" class="announcement-link">Growth Friday</a>
-            <p class="announcement-subtitle"> - Learn. Reflect. Grow.</p>
+          <!-- <a href="#news">WHERE WE ARE</a> -->
+        </div>
+
+        <div class="search">
+          <form
+            action="https://google.com/search"
+            method="get"
+            class="search-box"
+          >
+            <!-- 'q' is the standard name for search queries -->
+            <input
+              type="text"
+              id="site-search"
+              name="q"
+              placeholder="Search Intranet"
+            />
+            <!-- This hidden input restricts the search to your domain -->
+            <input
+              type="hidden"
+              name="sitesearch"
+              value="connect.stacmarine.com | stacmarineoffshore.sharepoint.com"
+            />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="stac-announcement-banner">
+      <!-- LEFT COLUMN: Brand Identity -->
+      <div class="ann-brand-col">
+        <div class="ann-brand-logo">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 class="ann-brand-title">STAC ACADEMY</h3>
+        <p class="ann-brand-sub">Learning platform</p>
+
+        <ul class="ann-brand-features">
+          <li><i class="fa-regular fa-newspaper"></i> Certificate</li>
+          <li><i class="fa-solid fa-globe"></i> Online courses</li>
+          <li><i class="fa-solid fa-chart-line"></i> Track Progress</li>
+        </ul>
+      </div>
+
+      <!-- CENTER COLUMN: Active Dynamic Content Panel -->
+      <div class="ann-content-col">
+        <div class="slideshow-container">
+          <!-- Slide 1 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-local">● Growth Friday</span>
+            <h2 class="ann-news-headline">
+              Your career path starts with
+              <span class="ann-headline-brand">STAC Academy</span>
+            </h2>
+            <p class="ann-news-desc">
+              A world-class learning experience built for maritime
+              professionals. Grow your skills, earn certificates, and take your
+              career further.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-chalkboard-user"></i> Expert-led courses
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-certificate"></i> Verified certificates
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-users"></i> Built for your team
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-globe"></i> Globally recognised
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-global">● Global Market</span>
+            <h2 class="ann-news-headline">
+              Oil and gas prices to stay elevated through
+              <span class="ann-headline-brand">end of 2027</span>
+            </h2>
+            <p class="ann-news-desc">
+              The EU has warned of prolonged structural energy constraints, with
+              pricing forecasts affecting international shipping hubs and
+              offshore operations.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-arrow-trend-up"></i> Price surge risk
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-ship"></i> Shipping impact
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-industry"></i> Supply constraints
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-earth-europe"></i> EU policy watch
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-global">● Global Market</span>
+            <h2 class="ann-news-headline">
+              World losing a fifth of traded oil as
+              <span class="ann-headline-brand">next shock looms</span>
+            </h2>
+            <p class="ann-news-desc">
+              Strategic transit choke points are under pressure as geopolitical
+              tensions escalate, raising maritime security risk indicators
+              across key corridors.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-triangle-exclamation"></i> Supply shock
+                risk
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-anchor"></i> Choke point alerts
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-shield-halved"></i> Maritime security
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-route"></i> Transit corridors
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-nigeria">● Nigeria Context</span>
+            <h2 class="ann-news-headline">
+              ExxonMobil deepens Nigeria's offshore play with
+              <span class="ann-headline-brand">Weatherford deal</span>
+            </h2>
+            <p class="ann-news-desc">
+              Technical infrastructure enhancements are being rolled out across
+              deepwater installations, marking a significant milestone in
+              Nigeria's deepwater expansion.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-water"></i> Deepwater ops
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-handshake"></i> Strategic deal
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-oil-well"></i> Exploration growth
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-flag"></i> Nigeria focus
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-global">● Global Market</span>
+            <h2 class="ann-news-headline">
+              BW Energy commits
+              <span class="ann-headline-brand">$300M FID</span> on Gabon's
+              Bourdon field
+            </h2>
+            <p class="ann-news-desc">
+              Capital expenditures are flowing into marine logistics platforms
+              as Gabon's offshore sector attracts major investment decisions for
+              the year ahead.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-sack-dollar"></i> $300M investment
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-ship"></i> Marine logistics
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-chart-bar"></i> FID milestone
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-earth-africa"></i> West Africa focus
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-global">● Global Market</span>
+            <h2 class="ann-news-headline">
+              U.S. rig count posts its
+              <span class="ann-headline-brand"
+                >biggest weekly gain since 2022</span
+              >
+            </h2>
+            <p class="ann-news-desc">
+              Active extraction infrastructure is expanding rapidly, with
+              production analytics signalling renewed upstream investment across
+              key American basins.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-arrow-up"></i> Rig count surge
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-oil-well"></i> Upstream growth
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-chart-line"></i> Production analytics
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-flag-usa"></i> U.S. market watch
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 7 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-nigeria">● Nigeria Context</span>
+            <h2 class="ann-news-headline">
+              Oil exports drive Nigeria–UK trade to
+              <span class="ann-headline-brand">£7.6 billion</span>
+            </h2>
+            <p class="ann-news-desc">
+              Bilateral trade volumes are surging through maritime logistics
+              networks, reflecting growing energy partnerships between Nigeria
+              and the United Kingdom.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-ship"></i> Maritime logistics
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-sterling-sign"></i> £7.6bn trade
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-handshake"></i> UK–Nigeria ties
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-barrel"></i> Oil export data
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Ticker Bar -->
+      </div>
+
+      <!-- RIGHT COLUMN: Control Desk & Navigation Counter -->
+      <!-- RIGHT COLUMN: Dynamic Launch Countdown Block -->
+      <div class="ann-control-col">
+        <div class="control-meta-label">LAUNCHING IN</div>
+
+        <!-- Countdown Box Grid Elements Matrix -->
+        <div class="stac-countdown-grid">
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-days">00</span>
+            <span class="countdown-lbl">DAYS</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-hours">00</span>
+            <span class="countdown-lbl">HRS</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-mins">00</span>
+            <span class="countdown-lbl">MIN</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-secs">00</span>
+            <span class="countdown-lbl">SEC</span>
           </div>
         </div>
       </div>
-      <div class="annSlides fade">
-        <div class="annBody">
-          <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
-          <div>
-            <h2 class="announcement-title">Announcements</h2>
-            <h2 class="announcement-title">(2/2)</h2>
-          </div>
-          <div>
-            <a href="public-holiday" class="announcement-link">Public Holiday - Eid-el-Fitr</a>
-            <p class="announcement-subtitle">Thursday, 19th Feb 2026 and Friday, 20th Feb 2026</p>
-          </div>
-        </div>
+      <div class="ann-footer-bar">
+        <span class="ann-footer-text">
+          • STAC Marine Offshore &middot; Powered by OpenSesame
+        </span>
+        <a
+          href="https://stacacademy.site"
+          target="_blank"
+          class="ann-footer-link"
+          >stacacademy.stacmarine.com</a
+        >
       </div>
     </div>
-  </div>
-  <!-- Page Shell -->
-  <main class="shell">
-    <!-- Left rail -->
-    <aside class="leftnav">
+
+    <!-- Page Shell -->
+    <main class="shell">
+      <!-- Left rail -->
+      <aside class="leftnav">
         <h3>Our Core Values</h3>
         <nav class="culture-list" aria-label="Culture Programme">
-          <div class="culture-item"><span class="bar" style="background:#bc6239"></span><span>Sustainability</span></div>
-          <div class="culture-item"><span class="bar" style="background:#2d4f9b"></span><span>Teamwork</span></div>
-          <div class="culture-item"><span class="bar" style="background:#be3a3a"></span><span>Accountability</span></div>
-          <div class="culture-item"><span class="bar" style="background:#8fbe21"></span><span>Competence</span></div>
-          <h3 style="margin: 10px 0px;">Our Behaviour Values</h3>
-          <div class="culture-item"><span class="bar" style="background:#27bdc2"></span><span>Honesty and Integrity</span></div>
-          <div class="culture-item"><span class="bar" style="background:#9739bc"></span><span>Fairness and Equity</span></div>
-          <div class="culture-item"><span class="bar" style="background:#39bc3c"></span><span>Compliance With Laws and Regulations</span></div>
-          <div class="culture-item"><span class="bar" style="background:#f7e92b"></span><span>Confidentiality and Data Protection</span></div>
-          <div class="culture-item"><span class="bar" style="background:#1523e4"></span><span>Conflicts of Interest</span></div>
-          <div class="culture-item mt-15"><span class="bar"></span><a href="behaviour-values" class="read-more">Read more!</a></div>
+          <div class="culture-item">
+            <span class="bar" style="background: #bc6239"></span
+            ><span>Sustainability</span>
+          </div>
+          <div class="culture-item">
+            <span class="bar" style="background: #2d4f9b"></span
+            ><span>Teamwork</span>
+          </div>
+          <div class="culture-item">
+            <span class="bar" style="background: #be3a3a"></span
+            ><span>Accountability</span>
+          </div>
+          <div class="culture-item">
+            <span class="bar" style="background: #8fbe21"></span
+            ><span>Competence</span>
+          </div>
+          <h3 style="margin: 10px 0px">Our Behaviour Values</h3>
+          <div class="culture-item">
+            <span class="bar" style="background: #27bdc2"></span
+            ><span>Honesty and Integrity</span>
+          </div>
+          <div class="culture-item">
+            <span class="bar" style="background: #9739bc"></span
+            ><span>Fairness and Equity</span>
+          </div>
+          <div class="culture-item">
+            <span class="bar" style="background: #39bc3c"></span
+            ><span>Compliance With Laws and Regulations</span>
+          </div>
+          <div class="culture-item">
+            <span class="bar" style="background: #f7e92b"></span
+            ><span>Confidentiality and Data Protection</span>
+          </div>
+          <div class="culture-item">
+            <span class="bar" style="background: #1523e4"></span
+            ><span>Conflicts of Interest</span>
+          </div>
+          <div class="culture-item mt-15">
+            <span class="bar"></span
+            ><a href="behaviour-values" class="read-more">Read more!</a>
+          </div>
         </nav>
-    </aside>
+      </aside>
 
-    <!-- Main -->
-    <section class="main">
-      <div class="section-title">Spotlight</div>
-      <div class="slideshow-container">
+      <!-- Main -->
+      <section class="main">
+        <div class="section-title">Spotlight</div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <article class="spotlight" aria-labelledby="hero-title">
+              <!--<div class="spotlight-header">&nbsp;</div>-->
 
-        <div class="mySlides fade">
-             <article class="spotlight" aria-labelledby="hero-title">
-              
-                  <!--<div class="spotlight-header">&nbsp;</div>-->
-
-                  <div class="hero">
-                    <div class="video-preview" onclick="openPopup()">
-                       <video id="previewVideo" autoplay muted playsinline loop>
-                            <source src="https://res.cloudinary.com/stacconnect/video/upload/v1770904128/STAC_Marine_Offshore_Brand_Video_Compressed_2_scoj7g.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <!--
+              <div class="hero">
+                <div class="video-preview" onclick="openPopup()">
+                  <video id="previewVideo" autoplay muted playsinline loop>
+                    <source
+                      src="https://res.cloudinary.com/stacconnect/video/upload/v1770904128/STAC_Marine_Offshore_Brand_Video_Compressed_2_scoj7g.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                  <!--
                         <iframe 
                             src="https://stacmarineoffshore.sharepoint.com/:v:/r/sites/updates/Shared%20Documents/videos/STAC_Marine_Offshore_Brand_Video.mp4?csf=1&web=1&e=J6vMwz" 
                             width="100%" 
@@ -246,235 +583,273 @@
                             allowfullscreen>
                         </iframe>
                         <div class="overlay">Click to Play with Sound</div> -->
-                    </div>
-                    <!-- <div class="hero-img" aria-hidden="true"></div> -->
-                    <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
+                </div>
+                <!-- <div class="hero-img" aria-hidden="true"></div> -->
+                <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
                     <div class="hero-title">
                       <div class="date">23 June 2025</div>
                       <h1 id="hero-title">Strategy Town Hall</h1>
                     </div>-->
-                    <div class="hero-label">STAC Connect</div>
-                  </div>
-                  <a href="unlocking-the-future-together">
-                    <div class="spot-text">
-                      <h2>Welcome to STAC Connect</h2>
-                      <p>Connecting our people, projects, and purpose—through collaboration, innovation, and shared success.</p>
-                    </div>
-                  </a>
-            </article>
-        </div>
-
-        <div class="mySlides fade">
-          <article class="spotlight" aria-labelledby="hero-title">
-              <a href="team-congratulations">
-                  <!--<div class="spotlight-header">&nbsp;</div>-->
-                  <div class="hero">
-                    <div class="hero-img-2" aria-hidden="true"></div>
-                    <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
-                    <div class="hero-title">
-                      <div class="date">23 June 2025</div>
-                      <h1 id="hero-title">Strategy Town Hall</h1>
-                    </div>-->
-                    <div class="hero-label">STAC Connect</div>
-                  </div>
-                  <div class="spot-text">
-                    <h2>HUGE CONGRATULATIONS TO OUR TEAM!</h2>
-                    <p>We have received the most compliant taxpayer award from FIRS </p>
-                  </div>
-              </a>
-            </article>
-        </div>
-
-        <div class="mySlides fade">
-             <article class="spotlight" aria-labelledby="hero-title">
-              <a href="what-we-achieve-matters">
-                  <!--<div class="spotlight-header">&nbsp;</div>-->
-                  <div class="hero">
-                    <div class="hero-img-3" aria-hidden="true"></div>
-                    <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
-                    <div class="hero-title">
-                      <div class="date">23 June 2025</div>
-                      <h1 id="hero-title">Strategy Town Hall</h1>
-                    </div>-->
-                    <div class="hero-label">STAC Connect</div>
-                  </div>
-                  <div class="spot-text">
-                    <h2>WHAT WE ACHIEVE MATTERS!</h2>
-                    <p>A unified vision for growth, innovation, and collaboration.</p>
-                  </div>
-              </a>
-            </article>
-        </div>
-
-      </div>
-      <div class="culture-code"><a href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources/Shared%20Documents/Employee%20Shared%20Folder/STAC%20MARINE%20CULTURE%20CODE.pdf?isSPOFile=1&xsdata=MDV8MDJ8fGZjNmQ3ZTA1ZmQ5MDQ5ZTEzZDhmMDhkZTVkYTJhN2Y5fGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNTExNTAzMTc0MDM1MzV8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mll6Um1Nak14TXkwd01qWTNMVFE0T1RndFltRTBNeTA1TlRKa1l6a3pPVFpqWVRWQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjMk9UVXhPREl5T1RBMk9RPT18OWEwNTFlMDVlMmEyNDAyYWQ5ODYwOGRlNWRhMmE3Zjh8NWQ0YjgxZWFiZDViNGEwNThkMDdhODhjNGY4NDhiNGQ%3D&sdata=VEFUQ0FOK0lSb1J5THpnVDRBWFBlT3VYaU5BRUExcytJNzZPekd0Ty9HTT0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas%40stac-marine.com"><img src="img/stac_culture_code_edited.png"/></a></div>
-    </section>
-
-    <!-- Right Rail -->
-    <aside class="aside-right">
-      <h3>Corporate Updates</h3>
-      <div class="news-list">
-
-         <a href="technical-function" class="news-item">
-          <article class="news-card">
-            <div>
-              <div class="news-date">27 February 2026</div>
-              <p class="news-title">Technical Function - Monthly Management Report Feb 2026</p>
-              <div class="news-meta">
-                <span class="badge"><span class="dot"></span> Corporate</span>
-                <span>The February 2026 Technical Function Monthly Management Report is now available on STAC Connect.</span>
+                <div class="hero-label">STAC Connect</div>
               </div>
-            </div>
-            <div class="news-thumb"><img src="img/zero-harm.png" alt="Zero harm" /></div>
-          </article>
-        </a>
+              <a href="unlocking-the-future-together">
+                <div class="spot-text">
+                  <h2>Welcome to STAC Connect</h2>
+                  <p>
+                    Connecting our people, projects, and purpose—through
+                    collaboration, innovation, and shared success.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
 
-        <a href="trust-high-performance" class="news-item">
+          <div class="mySlides fade">
+            <article class="spotlight" aria-labelledby="hero-title">
+              <a href="team-congratulations">
+                <!--<div class="spotlight-header">&nbsp;</div>-->
+                <div class="hero">
+                  <div class="hero-img-2" aria-hidden="true"></div>
+                  <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
+                    <div class="hero-title">
+                      <div class="date">23 June 2025</div>
+                      <h1 id="hero-title">Strategy Town Hall</h1>
+                    </div>-->
+                  <div class="hero-label">STAC Connect</div>
+                </div>
+                <div class="spot-text">
+                  <h2>HUGE CONGRATULATIONS TO OUR TEAM!</h2>
+                  <p>
+                    We have received the most compliant taxpayer award from FIRS
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="mySlides fade">
+            <article class="spotlight" aria-labelledby="hero-title">
+              <a href="what-we-achieve-matters">
+                <!--<div class="spotlight-header">&nbsp;</div>-->
+                <div class="hero">
+                  <div class="hero-img-3" aria-hidden="true"></div>
+                  <!--<div class="Stac Connect-watermark" aria-hidden="true">Stac Connect</div>
+                    <div class="hero-title">
+                      <div class="date">23 June 2025</div>
+                      <h1 id="hero-title">Strategy Town Hall</h1>
+                    </div>-->
+                  <div class="hero-label">STAC Connect</div>
+                </div>
+                <div class="spot-text">
+                  <h2>WHAT WE ACHIEVE MATTERS!</h2>
+                  <p>
+                    A unified vision for growth, innovation, and collaboration.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+        <div class="culture-code">
+          <a
+            href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources/Shared%20Documents/Employee%20Shared%20Folder/STAC%20MARINE%20CULTURE%20CODE.pdf?isSPOFile=1&xsdata=MDV8MDJ8fGZjNmQ3ZTA1ZmQ5MDQ5ZTEzZDhmMDhkZTVkYTJhN2Y5fGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNTExNTAzMTc0MDM1MzV8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mll6Um1Nak14TXkwd01qWTNMVFE0T1RndFltRTBNeTA1TlRKa1l6a3pPVFpqWVRWQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjMk9UVXhPREl5T1RBMk9RPT18OWEwNTFlMDVlMmEyNDAyYWQ5ODYwOGRlNWRhMmE3Zjh8NWQ0YjgxZWFiZDViNGEwNThkMDdhODhjNGY4NDhiNGQ%3D&sdata=VEFUQ0FOK0lSb1J5THpnVDRBWFBlT3VYaU5BRUExcytJNzZPekd0Ty9HTT0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas%40stac-marine.com"
+            ><img src="img/stac_culture_code_edited.png"
+          /></a>
+        </div>
+      </section>
+
+      <!-- Right Rail -->
+      <aside class="aside-right">
+        <h3>Corporate Updates</h3>
+        <div class="news-list">
+          <a href="technical-function" class="news-item">
+            <article class="news-card">
+              <div>
+                <div class="news-date">27 February 2026</div>
+                <p class="news-title">
+                  Technical Function - Monthly Management Report Feb 2026
+                </p>
+                <div class="news-meta">
+                  <span class="badge"><span class="dot"></span> Corporate</span>
+                  <span
+                    >The February 2026 Technical Function Monthly Management
+                    Report is now available on STAC Connect.</span
+                  >
+                </div>
+              </div>
+              <div class="news-thumb">
+                <img src="img/zero-harm.png" alt="Zero harm" />
+              </div>
+            </article>
+          </a>
+
+          <a href="trust-high-performance" class="news-item">
             <article class="news-card">
               <div>
                 <div class="news-date">29 January 2026</div>
-                <p class="news-title">Trust: The Key To Building High-Performance Teams</p>
+                <p class="news-title">
+                  Trust: The Key To Building High-Performance Teams
+                </p>
                 <div class="news-meta">
                   <span class="badge"><span class="dot"></span> Corporate</span>
-                  <span>Trust is the cornerstone of high-performance teams at STAC Marine Offshore...</span>
+                  <span
+                    >Trust is the cornerstone of high-performance teams at STAC
+                    Marine Offshore...</span
+                  >
                 </div>
               </div>
-              <div class="news-thumb"><img src="img/img_news_ai.jpg" alt="AI Assistant" /></div>
-          </article>
-        </a>
-
-        <a href="lost-time-injury" class="news-item">
-          <article class="news-card">
-            <div>
-              <div class="news-date">12 January 2026</div>
-              <p class="news-title" href="#">FPSO Mayo Abo Surpasses 8,300 LTI-Free Days</p>
-              <div class="news-meta">
-                <span class="badge"><span class="dot"></span> Corporate</span>
-                <span>FPSO Mayo Abo has proudly achieved over 8,300 Lost Time Injury (LTI)–free days and counting...</span>
+              <div class="news-thumb">
+                <img src="img/img_news_ai.jpg" alt="AI Assistant" />
               </div>
+            </article>
+          </a>
+
+          <a href="lost-time-injury" class="news-item">
+            <article class="news-card">
+              <div>
+                <div class="news-date">12 January 2026</div>
+                <p class="news-title" href="#">
+                  FPSO Mayo Abo Surpasses 8,300 LTI-Free Days
+                </p>
+                <div class="news-meta">
+                  <span class="badge"><span class="dot"></span> Corporate</span>
+                  <span
+                    >FPSO Mayo Abo has proudly achieved over 8,300 Lost Time
+                    Injury (LTI)–free days and counting...</span
+                  >
+                </div>
+              </div>
+              <div class="news-thumb">
+                <img src="img/img_lti_1.png" alt="AI Assistant" />
+              </div>
+            </article>
+          </a>
+        </div>
+      </aside>
+    </main>
+    <section class="new-joiners-tasks">
+      <div class="oil-header">
+        <div class="brand">
+          <div class="brand-text">
+            <h1>Nigeria Energy Updates</h1>
+            <p>Real-time oil prices &amp; FX intelligence</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="pill-live"><span class="pulse-dot"></span>Live</div>
+          <button class="btn" id="refreshBtn" onclick="fetchAll()">
+            <span class="ico">↻</span> Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- ── Error ── -->
+      <div id="errBanner"></div>
+
+      <!-- ── Grid ── -->
+      <div class="grid">
+        <!-- Brent Crude -->
+        <a href="https://www.eia.gov/dnav/pet/hist/RBRTED.htm">
+          <div class="oil-card card-brent">
+            <div class="card-watermark">🛢</div>
+            <div class="card-head">
+              <div>
+                <div class="widget-header">
+                  <img src="img/petrol-barrel.png" alt="oil icon" />
+                  <div class="card-label">Brent Crude</div>
+                </div>
+              </div>
+              <span class="badge badge-flat shim" id="brentBadge">——</span>
             </div>
-            <div class="news-thumb"><img src="img/img_lti_1.png" alt="AI Assistant" /></div>
-          </article>
+            <div class="price-val shim" id="brentPrice">$00.00</div>
+            <div class="price-unit">USD / Barrel</div>
+            <div class="chart-wrap">
+              <div class="chart-meta">
+                <span class="chart-lbl">14-Day Trend</span>
+                <span class="chart-range" id="brentRange"></span>
+              </div>
+              <canvas class="spark" id="brentChart"></canvas>
+            </div>
+            <div class="updated" id="brentUpdated"></div>
+          </div>
         </a>
 
-      </div>
-    </aside>
-  </main>
-  <section class="new-joiners-tasks">
-    <div class="oil-header">
-      <div class="brand">
-        <div class="brand-text">
-          <h1>Nigeria Energy Updates</h1>
-          <p>Real-time oil prices &amp; FX intelligence</p>
-        </div>
-      </div>
-      <div class="header-right">
-        <div class="pill-live"><span class="pulse-dot"></span>Live</div>
-        <button class="btn" id="refreshBtn" onclick="fetchAll()">
-          <span class="ico">↻</span> Refresh
-        </button>
-      </div>
-    </div>
-
-    <!-- ── Error ── -->
-    <div id="errBanner"></div>
-
-    <!-- ── Grid ── -->
-    <div class="grid">
-
-    <!-- Brent Crude -->
-     <a href="https://www.eia.gov/dnav/pet/hist/RBRTED.htm">
-      <div class="oil-card card-brent">
-        <div class="card-watermark">🛢</div>
-        <div class="card-head">
-          <div>
-            <div class="widget-header">
-              <img src="img/petrol-barrel.png" alt="oil icon">
-              <div class="card-label">Brent Crude</div>
+        <!-- Bonny Light -->
+        <a href="https://www.cbn.gov.ng/rates/crudeoil.html">
+          <div class="oil-card card-bonny">
+            <div class="card-watermark">🛢</div>
+            <div class="card-head">
+              <div>
+                <div class="widget-header">
+                  <img src="img/petrol-barrel.png" alt="oil icon" />
+                  <div class="card-label">Bonny Light</div>
+                </div>
+              </div>
+              <span class="badge badge-flat shim" id="bonnyBadge">——</span>
             </div>
+            <div class="price-val shim" id="bonnyPrice">$00.00</div>
+            <div class="price-unit">USD / Barrel</div>
+            <div class="chart-wrap">
+              <div class="chart-meta">
+                <span class="chart-lbl">Recent Trend</span>
+                <span class="chart-range" id="bonnyRange"></span>
+              </div>
+              <canvas class="spark" id="bonnyChart"></canvas>
+            </div>
+            <div class="updated" id="bonnyUpdated"></div>
           </div>
-          <span class="badge badge-flat shim" id="brentBadge">——</span>
-        </div>
-        <div class="price-val shim" id="brentPrice">$00.00</div>
-        <div class="price-unit">USD / Barrel</div>
-        <div class="chart-wrap">
-          <div class="chart-meta">
-            <span class="chart-lbl">14-Day Trend</span>
-            <span class="chart-range" id="brentRange"></span>
-          </div>
-          <canvas class="spark" id="brentChart"></canvas>
-        </div>
-        <div class="updated" id="brentUpdated"></div>
-      </div>
-     </a>
+        </a>
 
-    <!-- Bonny Light -->
-     <a href="https://www.cbn.gov.ng/rates/crudeoil.html">
-      <div class="oil-card card-bonny">
-        <div class="card-watermark">🛢</div>
-        <div class="card-head">
-          <div>
-            <div class="widget-header">
-              <img src="img/petrol-barrel.png" alt="oil icon">
-              <div class="card-label">Bonny Light</div>
+        <!-- NFEM -->
+        <a href="https://www.cbn.gov.ng/rates/ExchRateByCurrency.html">
+          <div class="oil-card card-nfem">
+            <div class="card-head">
+              <div>
+                <div class="card-label">NFEM</div>
+              </div>
+              <span class="badge badge-flat shim" id="nfemBadge">——</span>
             </div>
-          </div>
-          <span class="badge badge-flat shim" id="bonnyBadge">——</span>
-        </div>
-        <div class="price-val shim" id="bonnyPrice">$00.00</div>
-        <div class="price-unit">USD / Barrel</div>
-        <div class="chart-wrap">
-          <div class="chart-meta">
-            <span class="chart-lbl">Recent Trend</span>
-            <span class="chart-range" id="bonnyRange"></span>
-          </div>
-          <canvas class="spark" id="bonnyChart"></canvas>
-        </div>
-        <div class="updated" id="bonnyUpdated"></div>
-      </div>
-     </a>
-    
-    <!-- NFEM -->
-     <a href="https://www.cbn.gov.ng/rates/ExchRateByCurrency.html">
-         <div class="oil-card card-nfem">
-          <div class="card-head">
-            <div>
-              <div class="card-label">NFEM</div>
-            </div>
-            <span class="badge badge-flat shim" id="nfemBadge">——</span>
-          </div>
-          <div class="nfem-body">
-            <div class="nfem-price-block">
-              <div class="price-val shim" id="nfemRate">₦0000</div>
-              <div class="price-unit">₦ per US$1</div>
-            </div>
-            <div class="nfem-table-wrap">
-              <table class="fx">
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>NFEM Rate</th>
-                    <!-- <th>Highest</th>
+            <div class="nfem-body">
+              <div class="nfem-price-block">
+                <div class="price-val shim" id="nfemRate">₦0000</div>
+                <div class="price-unit">₦ per US$1</div>
+              </div>
+              <div class="nfem-table-wrap">
+                <table class="fx">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>NFEM Rate</th>
+                      <!-- <th>Highest</th>
                     <th>Lowest</th>
                     <th>Closing</th>
                     <th>Mean</th> -->
-                  </tr>
-                </thead>
-                <tbody id="nfemBody">
-                  <tr><td colspan="6" style="text-align:center;padding:1.2rem;color:var(--dim)">Loading…</td></tr>
-                </tbody>
-              </table>
+                    </tr>
+                  </thead>
+                  <tbody id="nfemBody">
+                    <tr>
+                      <td
+                        colspan="6"
+                        style="
+                          text-align: center;
+                          padding: 1.2rem;
+                          color: var(--dim);
+                        "
+                      >
+                        Loading…
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+            <div class="updated" id="nfemUpdated"></div>
           </div>
-          <div class="updated" id="nfemUpdated"></div>
-        </div>
-     </a>
-   
+        </a>
+      </div>
+      <!-- /grid -->
 
-  </div>
-  <!-- /grid -->
-
-     <!-- <div class="news-index">
+      <!-- <div class="news-index">
         <div class="oil-widget">
           <div class="widget-header">
             <img src="img/petrol-barrel.png" alt="oil icon">
@@ -518,36 +893,54 @@
         </div>
 
       </div> -->
-  </section>
-  <section class="new-joiners-tasks">
-  <div class="container">
-    <!-- Left: New Joiners -->
-    <div class="new-joiners">
-      <h2>New Joiners</h2>
-      
-     <div class="joiner-card">
-        <img src="img/img_estelle_morgan_3.jpg" alt="Profile" height="120" width="100">
-        <div class="details">
-          <a href="#">Estelle Morgan</a>
-          <p><strong>Position:</strong> Digital Brand and Communication Specialist</p>
-          <p><strong>Office/Unit:</strong> Lagos</p>
-          <p><strong>Reports to:</strong> Moses Ibrahim, Manager IT & Systems</p>
-        </div>
-        <span class="started">Started: March 2026</span>
-      </div>
+    </section>
+    <section class="new-joiners-tasks">
+      <div class="container">
+        <!-- Left: New Joiners -->
+        <div class="new-joiners">
+          <h2>New Joiners</h2>
 
-      <div class="joiner-card">
-         <img src="img/stac_marine_new2.jpeg" alt="Profile" height="120" width="100">
-        <div class="details">
-          <a href="#">Boirose Iroegbu</a>
-          <p><strong>Position:</strong> Operations Intern</p>
-          <p><strong>Office/Unit:</strong> Lagos</p>
-          <p><strong>Reports to:</strong> Echezonachukwu Obiekwe, Senior Planner</p>
-        </div>
-        <span class="started">Started: November 2025</span>
-      </div>
+          <div class="joiner-card">
+            <img
+              src="img/img_estelle_morgan_3.jpg"
+              alt="Profile"
+              height="120"
+              width="100"
+            />
+            <div class="details">
+              <a href="#">Estelle Morgan</a>
+              <p>
+                <strong>Position:</strong> Digital Brand and Communication
+                Specialist
+              </p>
+              <p><strong>Office/Unit:</strong> Lagos</p>
+              <p>
+                <strong>Reports to:</strong> Moses Ibrahim, Manager IT & Systems
+              </p>
+            </div>
+            <span class="started">Started: March 2026</span>
+          </div>
 
-       <!-- <div class="joiner-card">
+          <div class="joiner-card">
+            <img
+              src="img/stac_marine_new2.jpeg"
+              alt="Profile"
+              height="120"
+              width="100"
+            />
+            <div class="details">
+              <a href="#">Boirose Iroegbu</a>
+              <p><strong>Position:</strong> Operations Intern</p>
+              <p><strong>Office/Unit:</strong> Lagos</p>
+              <p>
+                <strong>Reports to:</strong> Echezonachukwu Obiekwe, Senior
+                Planner
+              </p>
+            </div>
+            <span class="started">Started: November 2025</span>
+          </div>
+
+          <!-- <div class="joiner-card">
         <img src="img/female_avatar.jpg" alt="Profile" height="120">
         <div class="details">
           <a href="#">Katrina Brittain</a>
@@ -558,227 +951,380 @@
         <span class="started">Started: 30 June 2025</span>
       </div>
     -->
-      <!-- Add more joiner cards as needed -->
-        <!-- See More link -->
-      <a href="#" class="see-more">See More</a>
-    </div>
+          <!-- Add more joiner cards as needed -->
+          <!-- See More link -->
+          <a href="#" class="see-more">See More</a>
+        </div>
 
-    <!-- Right: My Tasks + Apps -->
-    <div class="tasks-apps">
-      <h2>My Tasks</h2>
-      <div class="task-box">
-        <p>Welcome to the Tasks application. Please sign in using your Stac Connect Microsoft account.</p>
-        <a href="https://stacmarine-webapp.vercel.app/" class="btn-primary-small">Sign in</a>
-      </div>
-     <!-- <a href="#" class="see-tasks">See all tasks</a> --> 
+        <!-- Right: My Tasks + Apps -->
+        <div class="tasks-apps">
+          <h2>My Tasks</h2>
+          <div class="task-box">
+            <p>
+              Welcome to the Tasks application. Please sign in using your Stac
+              Connect Microsoft account.
+            </p>
+            <a
+              href="https://stacmarine-webapp.vercel.app/"
+              class="btn-primary-small"
+              >Sign in</a
+            >
+          </div>
+          <!-- <a href="#" class="see-tasks">See all tasks</a> -->
 
-      <h3>Apps</h3>
-      <div class="apps-grid">
-        <div class="app"><a href="https://m365.cloud.microsoft/" target="_blank"><img src="img/office_365_logo.png" alt="Office 365"></a></div>
-        <div class="app"><a href="https://app.powerbi.com/" target="_blank"><img src="img/power_bi_logo.png" alt="App"></a></div>
-        <div class="app"><a href="https://teams.microsoft.com/" target="_blank"><img src="img/microsoft_teams.png" alt="App"></a></div>
-        <div class="app"><a href="https://erp-stac-marine-offshore.odoo.com/web#action=menu&cids=1" target="_blank"><img src="img/odoo_logo_medium.png" alt="App"></a></div>
-        <div class="app"><a href="https://outlook.office.com/" target="_blank"><img src="img/outlook_logo.jpg" alt="App"></a></div>
-        <div class="app"><a href="https://www.erpodoostacmarine.com/odoo" target="_blank"><img src="img/odoo_logo.png" alt="App"></a></div>
-        <div class="app"><a href="https://vsoa.omega365.com/login" target="_blank"><img src="img/Omega365_Logo.png" alt="App"></a></div>
-        <div class="app"><a href="https://community.zammad.org/login" target="_blank"><img src="img/zammad_logo.png" alt="App"></a></div>
-        <div class="app"><a href="https://stacmarine-webapp.vercel.app/#/documents" target="_blank" class="open-sign-styles"><img src="img/img_docuseal.png" alt="App" class="img-opensign"><span>DocuSeal</span></a></div>
-        <div class="app"><a href="https://workspace.stacmarine.com/portal/myworkspace" target="_blank"><img src="img/eXo.png" alt="App"></a></div>
-        <!--<div class="app"><img src="img/zoom-logo-png.png" alt="App"></div>-->
-        
-        
-        
-       <!-- <div class="app"><img src="img/Trello-Logo-2021-present.png" alt="App"></div>
+          <h3>Apps</h3>
+          <div class="apps-grid">
+            <div class="app">
+              <a href="https://m365.cloud.microsoft/" target="_blank"
+                ><img src="img/office_365_logo.png" alt="Office 365"
+              /></a>
+            </div>
+            <div class="app">
+              <a href="https://app.powerbi.com/" target="_blank"
+                ><img src="img/power_bi_logo.png" alt="App"
+              /></a>
+            </div>
+            <div class="app">
+              <a href="https://teams.microsoft.com/" target="_blank"
+                ><img src="img/microsoft_teams.png" alt="App"
+              /></a>
+            </div>
+            <div class="app">
+              <a
+                href="https://erp-stac-marine-offshore.odoo.com/web#action=menu&cids=1"
+                target="_blank"
+                ><img src="img/odoo_logo_medium.png" alt="App"
+              /></a>
+            </div>
+            <div class="app">
+              <a href="https://outlook.office.com/" target="_blank"
+                ><img src="img/outlook_logo.jpg" alt="App"
+              /></a>
+            </div>
+            <div class="app">
+              <a href="https://www.erpodoostacmarine.com/odoo" target="_blank"
+                ><img src="img/odoo_logo.png" alt="App"
+              /></a>
+            </div>
+            <div class="app">
+              <a href="https://vsoa.omega365.com/login" target="_blank"
+                ><img src="img/Omega365_Logo.png" alt="App"
+              /></a>
+            </div>
+            <div class="app">
+              <a href="https://community.zammad.org/login" target="_blank"
+                ><img src="img/zammad_logo.png" alt="App"
+              /></a>
+            </div>
+            <div class="app">
+              <a
+                href="https://stacmarine-webapp.vercel.app/#/documents"
+                target="_blank"
+                class="open-sign-styles"
+                ><img
+                  src="img/img_docuseal.png"
+                  alt="App"
+                  class="img-opensign"
+                /><span>DocuSeal</span></a
+              >
+            </div>
+            <div class="app">
+              <a
+                href="https://workspace.stacmarine.com/portal/myworkspace"
+                target="_blank"
+                ><img src="img/eXo.png" alt="App"
+              /></a>
+            </div>
+            <!--<div class="app"><img src="img/zoom-logo-png.png" alt="App"></div>-->
+
+            <!-- <div class="app"><img src="img/Trello-Logo-2021-present.png" alt="App"></div>
         
         <div class="app"><img src="https://via.placeholder.com/60" alt="App"></div>  -->
-      </div>
+          </div>
 
-       <!-- Settings link -->
-      <!-- <a href="#" class="settings-link">Settings</a> -->
-    </div>
-  </div>
-</section>
-
-<section class="career-opportunities">
-    <h1 class="features-title">Dashboard Features</h1>
-    <div class="tools">
-      <div class="career-box">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="img/img_smart_task.jpg" alt="" class="img-connect-exp" /> 
-                    <div class='flip-overlay'>
-                      <p class='flip-front-title text-white'>Smart Task and Workflow Manager</p>
-                      <p class="career-meta-front">Centralized Workflow Command</p>
-                    </div>
-
-                </div>
-                <div class="flip-card-back">
-                    <h1 class='flip-back-title'>Smart Task and Workflow Manager</h1> 
-                    <p class='fs-14'>Easily assign, prioritize, and track every task across your organization to ensure deadlines are met and resources are utilized effectively.</p> 
-                </div>
-            </div>
+          <!-- Settings link -->
+          <!-- <a href="#" class="settings-link">Settings</a> -->
         </div>
       </div>
-      
-      <div class="career-box">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="img/img_it_helpdesk.jpg" alt="" class="img-connect-exp" /> 
-                    <div class='flip-overlay'>
-                      <p class='flip-front-title text-white'>IT Helpdesk Chatbot &amp; Self-Service Portal</p>
-                      <p class="career-meta-front">Instant IT Support and Resolution</p>
-                    </div>
+    </section>
 
+    <section class="career-opportunities">
+      <h1 class="features-title">Dashboard Features</h1>
+      <div class="tools">
+        <div class="career-box">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="img/img_smart_task.jpg"
+                  alt=""
+                  class="img-connect-exp"
+                />
+                <div class="flip-overlay">
+                  <p class="flip-front-title text-white">
+                    Smart Task and Workflow Manager
+                  </p>
+                  <p class="career-meta-front">Centralized Workflow Command</p>
                 </div>
-                <div class="flip-card-back">
-                    <h1 class='flip-back-title'>IT Helpdesk Chatbot &amp; Self-Service Portal</h1> 
-                    <p class='fs-14'>Get immediate answers to common issues and submit tickets 24/7. Access a comprehensive knowledge base to resolve technical problems instantly without waiting.</p> 
-                </div>
+              </div>
+              <div class="flip-card-back">
+                <h1 class="flip-back-title">Smart Task and Workflow Manager</h1>
+                <p class="fs-14">
+                  Easily assign, prioritize, and track every task across your
+                  organization to ensure deadlines are met and resources are
+                  utilized effectively.
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div class="career-box">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="img/img_it_helpdesk.jpg"
+                  alt=""
+                  class="img-connect-exp"
+                />
+                <div class="flip-overlay">
+                  <p class="flip-front-title text-white">
+                    IT Helpdesk Chatbot &amp; Self-Service Portal
+                  </p>
+                  <p class="career-meta-front">
+                    Instant IT Support and Resolution
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h1 class="flip-back-title">
+                  IT Helpdesk Chatbot &amp; Self-Service Portal
+                </h1>
+                <p class="fs-14">
+                  Get immediate answers to common issues and submit tickets
+                  24/7. Access a comprehensive knowledge base to resolve
+                  technical problems instantly without waiting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="career-box">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="img/img_digitrans_dashboard.jpg"
+                  alt=""
+                  class="img-connect-exp"
+                />
+                <div class="flip-overlay">
+                  <p class="flip-front-title text-white">
+                    Digital Transformation Progress Dashboard
+                  </p>
+                  <p class="career-meta-front">
+                    Track Your Strategic Digital Advancement
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h1 class="flip-back-title">
+                  Digital Transformation Progress Dashboard
+                </h1>
+                <p class="fs-14">
+                  Centralize all data to visualize project impact, resource
+                  allocation, and key risks. Make informed, data-driven
+                  decisions to accelerate your digital maturity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="career-box">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="img/img_knowledge_hub.jpg"
+                  alt=""
+                  class="img-connect-exp"
+                />
+                <div class="flip-overlay">
+                  <p class="flip-front-title text-white">
+                    AI Powered Knowledge Hub
+                  </p>
+                  <p class="career-meta-front">
+                    Intelligent Information Retrieval
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h1 class="flip-back-title">AI Powered Knowledge Hub</h1>
+                <p class="fs-14">
+                  Instantly access verified and relevant information across your
+                  organization. Leverage AI to power advanced search and surface
+                  actionable insights, saving time on research.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="career-box">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/img_unified.jpg" alt="" class="img-connect-exp" />
+                <div class="flip-overlay">
+                  <p class="flip-front-title text-white">
+                    Unified Digital Workspace Hub
+                  </p>
+                  <p class="career-meta-front">
+                    The Integrated Platform for Team Productivity
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h1 class="flip-back-title">Unified Digital Workspace Hub</h1>
+                <p class="fs-14">
+                  Centralize all your essential tools, applications, and
+                  communications into a single, seamless dashboard. Eliminate
+                  application switching and boost organizational efficiency.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="career-box">
-           <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="img/img_digitrans_dashboard.jpg" alt="" class="img-connect-exp" /> 
-                    <div class='flip-overlay'>
-                      <p class='flip-front-title text-white'>Digital Transformation Progress Dashboard</p>
-                      <p class="career-meta-front">Track Your Strategic Digital Advancement</p>
-                    </div>
+      <div class="features-btn-area">
+        <a href="https://stacmarine-webapp.vercel.app/" class="btn-primary"
+          >Get Started</a
+        >
+      </div>
+    </section>
 
-                </div>
-                <div class="flip-card-back">
-                    <h1 class='flip-back-title'>Digital Transformation Progress Dashboard</h1> 
-                    <p class='fs-14'>Centralize all data to visualize project impact, resource allocation, and key risks. Make informed, data-driven decisions to accelerate your digital maturity.</p> 
-                </div>
-            </div>
+    <section class="integrity-section">
+      <div class="integrity-grid">
+        <!-- Column 1 -->
+        <div class="integrity-card">
+          <a
+            href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FHumanResources%2FShared%20Documents%2FIntranet%20Content%2FGROW%20PERFORMANCE%20MANAGEMENT%2Epdf&parent=%2Fsites%2FHumanResources%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1"
+          >
+            <img
+              src="img/growth.png"
+              alt="We Lead"
+              height="305"
+              class="img_below"
+            />
+            <h3>We Recognize & Reward Performance Management through GROW</h3>
+            <p>
+              The global recognition and reward process is aligned with our
+              values
+              <strong>"We LEAD with Integrity"</strong>
+            </p>
+            <!-- <p><a href="#">Read about the latest winners and nominate your colleagues here!</a></p> -->
+          </a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="integrity-card">
+          <a href="speakup-channel">
+            <img
+              src="img/img_speakup5.jpg"
+              alt="Speak Up"
+              height="305"
+              class="img_below"
+            />
+            <h3>STAC Marine Offshore Speak Up Channel</h3>
+            <p>
+              All employees have the right to express their views and concerns
+              in good faith, without fear of retaliation or reprisal. Employees
+              who discover any unethical or illegal practice are encouraged to
+              speak up.
+            </p>
+          </a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="integrity-card">
+          <a href="digitization">
+            <img
+              src="img/img_digitalization.svg"
+              alt="Digitalisation"
+              height="305"
+              class="img_below"
+            />
+            <h3>Digitalisation in STAC Marine Offshore</h3>
+            <p>
+              At STAC Marine Offshore, we aim to leverage digital technologies
+              to enhance our operations and drive innovation. Our digitalization
+              initiatives focus on improving decision-making, efficiency, user
+              experience, and fostering a culture of innovation. Stay tuned for
+              more updates on our digital transformation journey!
+            </p>
+          </a>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="integrity-card">
+          <a href="zero-harm">
+            <img
+              src="img/img_zero_harm_2.png"
+              alt="Zero Harm"
+              height="305"
+              class="img_below"
+            />
+            <h3>Zero Harm: Why Safety Culture is Key</h3>
+            <p>
+              Operational integrity at STAC Marine Offshore, anchored in a
+              strong Zero Harm safety culture, ensures the consistent
+              application of effective processes and controls to protect our
+              people, assets, and the environment, while enabling safe,
+              reliable, and compliant operations in support of our business
+              objectives.
+            </p>
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="career-box">
-           <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="img/img_knowledge_hub.jpg" alt="" class="img-connect-exp" /> 
-                    <div class='flip-overlay'>
-                      <p class='flip-front-title text-white'>AI Powered Knowledge Hub</p>
-                      <p class="career-meta-front">Intelligent Information Retrieval</p>
-                    </div>
-
-                </div>
-                <div class="flip-card-back">
-                    <h1 class='flip-back-title'>AI Powered Knowledge Hub</h1> 
-                    <p class='fs-14'>Instantly access verified and relevant information across your organization. Leverage AI to power advanced search and surface actionable insights, saving time on research.</p> 
-                </div>
-            </div>
-        </div>
-      </div>
-
-       <div class="career-box">
-           <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="img/img_unified.jpg" alt="" class="img-connect-exp" /> 
-                    <div class='flip-overlay'>
-                      <p class='flip-front-title text-white'>Unified Digital Workspace Hub</p>
-                      <p class="career-meta-front">The Integrated Platform for Team Productivity</p>
-                    </div>
-
-                </div>
-                <div class="flip-card-back">
-                    <h1 class='flip-back-title'>Unified Digital Workspace Hub</h1> 
-                    <p class='fs-14'> Centralize all your essential tools, applications, and communications into a single, seamless dashboard. Eliminate application switching and boost organizational efficiency.</p> 
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-    <div class="features-btn-area">
-      <a href="https://stacmarine-webapp.vercel.app/" class="btn-primary">Get Started</a>
-    </div>
-</section>
-
-  <section class="integrity-section">
-  <div class="integrity-grid">
-
-   <!-- Column 1 -->
-    <div class="integrity-card">
-      <a href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FHumanResources%2FShared%20Documents%2FIntranet%20Content%2FGROW%20PERFORMANCE%20MANAGEMENT%2Epdf&parent=%2Fsites%2FHumanResources%2FShared%20Documents%2FIntranet%20Content&p=true&ga=1">
-          <img src="img/growth.png" alt="We Lead" height="305" class="img_below">
-          <h3>We Recognize & Reward Performance Management through GROW</h3>
-          <p>
-            The global recognition and reward process is aligned with our values 
-            <strong>"We LEAD with Integrity"</strong>
-          </p>
-          <!-- <p><a href="#">Read about the latest winners and nominate your colleagues here!</a></p> -->
-      </a>
-    </div>
-
-    <!-- Column 2 -->
-    <div class="integrity-card">
-      <a href="speakup-channel">
-          <img src="img/img_speakup5.jpg" alt="Speak Up" height="305" class="img_below">
-          <h3>STAC Marine Offshore Speak Up Channel</h3>
-          <p>
-            All employees have the right to express their views and concerns in good faith, without fear of retaliation 
-            or reprisal. Employees who discover any unethical or illegal practice are encouraged to speak up.
-          </p>
-      </a>
-    </div>
-
-    <!-- Column 3 -->
-    <div class="integrity-card">
-      <a href="digitization">
-         <img src="img/img_digitalization.svg" alt="Digitalisation" height="305" class="img_below">
-        <h3>Digitalisation in STAC Marine Offshore</h3>
-        <p>
-          At STAC Marine Offshore, we aim to leverage digital technologies to enhance our operations and drive innovation. 
-          Our digitalization initiatives focus on improving decision-making, efficiency, user experience, and 
-          fostering a culture of innovation. Stay tuned for more updates on our digital transformation journey!
-        </p>
-      </a>
-    </div>
-
-    <!-- Column 4 -->
-    <div class="integrity-card">
-      <a href="zero-harm">
-        <img src="img/img_zero_harm_2.png" alt="Zero Harm" height="305" class="img_below">
-        <h3>Zero Harm: Why Safety Culture is Key</h3>
-        <p>
-          Operational integrity at STAC Marine Offshore, anchored in a strong Zero Harm safety culture, ensures the consistent application of effective processes and controls to protect our people, assets, and the environment, while enabling safe, reliable, and compliant operations in support of our business objectives.
-        </p>
-      </a>
-     
-    </div>
-
-  </div>
-</section>
-
-<footer class="site-footer">
-    <div class="logo"><img src="img/stac_logo_new.jpg" height="50px"/></div>
-    <div class="quick-finder">
+    <footer class="site-footer">
+      <div class="logo"><img src="img/stac_logo_new.jpg" height="50px" /></div>
+      <div class="quick-finder">
         <h3>Quick Finder</h3>
         <ul>
-            <li><a href="#">IT Support Information</a></li>
-            <li><a href="mailto:itsupport@stac-marine.com">IT Support email</a></li>
-            <li><a href="#">My settings</a></li>
+          <li><a href="#">IT Support Information</a></li>
+          <li>
+            <a href="mailto:itsupport@stac-marine.com">IT Support email</a>
+          </li>
+          <li><a href="#">My settings</a></li>
         </ul>
-    </div>
-    <div class="copyright">© 2025 STAC Marine Offshore. All Rights Reserved.</div>
-</footer>
+      </div>
+      <div class="copyright">
+        © 2025 STAC Marine Offshore. All Rights Reserved.
+      </div>
+    </footer>
 
-<!-- Popup Modal -->
-<div id="videoModal" class="modal">
-    <div class="modal-content">
+    <!-- Popup Modal -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
-        <video id="popupVideo" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; height: 400px;">
-            <source src="https://res.cloudinary.com/stacconnect/video/upload/v1770904128/STAC_Marine_Offshore_Brand_Video_Compressed_2_scoj7g.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video> 
+        <video
+          id="popupVideo"
+          controls
+          controlsList="nodownload"
+          oncontextmenu="return false;"
+          style="width: 100%; height: 400px"
+        >
+          <source
+            src="https://res.cloudinary.com/stacconnect/video/upload/v1770904128/STAC_Marine_Offshore_Brand_Video_Compressed_2_scoj7g.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
         <!-- <iframe 
             src="https://res.cloudinary.com/vou-ai/video/upload/v1770220079/stacconnect/general/zam9n51z6uwuhpvwntwn.mp4" 
             width="100%" 
@@ -786,346 +1332,387 @@
             style="border: 0"
             allowfullscreen>
         </iframe> -->
+      </div>
     </div>
-</div>
 
-<script>
-/* When the user clicks on the button, 
+    <script>
+      /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
- var whatsNewMenu = document.getElementById("whatsNewMenu");
-    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
-    var manageSystemMenu = document.getElementById("manageSystemMenu");
-    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
+      var whatsNewMenu = document.getElementById("whatsNewMenu");
+      var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+      var manageSystemMenu = document.getElementById("manageSystemMenu");
+      var resourceToolsMenu = document.getElementById("resourceToolsMenu");
 
+      function whatsNew() {
+        if (whatWeDoMenu.classList.contains("show")) {
+          whatWeDoMenu.classList.remove("show");
+        }
 
-function whatsNew() {
+        if (manageSystemMenu.classList.contains("show")) {
+          manageSystemMenu.classList.remove("show");
+        }
 
-  if (whatWeDoMenu.classList.contains('show')) {
-    whatWeDoMenu.classList.remove('show');
-  }
+        if (resourceToolsMenu.classList.contains("show")) {
+          resourceToolsMenu.classList.remove("show");
+        }
+        document.getElementById("whatsNewMenu").classList.toggle("show");
+      }
 
-  if (manageSystemMenu.classList.contains('show')) {
-    manageSystemMenu.classList.remove('show');
-  }
+      function whatWeDo() {
+        if (whatsNewMenu.classList.contains("show")) {
+          whatsNewMenu.classList.remove("show");
+        }
 
-  if (resourceToolsMenu.classList.contains('show')) {
-    resourceToolsMenu.classList.remove('show');
-  }
-  document.getElementById("whatsNewMenu").classList.toggle("show");
+        if (manageSystemMenu.classList.contains("show")) {
+          manageSystemMenu.classList.remove("show");
+        }
 
-}
+        if (resourceToolsMenu.classList.contains("show")) {
+          resourceToolsMenu.classList.remove("show");
+        }
+        document.getElementById("whatWeDoMenu").classList.toggle("show");
+      }
 
-function whatWeDo() {
+      function manageSystem() {
+        if (whatsNewMenu.classList.contains("show")) {
+          whatsNewMenu.classList.remove("show");
+        }
 
-   if (whatsNewMenu.classList.contains('show')) {
-      whatsNewMenu.classList.remove('show');
-    }
+        if (whatWeDoMenu.classList.contains("show")) {
+          whatWeDoMenu.classList.remove("show");
+        }
 
-    if (manageSystemMenu.classList.contains('show')) {
-      manageSystemMenu.classList.remove('show');
-    }
+        if (resourceToolsMenu.classList.contains("show")) {
+          resourceToolsMenu.classList.remove("show");
+        }
 
-    if (resourceToolsMenu.classList.contains('show')) {
-      resourceToolsMenu.classList.remove('show');
-    }
-    document.getElementById("whatWeDoMenu").classList.toggle("show");
-}
+        document.getElementById("manageSystemMenu").classList.toggle("show");
+      }
 
-function manageSystem() {
+      function resourceTools() {
+        if (whatsNewMenu.classList.contains("show")) {
+          whatsNewMenu.classList.remove("show");
+        }
 
-    if (whatsNewMenu.classList.contains('show')) {
-      whatsNewMenu.classList.remove('show');
-    }
+        if (whatWeDoMenu.classList.contains("show")) {
+          whatWeDoMenu.classList.remove("show");
+        }
 
-    if (whatWeDoMenu.classList.contains('show')) {
-      whatWeDoMenu.classList.remove('show');
-    }
+        if (manageSystemMenu.classList.contains("show")) {
+          manageSystemMenu.classList.remove("show");
+        }
+        document.getElementById("resourceToolsMenu").classList.toggle("show");
+      }
 
-    if (resourceToolsMenu.classList.contains('show')) {
-      resourceToolsMenu.classList.remove('show');
-    }
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          if (whatsNewMenu.classList.contains("show")) {
+            whatsNewMenu.classList.remove("show");
+          }
 
-  document.getElementById("manageSystemMenu").classList.toggle("show");
-}
+          if (whatWeDoMenu.classList.contains("show")) {
+            whatWeDoMenu.classList.remove("show");
+          }
 
-function resourceTools() {
+          if (manageSystemMenu.classList.contains("show")) {
+            manageSystemMenu.classList.remove("show");
+          }
 
-   if (whatsNewMenu.classList.contains('show')) {
-      whatsNewMenu.classList.remove('show');
-    }
+          if (resourceToolsMenu.classList.contains("show")) {
+            resourceToolsMenu.classList.remove("show");
+          }
+        }
 
-    if (whatWeDoMenu.classList.contains('show')) {
-      whatWeDoMenu.classList.remove('show');
-    }
+        if (event.target == modal) closePopup();
+      };
+    </script>
 
-    if (manageSystemMenu.classList.contains('show')) {
-      manageSystemMenu.classList.remove('show');
-    }
-  document.getElementById("resourceToolsMenu").classList.toggle("show");
-}
+    <script>
+      let slideIndex = 0;
+      showSlides();
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
 
-    if (whatsNewMenu.classList.contains('show')) {
-      whatsNewMenu.classList.remove('show');
-    }
+        slides[slideIndex - 1].style.display = "block";
 
-    if (whatWeDoMenu.classList.contains('show')) {
-      whatWeDoMenu.classList.remove('show');
-    }
+        setTimeout(showSlides, 10000); // Change image every 2 seconds
+      }
+    </script>
 
-    if (manageSystemMenu.classList.contains('show')) {
-      manageSystemMenu.classList.remove('show');
-    }
+    <script>
+      let slideIdx = 0;
+      announcementSlides();
 
-    if (resourceToolsMenu.classList.contains('show')) {
-      resourceToolsMenu.classList.remove('show');
-    }
+      function announcementSlides() {
+        let i;
+        let slides = document.getElementsByClassName("annSlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIdx++;
+        if (slideIdx > slides.length) {
+          slideIdx = 1;
+        }
 
-  }
+        slides[slideIdx - 1].style.display = "block";
 
-  if (event.target == modal) closePopup();
-}
-</script>
+        setTimeout(announcementSlides, 5000); // Change image every 2 seconds
+      }
+    </script>
 
-<script>
-let slideIndex = 0;
-showSlides();
+    <script>
+      const modal = document.getElementById("videoModal");
+      const popupVideo = document.getElementById("popupVideo");
+      const previewVideo = document.getElementById("previewVideo");
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  
-  slides[slideIndex-1].style.display = "block";  
-  
-  setTimeout(showSlides, 10000); // Change image every 2 seconds
-}
-</script>
+      document
+        .querySelector("video")
+        .setAttribute("controlslist", "nodownload");
+      document
+        .querySelector("video")
+        .setAttribute("oncontextmenu", "return false;");
 
-<script>
-let slideIdx = 0;
-announcementSlides();
+      function openPopup() {
+        modal.style.display = "block";
+        previewVideo.pause(); // Pause preview to save resources
 
-function announcementSlides() {
-  let i;
-  let slides = document.getElementsByClassName("annSlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIdx++;
-  if (slideIdx > slides.length) {slideIdx = 1}    
-  
-  slides[slideIdx-1].style.display = "block";  
-  
-  setTimeout(announcementSlides, 5000); // Change image every 2 seconds
-}
-</script>
+        popupVideo.muted = false; // Enable sound
+        popupVideo.currentTime = previewVideo.currentTime; // Sync time (optional)
+        popupVideo.play();
+      }
 
-<script>
-  
-  const modal = document.getElementById("videoModal");
-  const popupVideo = document.getElementById("popupVideo");
-  const previewVideo = document.getElementById("previewVideo");
-  
-  document.querySelector('video').setAttribute("controlslist", "nodownload");
-document.querySelector('video').setAttribute("oncontextmenu", "return false;");
+      function closePopup() {
+        modal.style.display = "none";
+        popupVideo.pause();
+        previewVideo.play(); // Resume preview
+      }
+    </script>
 
-  function openPopup() {
-      modal.style.display = "block";
-      previewVideo.pause(); // Pause preview to save resources
-      
-      popupVideo.muted = false; // Enable sound
-      popupVideo.currentTime = previewVideo.currentTime; // Sync time (optional)
-      popupVideo.play();
-  }
+    <script>
+      // ─── Config ──────────────────────────────────────────────────────────────────
+      const API = "https://oil-price-backend.onrender.com/api";
+      const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 min
 
-  function closePopup() {
-      modal.style.display = "none";
-      popupVideo.pause();
-      previewVideo.play(); // Resume preview
-  }
-  
-</script>
+      // ─── Sparkline renderer ──────────────────────────────────────────────────────
+      function drawSpark(canvasId, history, strokeColor, fillColor) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas || !history?.length) return;
+        const prices = history.map((h) => h.price ?? h);
+        if (prices.length < 2) return;
 
-<script>
-// ─── Config ──────────────────────────────────────────────────────────────────
-const API = 'https://oil-price-backend.onrender.com/api';
-const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 min
+        const dpr = window.devicePixelRatio || 1;
+        const W = canvas.parentElement.clientWidth || 400;
+        const H = 50;
+        canvas.width = W * dpr;
+        canvas.height = H * dpr;
+        canvas.style.width = W + "px";
+        canvas.style.height = H + "px";
 
-// ─── Sparkline renderer ──────────────────────────────────────────────────────
-function drawSpark(canvasId, history, strokeColor, fillColor) {
-  const canvas = document.getElementById(canvasId);
-  if (!canvas || !history?.length) return;
-  const prices = history.map(h => h.price ?? h);
-  if (prices.length < 2) return;
+        const ctx = canvas.getContext("2d");
+        ctx.scale(dpr, dpr);
 
-  const dpr = window.devicePixelRatio || 1;
-  const W   = canvas.parentElement.clientWidth || 400;
-  const H   = 50;
-  canvas.width  = W * dpr;
-  canvas.height = H * dpr;
-  canvas.style.width  = W + 'px';
-  canvas.style.height = H + 'px';
+        const pad = { t: 10, b: 6, l: 2, r: 2 };
+        const aw = W - pad.l - pad.r;
+        const ah = H - pad.t - pad.b;
 
-  const ctx = canvas.getContext('2d');
-  ctx.scale(dpr, dpr);
+        const min = Math.min(...prices);
+        const max = Math.max(...prices);
+        const range = max - min || 1;
 
-  const pad = { t: 10, b: 6, l: 2, r: 2 };
-  const aw = W - pad.l - pad.r;
-  const ah = H - pad.t - pad.b;
+        const pts = prices.map((v, i) => ({
+          x: pad.l + (i / (prices.length - 1)) * aw,
+          y: pad.t + (1 - (v - min) / range) * ah,
+        }));
 
-  const min = Math.min(...prices);
-  const max = Math.max(...prices);
-  const range = (max - min) || 1;
+        // Dashed gridline at midpoint
+        ctx.setLineDash([3, 5]);
+        ctx.strokeStyle = "rgba(255,255,255,0.04)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(pad.l, pad.t + ah / 2);
+        ctx.lineTo(pad.l + aw, pad.t + ah / 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
 
-  const pts = prices.map((v, i) => ({
-    x: pad.l + (i / (prices.length - 1)) * aw,
-    y: pad.t + (1 - (v - min) / range) * ah,
-  }));
+        // Gradient fill
+        const grad = ctx.createLinearGradient(0, pad.t, 0, H);
+        grad.addColorStop(0, fillColor + "30");
+        grad.addColorStop(0.7, fillColor + "08");
+        grad.addColorStop(1, fillColor + "00");
 
-  // Dashed gridline at midpoint
-  ctx.setLineDash([3, 5]);
-  ctx.strokeStyle = 'rgba(255,255,255,0.04)';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(pad.l, pad.t + ah / 2);
-  ctx.lineTo(pad.l + aw, pad.t + ah / 2);
-  ctx.stroke();
-  ctx.setLineDash([]);
+        ctx.beginPath();
+        ctx.moveTo(pts[0].x, H);
+        for (let i = 0; i < pts.length; i++) {
+          if (i === 0) ctx.lineTo(pts[i].x, pts[i].y);
+          else {
+            const cpx = (pts[i - 1].x + pts[i].x) / 2;
+            ctx.bezierCurveTo(
+              cpx,
+              pts[i - 1].y,
+              cpx,
+              pts[i].y,
+              pts[i].x,
+              pts[i].y,
+            );
+          }
+        }
+        ctx.lineTo(pts.at(-1).x, H);
+        ctx.closePath();
+        ctx.fillStyle = grad;
+        ctx.fill();
 
-  // Gradient fill
-  const grad = ctx.createLinearGradient(0, pad.t, 0, H);
-  grad.addColorStop(0, fillColor + '30');
-  grad.addColorStop(0.7, fillColor + '08');
-  grad.addColorStop(1, fillColor + '00');
+        // Stroke
+        ctx.beginPath();
+        ctx.moveTo(pts[0].x, pts[0].y);
+        for (let i = 1; i < pts.length; i++) {
+          const cpx = (pts[i - 1].x + pts[i].x) / 2;
+          ctx.bezierCurveTo(
+            cpx,
+            pts[i - 1].y,
+            cpx,
+            pts[i].y,
+            pts[i].x,
+            pts[i].y,
+          );
+        }
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 1.75;
+        ctx.lineJoin = "round";
+        ctx.stroke();
 
-  ctx.beginPath();
-  ctx.moveTo(pts[0].x, H);
-  for (let i = 0; i < pts.length; i++) {
-    if (i === 0) ctx.lineTo(pts[i].x, pts[i].y);
-    else {
-      const cpx = (pts[i-1].x + pts[i].x) / 2;
-      ctx.bezierCurveTo(cpx, pts[i-1].y, cpx, pts[i].y, pts[i].x, pts[i].y);
-    }
-  }
-  ctx.lineTo(pts.at(-1).x, H);
-  ctx.closePath();
-  ctx.fillStyle = grad;
-  ctx.fill();
+        // End dot with glow
+        const last = pts.at(-1);
+        ctx.shadowColor = strokeColor;
+        ctx.shadowBlur = 8;
+        ctx.beginPath();
+        ctx.arc(last.x, last.y, 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = strokeColor;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
 
-  // Stroke
-  ctx.beginPath();
-  ctx.moveTo(pts[0].x, pts[0].y);
-  for (let i = 1; i < pts.length; i++) {
-    const cpx = (pts[i-1].x + pts[i].x) / 2;
-    ctx.bezierCurveTo(cpx, pts[i-1].y, cpx, pts[i].y, pts[i].x, pts[i].y);
-  }
-  ctx.strokeStyle = strokeColor;
-  ctx.lineWidth = 1.75;
-  ctx.lineJoin = 'round';
-  ctx.stroke();
+      // ─── Helpers ─────────────────────────────────────────────────────────────────
+      const fmt = (n, d = 2) =>
+        n != null && !isNaN(n) ? Number(n).toFixed(d) : "—";
+      const fmtD = (s) => {
+        try {
+          return new Date(s).toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+          });
+        } catch {
+          return s;
+        }
+      };
+      const $ = (id) => document.getElementById(id);
 
-  // End dot with glow
-  const last = pts.at(-1);
-  ctx.shadowColor = strokeColor;
-  ctx.shadowBlur  = 8;
-  ctx.beginPath();
-  ctx.arc(last.x, last.y, 3.5, 0, Math.PI * 2);
-  ctx.fillStyle = strokeColor;
-  ctx.fill();
-  ctx.shadowBlur = 0;
-}
+      function applyBadge(id, change, pct) {
+        const el = $(id);
+        if (!el) return;
+        el.classList.remove("shim", "badge-flat", "badge-up", "badge-down");
+        if (change == null) {
+          el.className = "badge badge-flat";
+          el.textContent = "N/A";
+          return;
+        }
+        const dir = change >= 0 ? "up" : "down";
+        const arrow = change >= 0 ? "▲" : "▼";
+        const sign = change >= 0 ? "+" : "";
+        el.className = `badge badge-${dir}`;
+        el.textContent = `${arrow} ${sign}${fmt(pct)}%`;
+      }
 
-// ─── Helpers ─────────────────────────────────────────────────────────────────
-const fmt  = (n, d = 2) => n != null && !isNaN(n) ? Number(n).toFixed(d) : '—';
-const fmtD = s => { try { return new Date(s).toLocaleDateString('en-GB', {day:'2-digit',month:'short',year:'numeric'}); } catch { return s; } };
-const $    = id => document.getElementById(id);
+      function clearShim(...ids) {
+        ids.forEach((id) => $(id)?.classList.remove("shim"));
+      }
 
-function applyBadge(id, change, pct) {
-  const el = $(id);
-  if (!el) return;
-  el.classList.remove('shim', 'badge-flat', 'badge-up', 'badge-down');
-  if (change == null) { el.className = 'badge badge-flat'; el.textContent = 'N/A'; return; }
-  const dir = change >= 0 ? 'up' : 'down';
-  const arrow = change >= 0 ? '▲' : '▼';
-  const sign  = change >= 0 ? '+' : '';
-  el.className = `badge badge-${dir}`;
-  el.textContent = `${arrow} ${sign}${fmt(pct)}%`;
-}
+      const errors = new Set();
+      function showErr(msg) {
+        errors.add(msg);
+        const b = $("errBanner");
+        if (!b) {
+          console.error("[Dashboard]", msg);
+          return;
+        }
+        b.style.display = "block";
+        b.innerHTML = [...errors].map((m) => `⚠ ${m}`).join("<br>");
+      }
 
-function clearShim(...ids) { ids.forEach(id => $(id)?.classList.remove('shim')); }
+      // ─── Render ──────────────────────────────────────────────────────────────────
+      function renderOil({ prefix, data, stroke, fill }) {
+        const p = prefix.toLowerCase();
+        clearShim(`${p}Price`, `${p}Badge`);
 
-const errors = new Set();
-function showErr(msg) {
-  errors.add(msg);
-  const b = $('errBanner');
-  if (!b) { console.error('[Dashboard]', msg); return; }
-  b.style.display = 'block';
-  b.innerHTML = [...errors].map(m => `⚠ ${m}`).join('<br>');
-}
+        if (!data || data.error) {
+          const priceEl = $(`${p}Price`);
+          const badgeEl = $(`${p}Badge`);
+          const updatedEl = $(`${p}Updated`);
+          if (priceEl) priceEl.textContent = "—";
+          if (badgeEl) {
+            badgeEl.className = "badge badge-flat";
+            badgeEl.textContent = "Error";
+          }
+          if (updatedEl) updatedEl.textContent = data?.error ?? "Unavailable";
+          showErr(`${prefix}: ${data?.error ?? "Failed to load"}`);
+          return;
+        }
 
-// ─── Render ──────────────────────────────────────────────────────────────────
-function renderOil({ prefix, data, stroke, fill }) {
-  const p = prefix.toLowerCase();
-  clearShim(`${p}Price`, `${p}Badge`);
+        const priceEl = $(`${p}Price`);
+        const srcEl = $(`${p}Src`);
+        const updatedEl = $(`${p}Updated`);
+        if (priceEl) priceEl.textContent = `$${fmt(data.current)}`;
+        if (srcEl && data.source) srcEl.textContent = data.source;
+        applyBadge(`${p}Badge`, data.change, data.changePct);
+        if (updatedEl)
+          updatedEl.textContent = `↻ Last data: ${fmtD(data.lastDate)}`;
 
-  if (!data || data.error) {
-    const priceEl   = $(`${p}Price`);
-    const badgeEl   = $(`${p}Badge`);
-    const updatedEl = $(`${p}Updated`);
-    if (priceEl)   priceEl.textContent = '—';
-    if (badgeEl)   { badgeEl.className = 'badge badge-flat'; badgeEl.textContent = 'Error'; }
-    if (updatedEl) updatedEl.textContent = data?.error ?? 'Unavailable';
-    showErr(`${prefix}: ${data?.error ?? 'Failed to load'}`);
-    return;
-  }
+        if (data.history?.length > 1) {
+          const prices = data.history.map((h) => h.price);
+          const lo = Math.min(...prices).toFixed(2);
+          const hi = Math.max(...prices).toFixed(2);
+          if ($(`${p}Range`)) $(`${p}Range`).textContent = `$${lo} – $${hi}`;
+          drawSpark(`${p}Chart`, data.history, stroke, fill);
+        }
+      }
 
-  const priceEl   = $(`${p}Price`);
-  const srcEl     = $(`${p}Src`);
-  const updatedEl = $(`${p}Updated`);
-  if (priceEl)              priceEl.textContent = `$${fmt(data.current)}`;
-  if (srcEl && data.source) srcEl.textContent = data.source;
-  applyBadge(`${p}Badge`, data.change, data.changePct);
-  if (updatedEl) updatedEl.textContent = `↻ Last data: ${fmtD(data.lastDate)}`;
+      function renderNFEM(data) {
+        clearShim("nfemRate", "nfemBadge");
+        const rateEl = $("nfemRate");
+        const badgeEl = $("nfemBadge");
+        const updatedEl = $("nfemUpdated");
+        const bodyEl = $("nfemBody");
 
-  if (data.history?.length > 1) {
-    const prices = data.history.map(h => h.price);
-    const lo = Math.min(...prices).toFixed(2);
-    const hi = Math.max(...prices).toFixed(2);
-    if ($(`${p}Range`)) $(`${p}Range`).textContent = `$${lo} – $${hi}`;
-    drawSpark(`${p}Chart`, data.history, stroke, fill);
-  }
-}
+        if (!data || data.error) {
+          if (rateEl) rateEl.textContent = "—";
+          if (badgeEl) {
+            badgeEl.className = "badge badge-flat";
+            badgeEl.textContent = "Error";
+          }
+          if (updatedEl) updatedEl.textContent = data?.error ?? "Unavailable";
+          if (bodyEl)
+            bodyEl.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:1rem;color:var(--dim)">Data unavailable</td></tr>`;
+          showErr(`NFEM: ${data?.error ?? "Failed"}`);
+          return;
+        }
 
-function renderNFEM(data) {
-  clearShim('nfemRate', 'nfemBadge');
-  const rateEl    = $('nfemRate');
-  const badgeEl   = $('nfemBadge');
-  const updatedEl = $('nfemUpdated');
-  const bodyEl    = $('nfemBody');
+        if (rateEl) rateEl.textContent = `₦${fmt(data.current)}`;
+        applyBadge("nfemBadge", data.change, data.changePct);
+        if (updatedEl)
+          updatedEl.textContent = `↻ Last data: ${data.latest?.date ?? "—"}`;
 
-  if (!data || data.error) {
-    if (rateEl)    rateEl.textContent = '—';
-    if (badgeEl)   { badgeEl.className = 'badge badge-flat'; badgeEl.textContent = 'Error'; }
-    if (updatedEl) updatedEl.textContent = data?.error ?? 'Unavailable';
-    if (bodyEl)    bodyEl.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:1rem;color:var(--dim)">Data unavailable</td></tr>`;
-    showErr(`NFEM: ${data?.error ?? 'Failed'}`);
-    return;
-  }
-
-  if (rateEl)    rateEl.textContent = `₦${fmt(data.current)}`;
-  applyBadge('nfemBadge', data.change, data.changePct);
-  if (updatedEl) updatedEl.textContent = `↻ Last data: ${data.latest?.date ?? '—'}`;
-
-/*
+        /*
 
 if (bodyEl) {
     bodyEl.innerHTML = (data.history ?? []).map(r => `
@@ -1141,64 +1728,159 @@ if (bodyEl) {
   }
 */
 
-
-  if (bodyEl) {
-    bodyEl.innerHTML = (data.history ?? []).slice(0, 2).map(r => `
+        if (bodyEl) {
+          bodyEl.innerHTML =
+            (data.history ?? [])
+              .slice(0, 2)
+              .map(
+                (r) => `
       <tr>
-        <td>${r.date ?? '—'}</td>
+        <td>${r.date ?? "—"}</td>
         <td class="fx-nfem">₦${fmt(r.nfem)}</td> 
-      </tr>`).join('') ||
-      `<tr><td colspan="6" style="text-align:center;color:var(--dim);padding:0.8rem">No rows</td></tr>`;
-  }
-}
+      </tr>`,
+              )
+              .join("") ||
+            `<tr><td colspan="6" style="text-align:center;color:var(--dim);padding:0.8rem">No rows</td></tr>`;
+        }
+      }
 
-// ─── Main fetch ───────────────────────────────────────────────────────────────
-async function fetchAll() {
-  const btn = $('refreshBtn');
-  const banner = $('errBanner');
-  if (btn) { btn.disabled = true; btn.classList.add('spinning'); }
-  errors.clear();
-  if (banner) banner.style.display = 'none';
+      // ─── Main fetch ───────────────────────────────────────────────────────────────
+      async function fetchAll() {
+        const btn = $("refreshBtn");
+        const banner = $("errBanner");
+        if (btn) {
+          btn.disabled = true;
+          btn.classList.add("spinning");
+        }
+        errors.clear();
+        if (banner) banner.style.display = "none";
 
-  // Re-add shimmer
-  ['brentPrice','brentBadge','bonnyPrice','bonnyBadge','nfemRate','nfemBadge']
-    .forEach(id => $(id)?.classList.add('shim'));
+        // Re-add shimmer
+        [
+          "brentPrice",
+          "brentBadge",
+          "bonnyPrice",
+          "bonnyBadge",
+          "nfemRate",
+          "nfemBadge",
+        ].forEach((id) => $(id)?.classList.add("shim"));
 
-  try {
-    const res  = await fetch(`${API}/all`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+        try {
+          const res = await fetch(`${API}/all`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
 
-    renderOil({ prefix: 'brent', data: data.brent, stroke: '#3082ff', fill: '#3082ff' });
-    renderOil({ prefix: 'bonny', data: data.bonny, stroke: '#00b89e', fill: '#00b89e' });
-    renderNFEM(data.nfem);
+          renderOil({
+            prefix: "brent",
+            data: data.brent,
+            stroke: "#3082ff",
+            fill: "#3082ff",
+          });
+          renderOil({
+            prefix: "bonny",
+            data: data.bonny,
+            stroke: "#00b89e",
+            fill: "#00b89e",
+          });
+          renderNFEM(data.nfem);
 
-    const fetchTimeEl = $('fetchTime');
-    if (fetchTimeEl) fetchTimeEl.textContent = `Last refreshed: ${new Date(data.fetchedAt ?? Date.now()).toLocaleTimeString()}`;
-  } catch (e) {
-    showErr(`Cannot reach backend at ${API}. Is the server running? (${e.message})`);
-    ['brentPrice','brentBadge','bonnyPrice','bonnyBadge','nfemRate','nfemBadge']
-      .forEach(id => { const el=$(id); if(el){el.classList.remove('shim');el.textContent='—';} });
-  } finally {
-    if (btn) { btn.disabled = false; btn.classList.remove('spinning'); }
-  }
-}
+          const fetchTimeEl = $("fetchTime");
+          if (fetchTimeEl)
+            fetchTimeEl.textContent = `Last refreshed: ${new Date(data.fetchedAt ?? Date.now()).toLocaleTimeString()}`;
+        } catch (e) {
+          showErr(
+            `Cannot reach backend at ${API}. Is the server running? (${e.message})`,
+          );
+          [
+            "brentPrice",
+            "brentBadge",
+            "bonnyPrice",
+            "bonnyBadge",
+            "nfemRate",
+            "nfemBadge",
+          ].forEach((id) => {
+            const el = $(id);
+            if (el) {
+              el.classList.remove("shim");
+              el.textContent = "—";
+            }
+          });
+        } finally {
+          if (btn) {
+            btn.disabled = false;
+            btn.classList.remove("spinning");
+          }
+        }
+      }
 
-fetchAll();
-setInterval(fetchAll, REFRESH_INTERVAL);
-window.addEventListener('resize', () => {
-  // Redraw sparklines on resize without re-fetching
-  const brent = window.__lastData?.brent;
-  const bonny = window.__lastData?.bonny;
-  if (brent?.history) drawSpark('brentChart', brent.history, '#3082ff', '#3082ff');
-  if (bonny?.history) drawSpark('bonnyChart', bonny.history, '#00b89e', '#00b89e');
-});
-</script>
+      fetchAll();
+      setInterval(fetchAll, REFRESH_INTERVAL);
+      window.addEventListener("resize", () => {
+        // Redraw sparklines on resize without re-fetching
+        const brent = window.__lastData?.brent;
+        const bonny = window.__lastData?.bonny;
+        if (brent?.history)
+          drawSpark("brentChart", brent.history, "#3082ff", "#3082ff");
+        if (bonny?.history)
+          drawSpark("bonnyChart", bonny.history, "#00b89e", "#00b89e");
+      });
+    </script>
 
-<script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set your target launch date specifically to July 6, 2026
+        const targetLaunchDate = new Date("July 6, 2026 00:00:00").getTime();
 
-  // Sample sparkline data
-/*
+        function computeCountdownTimer() {
+          const exactCurrentTime = new Date().getTime();
+          const differenceTimeDistance = targetLaunchDate - exactCurrentTime;
+
+          // Verify if target countdown phase completed
+          if (differenceTimeDistance < 0) {
+            document.getElementById("stac-days").textContent = "00";
+            document.getElementById("stac-hours").textContent = "00";
+            document.getElementById("stac-mins").textContent = "00";
+            document.getElementById("stac-secs").textContent = "00";
+            return;
+          }
+
+          // Standard time transformations logic
+          const dynamicDays = Math.floor(
+            differenceTimeDistance / (1000 * 60 * 60 * 24),
+          );
+          const dynamicHours = Math.floor(
+            (differenceTimeDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+          const dynamicMinutes = Math.floor(
+            (differenceTimeDistance % (1000 * 60 * 60)) / (1000 * 60),
+          );
+          const dynamicSeconds = Math.floor(
+            (differenceTimeDistance % (1000 * 60)) / 1000,
+          );
+
+          // Render values safely with padding zero string formats
+          document.getElementById("stac-days").textContent = String(
+            dynamicDays,
+          ).padStart(2, "0");
+          document.getElementById("stac-hours").textContent = String(
+            dynamicHours,
+          ).padStart(2, "0");
+          document.getElementById("stac-mins").textContent = String(
+            dynamicMinutes,
+          ).padStart(2, "0");
+          document.getElementById("stac-secs").textContent = String(
+            dynamicSeconds,
+          ).padStart(2, "0");
+        }
+
+        // Initialize tracking interval mechanics
+        computeCountdownTimer();
+        setInterval(computeCountdownTimer, 1000);
+      });
+    </script>
+    <script>
+      // Sample sparkline data
+      /*
   const data = [85, 86, 85.5, 86.2, 87, 86.8, 87.45];
   const canvas = document.getElementById('sparkline');
   const canvas2 = document.getElementById('sparkline2');
@@ -1242,9 +1924,9 @@ window.addEventListener('resize', () => {
   ctx.stroke();
   ctx2.stroke();
 */
-</script>
- <!-- Link your application's JavaScript file 
+    </script>
+    <!-- Link your application's JavaScript file 
 <script src="js/authConfig.js"></script>
 <script src="js/app.js"></script>-->
-</body>
+  </body>
 </html>
