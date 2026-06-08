@@ -77,7 +77,7 @@
                     <h4>Management System Onshore</h4>
                     <a href="#">Compliance</a>
                     <a href="#">Finance</a>
-                    <a href="#">HR</a>
+                    <a href="human-rights-policies">HR</a>
                     <a href="#">HSE</a>
                     <a href="#">IT</a>
                     <a href="#">Omega 365</a>
@@ -95,7 +95,9 @@
             <button class="dropbtn" onclick="resourceTools()">
               RESOURCES & TOOLS
             </button>
-             <div class="dropdown-grid-sm">
+             <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid-sm">
                   <div class="dropdown-column">
                     <h4>References</h4>
                     <a href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK/SitePages/Cyber-Security-Learning-Portal.aspx?e=4%3Af7609e54cd494c1f83cc98ecfd2c90b4&web=1&sharingv2=true&fromShare=true&at=9&CID=2a755509-ba2e-4ebc-b248-b9bec5f9ec2b">Cyber Security</a>
@@ -140,6 +142,7 @@
                   </div>
                   <div class="dropdown-column">
                     <h4>Mayo ABO</h4>
+                     <!-- <a href="#">ABO Project Folder</a> -->
                       <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Fstacmarineoffshore%2Esharepoint%2Ecom%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FDocOrgABO%3Fcsf%3D1%26web%3D1%26e%3DSUA2Nq%26CID%3D7c445a38%2D227f%2D4150%2Db8ef%2D27e2b9eb7e77&correlation=cbc6f2a1%2Df001%2Df000%2D5bef%2D9afdb95eb5d1&Type=item&name=9355e69b%2Dbc35%2D4901%2Db4a0%2Da461d07ef00b&listItemId=19826&listItemUniqueId=93591f1e%2D8d38%2D49b7%2D981f%2D701d9da78b91">DocOrgABO</a>
                       <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx">Mayo ABO Operations & Maintenance</a>
                       <a href="https://stacmarineoffshore.sharepoint.com/sites/FPSOABOHandoverData/STAC%20MARINE/Forms/AllItems.aspx?csf=1&web=1&e=cc2Ima&CID=00690e88%2Daa78%2D4ad7%2D9f50%2Dd856368cc8e3&FolderCTID=0x0120003C5300E541C2B942B44E3DAF654E2069&id=%2Fsites%2FFPSOABOHandoverData%2FSTAC%20MARINE%2FProject%204266">Project 4266</a>
@@ -181,11 +184,12 @@
 
                     <div id="filterContent">
                         <div class="filter-tabs">
-                            <div class="filter-tab active" onclick="showFilterTab('category')">Category ✚</div>
+                            <!-- <div class="filter-tab active" onclick="showFilterTab('category')">Category ✚</div> -->
                             <div class="filter-tab" onclick="showFilterTab('location')">Locations ✚</div>
                             <div class="filter-tab" onclick="showFilterTab('years')">Years ✚</div>
                         </div>
 
+                        <!--
                         <div id="categoryFilters" class="filter-options">
                             <div class="filter-option">
                                 <input type="checkbox" id="policy" value="policy" onchange="applyFilters()">
@@ -200,8 +204,9 @@
                                 <label for="markets">Global Market</label>
                             </div>
                         </div>
+                    -->
 
-                        <div id="locationFilters" class="filter-options" style="display: none;">
+                        <div id="locationFilters" class="filter-options">
                             <div class="filter-option">
                                 <input type="checkbox" id="nigeria" value="nigeria" onchange="applyFilters()">
                                 <label for="nigeria">Nigeria</label>
@@ -213,21 +218,22 @@
                         </div>
 
                         <div id="yearsFilters" class="filter-options" style="display: none;">
-                            <div class="filter-option">
-                                <input type="checkbox" id="year2024q4" value="2024-q4" onchange="applyFilters()">
-                                <label for="year2024q4">2024 Q4</label>
+                           <div class="filter-option">
+                                <input type="checkbox" id="year2026q4" value="2026-q4" onchange="applyFilters()">
+                                <label for="year2026q4">2026 Q4</label>
                             </div>
                             <div class="filter-option">
-                                <input type="checkbox" id="year2024q3" value="2024-q3" onchange="applyFilters()">
-                                <label for="year2024q3">2024 Q3</label>
+                                <input type="checkbox" id="year2026q3" value="2026-q3" onchange="applyFilters()">
+                                <label for="year2026q3">2026 Q3</label>
                             </div>
                             <div class="filter-option">
-                                <input type="checkbox" id="year2024q2" value="2024-q2" onchange="applyFilters()">
-                                <label for="year2024q2">2024 Q2</label>
+                                <input type="checkbox" id="year2026q2" value="2026-q2" onchange="applyFilters()">
+                                <label for="year2026q2">2026 Q2</label>
                             </div>
+                            
                             <div class="filter-option">
-                                <input type="checkbox" id="year2024q1" value="2024-q1" onchange="applyFilters()">
-                                <label for="year2024q1">2024 Q1</label>
+                                <input type="checkbox" id="year2026q1" value="2026-q1" onchange="applyFilters()">
+                                <label for="year2026q1">2026 Q1</label>
                             </div>
                         </div>
 
@@ -239,11 +245,12 @@
                     </div>
                 </div>
                 <!-- Q4 2024 Section -->
+                 <!--
                 <div class="quarter-header">
-                    <h3>Published 2024 Q4</h3>
+                    <h3>Q4 2026</h3>
                 </div>
                 
-                <div class="update-row" data-id="1" data-category="travel,procedure" data-location="nigeria,global" data-year="2024-q4" onclick="showDetail(1)">
+                <div class="update-row" data-id="1" data-category="travel,procedure" data-location="nigeria,global" data-year="2026-q4" onclick="showDetail(1)">
                     <div class="update-content">
                         <div class="update-date">12 December 2024</div>
                         <div class="update-title">Travel booking routines</div>
@@ -256,13 +263,15 @@
                         <img src="img/img_travel_news1.jpg" alt="Travel illustration">
                     </div>
                 </div>
+            -->
 
                 <!-- Q3 2024 Section -->
+                 <!--
                 <div class="quarter-header">
-                    <h3>Published 2024 Q3</h3>
+                    <h3>Q3 2026</h3>
                 </div>
                 
-                <div class="update-row" data-id="2" data-category="travel,procedure" data-location="nigeria,global" data-year="2024-q3" onclick="showDetail(2)">
+                <div class="update-row" data-id="2" data-category="travel,procedure" data-location="nigeria,global" data-year="2026-q3" onclick="showDetail(2)">
                     <div class="update-content">
                         <div class="update-date">20 September 2024</div>
                         <div class="update-title">Travel booking – new procedure</div>
@@ -275,9 +284,10 @@
                         <img src="img/img_travel_news2.jpg" alt="Travel illustration">
                     </div>
                 </div>
+            
 
-                <!-- Additional example row -->
-                <div class="update-row" data-id="3" data-category="travel,policy" data-location="nigeria,global" data-year="2024-q3" onclick="showDetail(3)">
+                
+                <div class="update-row" data-id="3" data-category="travel,policy" data-location="nigeria" data-year="2026-q3" onclick="showDetail(3)">
                     <div class="update-content">
                         <div class="update-date">15 September 2024</div>
                         <div class="update-title">Corporate travel policy updates</div>
@@ -290,82 +300,575 @@
                          <img src="img/img_travel_news3.jpg" alt="Travel illustration">
                     </div>
                 </div>
+                -->
 
                 <!-- Q2 2024 Section -->
-                <div class="quarter-header">
-                    <h3>Published 2024 Q2</h3>
-                </div>
                 
-                <div class="update-row" data-id="4" data-category="markets" data-location="global" data-year="2024-q2">
+                <div class="quarter-header">
+                    <h3>Q2 2026</h3>
+                </div>
+                <a href="https://orientalnewsng.com/eu-warns-oil-and-gas-prices-to-remain-elevated-till-end-of-2027/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
                     <div class="update-content">
-                        <div class="update-date">2 August 2024</div>
-                        <div class="update-title">Brent Crude Oil Price Crash</div>
+                        <div class="update-date">25 May 2026</div>
+                        <div class="update-title">EU Warns Oil And Gas Prices To Remain Elevated Till End Of 2027</div>
                         <div class="update-tags">- Global</div>
                         <div class="update-description">
-                            Good News, you can now book your own travels! This is applicable for employees in Norway, France &amp;...
+                           European Union (EU) officials have warned that oil and gas prices are expected to remain......
                         </div>
                     </div>
-                   
-                </div>
-
-                <!-- Additional example row -->
-                <div class="update-row" data-id="5" data-category="markets" data-location="global" data-year="2024-q2">
+                    <div class="update-image">
+                         <img src="img/eu_flag.jpg" alt="EU flag">
+                    </div>
+                </a>
+                 
+                <a href="https://orientalnewsng.com/world-losing-one-fifth-of-globally-traded-oil-as-next-oil-shock-beckons-over-iran-war/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
                     <div class="update-content">
-                        <div class="update-date">18 June 2024</div>
-                        <div class="update-title">OPEC+ Agree on Daily Output</div>
+                        <div class="update-date">25 May 2026</div>
+                        <div class="update-title">World Losing One Fifth Of Globally Traded Oil As Next Oil Shock Beckons Over Iran War</div>
                         <div class="update-tags">- Global</div>
                         <div class="update-description">
-                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
+                           Experts have warned that if the Gulf exports is materially disrupted for an extended period......
                         </div>
                     </div>
-                    
-                </div>
+                    <div class="update-image">
+                         <img src="img/oil_iran.jpg" alt="World Losing One Fifth Of Globally Traded Oil As Next Oil Shock Beckons Over Iran War">
+                    </div>
+                </a>
 
-                <!-- Q1 2024 Section -->
-                <div class="quarter-header">
-                    <h3>Published 2024 Q1</h3>
-                </div>
+                  
+                <a href="https://orientalnewsng.com/exxonmobil-expands-nigerias-deepwater-horizon-with-weatherford-deal/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">25 May 2026</div>
+                        <div class="update-title">ExxonMobil Expands Nigeria's Deepwater Horizon with Weatherford Deal</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                          ExxonMobil is expanding its deepwater footprint in Nigeria as the country provides more fiscal policy...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/exxonmobil.jpg" alt="ExxonMobil Expands Nigeria's Deepwater Horizon with Weatherford Deal">
+                    </div>
+                </a>
+
+               
+                <a href="https://africaoilgasreport.com/2026/05/in-the-news/bw-energy-takes-a-300milliion-fid-on-gabons-bourdon-development/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">25 May 2026</div>
+                        <div class="update-title">BW Energy Takes a $300 Million FID on Gabon's Bourdon Development</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           The Nrwegian minnow, BW Energy has approved the Final Investment Decision.....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/bwenergy.png" alt="BW Energy Takes a $300 Million FID on Gabon's Bourdon Development">
+                    </div>
+                </a>
+
                 
-                <div class="update-row" data-id="6" data-category="markets,policy" data-location="nigeria" data-year="2024-q1">
+                <a href="https://punchng.com/oil-exports-drive-nigeria-uk-trade-to-7-6bn/" class="update-row" data-id="22" data-category="markets" data-location="Nigeria" data-year="2026-q2">
                     <div class="update-content">
-                        <div class="update-date">25 April 2024</div>
-                        <div class="update-title">NNPC Shareholders Meeting</div>
+                        <div class="update-date">25 May 2026</div>
+                        <div class="update-title">Nigeria’s Oil Exports Drive UK Trade to $7.6 Billion</div>
                         <div class="update-tags">- Nigeria</div>
                         <div class="update-description">
-                            Good News, you can now book your own travels! This is applicable for employees in Nigeria &amp;...
+                           Nigeria’s crude oil exports played a significant role in raising total trade between Nigeria and the United Kingdom to.....
                         </div>
                     </div>
-                    
+                    <div class="update-image">
+                         <img src="img/uk_crudeoil.jpg" alt="Nigeria’s Oil Exports Drive UK Trade to $7.6 Billion">
+                    </div>
+                </a>
+
+                <!-- Additional example row -->
+                <a href="https://www.worldoil.com/news/2026/5/22/u-s-oil-rig-count-posts-largest-weekly-gain-since-2022/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">25 May 2026</div>
+                        <div class="update-title">U.S. oil rig count posts largest weekly gain since 2022</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           The number of rigs drilling in the U.S. shale patch rose by the most in more than four years, the latest sign of a resurgence in domestic...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/oilrig.jpeg" alt="U.S. oil rig count posts largest weekly gain since 2022">
+                    </div>
+                </a>
+
+                <!-- Additional example row -->
+                <a href="https://www.rigzone.com/news/wire/oil_jumps_as_hormuz_crisis_deepens-11-may-2026-183662-article/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">13 May 2026</div>
+                        <div class="update-title">Oil jumps as Hormuz crisis deepens</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           Oil rose after President Donald Trump said a fragile ceasefire between the US and Iran is close to unraveling, prolonging the effective closure of the crucial Strait of Hormuz...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/oil_jumps.jpg" alt="Oil jumps as Hormuz crisis deepens">
+                    </div>
+                </a>
+
+                          <!-- Additional example row -->
+                <a href="https://www.upstreamonline.com/sponsored-content/yinson/how-yinson-production-is-powering-africas-offshore-future-and-building-local-capacity/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">13 May 2026</div>
+                        <div class="update-title">How Yinson Production is powering Africa's offshore future and building local capacity</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           With more than two decades of operations across the continent, Yinson Production has established a strong presence in Africa’s offshore energy sector....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/Yinson_production.png" alt="How Yinson Production is powering Africa's offshore future and building local capacity">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://www.nuprc.gov.ng/nuprc-releases-dcso-report-for-q1-2026/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">12 May 2026</div>
+                        <div class="update-title">NUPRC releases DCSO report for Q1 2026</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                        The Nigerian Upstream Petroleum Regulatory Commission has released the statistics on the enforcement of the Domestic Crude Supply Obligation (DCSO) in accordance with the provisions of the Petroleum Industry Act....
+                    </div>
+                 </div> 
+                    <div class="update-image">
+                         <img src="img/nuprc_releases_dsco.jpg" alt="NUPRC releases DCSO report for Q1 2026">
+                    </div>
+                </a>
+
+                  <!-- Additional example row -->
+                <a href="https://www.nuprc.gov.ng/magnus-abe-resumes-as-nuprc-board-chairman-pledges-improved-leadership/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">12 May 2026</div>
+                        <div class="update-title">Magnus Abe Resumes as NUPRC Board Chairman, Pledges Improved Leadership</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                        The newly inaugurated board of the Nigerian Upstream Petroleum Regulatory Commission (NUPRC) resumed on April 28, 2026 with a pledge to boost the capacity of the NUPRC in meeting its statutory mandate.....
+                    </div>
+                 </div> 
+                    <div class="update-image">
+                         <img src="img/magnus_abe_resumes.jpg" alt="Magnus Abe Resumes as NUPRC Board Chairman, Pledges Improved Leadership">
+                    </div>
+                </a>
+                
+                  <!-- Additional example row -->
+                <a href="hhttps://thesun.ng/nga-seeks-de-risking-measures-to-boost-oil-gas-project-execution/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">28 April 2026</div>
+                        <div class="update-title">NGA seeks de-risking measures to boost oil, gas project execution</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           The Nigerian Gas Association(NGA), has identified predictable fiscal and regulatory environment as key ingredients essential to de-risking investments and accelerating project delivery in the oil and gas sector....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/kogi_gas_plant.jpg" alt="NGA seeks de-risking measures to boost oil, gas project execution">
+                    </div>
+                </a>
+
+
+                                  <!-- Additional example row -->
+                <a href="https://dailytrust.com/oil-wells-dispute-why-c-river-a-ibom-tensions-demand-urgent-federal-intervention/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">28 April 2026</div>
+                        <div class="update-title">Oil wells dispute: Why C/River–A/Ibom tensions demand urgent federal intervention</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           A renewed dispute over oil wells between Cross River and Akwa Ibom states is fast evolving into a complex political, legal and economic contest,...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/na_oil.jpg" alt="Oil wells dispute: Why C/River–A/Ibom tensions demand urgent federal intervention">
+                    </div>
+                </a>
+
+                  <!-- Additional example row -->
+                <a href="https://punchng.com/nnpc-crude-output-surges-to-five-year-high/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">28 April 2026</div>
+                        <div class="update-title">NNPC crude output surges to five-year high</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           The Nigerian National Petroleum Company Limited has announced a significant increase in crude oil production to 1.71 million barrels per day, the highest level recorded in five years, as part of its one-year performance report under the leadership of its Group Chief Executive Officer, Bayo Ojulari....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/NNPCL.jpg" alt="NNPC crude output surges to five-year high">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://www.worldoil.com/news/2026/4/27/canada-launches-25-billion-fund-to-back-oil-gas-and-lng-infrastructure-growth/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">28 April 2026</div>
+                        <div class="update-title">Canada launches $25-billion fund to back oil, gas and LNG infrastructure growth</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                            The Government of Canada has unveiled a $25-billion sovereign investment vehicle aimed at accelerating large-scale energy and infrastructure projects, signaling increased federal support for oil, gas and LNG development.....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/canada_pm.jpg" alt="Canada launches $25-billion fund to back oil, gas and LNG infrastructure growth">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://www.worldoil.com/news/2026/4/27/u-s-cancels-more-wind-leases-as-investment-shifts-to-oil-gas-and-lng/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">28 April 2026</div>
+                        <div class="update-title">U.S. cancels more wind leases as investment shifts to oil, gas and LNG</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                            U.S. Department of the Interior has reached agreements with two offshore wind developers to terminate lease positions and redirect capital into conventional energy projects, marking a notable shift in U.S. energy policy and investment flows....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/us_sec.jpg" alt="U.S. cancels more wind leases as investment shifts to oil, gas and LNG">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://www.trend.az/casia/kazakhstan/4179981.html" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">28 April 2026</div>
+                        <div class="update-title">Kazakhstan, ExxonMobil discuss key projects and expansion plans</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           STANA, Kazakhstan, April 28. Nurlan Zhakupov, Chairman of the Management Board of Samruk-Kazyna, and Peter Larden, Senior Vice President of ExxonMobil, convened to review....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/kazakhstan.jpg" alt="Kazakhstan, ExxonMobil discuss key projects and expansion plans">
+                    </div>
+                </a>
+
+                    <!-- Additional example row -->
+                <a href="https://thenationonlineng.net/nnpc-crude-oil-trading-hits-five-years-high/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">28 April 2026</div>
+                        <div class="update-title">NNPC crude oil trading hits five-years high</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           Under the watch of the Nigerian National Petroleum Company (NNPC) Limited, Group Chief Executive (GCEO) Engr. Bashir Bayo Ojulari,....
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/NNPCL.jpg" alt="NNPC crude oil trading hits five-years high">
+                    </div>
+                </a>
+
+
+                  <!-- Additional example row -->
+                <a href="https://thesun.ng/nigerias-upstream-oil-gas-sector-attracts-24bn-investment-ojulari/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">20 April 2026</div>
+                        <div class="update-title">Nigeria’s upstream oil, gas sector attracts $24bn investment – Ojulari</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           The Group Chief Executive Officer of NNPC Ltd, Mr. Bashir Bayo Ojulari, has hinted that announced at OLEF 2026 that Nigeria’s upstream oil and gas sector has attracted over $24 billion in capital investment ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/Ojulari.jpg" alt="Nigeria’s upstream oil, gas sector attracts $24bn investment –Ojulari">
+                    </div>
+                </a>
+
+                  <!-- Additional example row -->
+                <a href="https://www.albawaba.com/news/massive-fire-russias-tuapse-oil-refinery-1625817" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">20 April 2026</div>
+                        <div class="update-title">Massive fire at Russia's Tuapse Oil Refinery after Ukrainian drone strike</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           ALBAWABA - Russia said that Ukrainian drones struck the Tuapse Oil Refinery in southern Krasnodar Krai during an overnight attack on April 20, causing a massive fire ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/vsf.jpg" alt="Massive fire at Russia's Tuapse Oil Refinery after Ukrainian drone strike">
+                    </div>
+                </a>
+
+
+                 <!-- Additional example row -->
+                <a href="https://timesofoman.com/article/170828-oil-prices-jump-markets-shake-amid-us-iran-ceasefire-uncertainty" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">20 April 2026</div>
+                        <div class="update-title">Oil prices jump, markets shake amid US-Iran ceasefire uncertainty</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           New Delhi: Global energy prices surged on Monday as the Islamic Revolutionary Guard Corps announced the imminent closure of the Strait of Hormuz ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/1776664109-1776664109-xwv7r10t3tly-700x400.jpg" alt="Oil prices jump, markets shake amid US-Iran ceasefire uncertainty">
+                    </div>
+                </a>
+
+
+                    <!-- Additional example row -->
+                <a href="https://newsdiaryonline.com/navy-intensifies-anti-oil-theft-war-recovers-over-%E2%82%A62-5bn-products-in-rivers-operations/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">19 April 2026</div>
+                        <div class="update-title">Navy intensifies anti-oil theft war, recovers over ₦2.5bn products in Rivers operations</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           The Nigerian Navy has stepped up its offensive against crude oil theft, recording major operational breakthroughs under Operation DELTA SENTINEL ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/Port-Harcourt-Operation-8.jpeg" alt="Navy intensifies anti-oil theft war, recovers over ₦2.5bn products in Rivers operations">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://www.ibtimes.com.au/global-oil-prices-surge-over-5-iran-recloses-strait-hormuz-sparking-fresh-energy-crisis-fears-1867052" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">20 April 2026</div>
+                        <div class="update-title">Global Oil Prices Surge Over 5% as Iran Recloses Strait of Hormuz, Sparking Fresh Energy Crisis Fears</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           World petrol prices jumped sharply Monday amid renewed tensions in the Strait of Hormuz ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/global-oil-prices-surge-over-5-iran-recloses-strait.webp" alt="Global Oil Prices Surge Over 5% as Iran Recloses Strait of Hormuz, Sparking Fresh Energy Crisis Fears">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://www.worldoil.com/news/2026/4/17/energy-nl-names-new-board-chair-to-guide-newfoundland-offshore-energy-industry/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">17 April 2026</div>
+                        <div class="update-title">Energy NL names new board, chair to guide Newfoundland offshore energy industry</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           (WO) - Energy NL has appointed a new board of directors following its Annual General Meeting in St. John’s, Newfoundland and Labrador, with new leadership set to guide the province’s offshore energy supply and service sector ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/newsletter-energy-nl-interview.jpg" alt="Energy NL names new board, chair to guide Newfoundland offshore energy industry">
+                    </div>
+                </a>
+
+                    <!-- Additional example row -->
+                <a href="https://thesun.ng/nigeria-loses-226bn-revenue-following-oil-suspension-in-ogoniland-pinl/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">15 April 2026</div>
+                        <div class="update-title">Nigeria loses $226bn revenue following oil suspension in Ogoniland: PINL</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           Nigeria has lost an estimated $226.734 billion in revenue from the suspension of crude oil production across 96 wells in Ogoniland over the past 32 years ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/Ah4g0.jpg" alt="Nigeria loses $226bn revenue following oil suspension in Ogoniland: PINL">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://leadership.ng/crude-oil-middle-east-crisis-pushes-buyers-to-focus-on-nigeria-other-african-producers/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">07 April 2026</div>
+                        <div class="update-title">Crude Oil: Middle East Crisis Pushes Buyers To Focus On Nigeria, Other African Producers</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           Global energy analysts have predicted that Nigeria, along with other oil-producing African countries, will become a major beneficiary of the ongoing Middle East conflict ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/oil-barrels-509x339.jpg" alt="Crude Oil: Middle East Crisis Pushes Buyers To Focus On Nigeria, Other African Producers">
+                    </div>
+                </a>
+
+                <!-- Additional example row -->
+                <a href="https://thesun.ng/indigenous-firms-now-anchor-nigerias-oil-industry-stability-petan/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">07 April 2026</div>
+                        <div class="update-title">Indigenous firms now anchor Nigeria’s oil industry stability – PETAN</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           Nigeria’s oil and gas sector is undergoing a quiet but profound shift, with indigenous service companies emerging as the true stabilising force behind industry operations, the Petroleum Technology Association of Nigeria (PETAN) has declared ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/Pixss-1.jpg" alt="Indigenous firms now anchor Nigeria’s oil industry stability – PETAN">
+                    </div>
+                </a>
+
+                <!-- Additional example row -->
+                <a href="https://www.worldoil.com/news/2026/4/6/u-s-shale-producers-move-to-boost-output-as-oil-surges-past-100/" class="update-row" data-id="20" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">06 April 2026</div>
+                        <div class="update-title">U.S. shale producers move to boost output as oil surges past $100</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           (Bloomberg) — U.S. shale drillers are expected to follow President Donald Trump’s call for higher oil production — but not just because he said so ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/shaletech-lead-photo-1.jpg" alt="U.S. shale producers move to boost output as oil surges past $100">
+                    </div>
+                </a>
+                
+                 <!-- Additional example row -->
+                <a href="https://www.worldoil.com/news/2026/4/5/trump-administration-to-reunite-offshore-drilling-agencies-split-after-deepwater-horizon-spill" class="update-row" data-id="21" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">05 April 2026</div>
+                        <div class="update-title">Trump administration to reunite offshore drilling agencies split after Deepwater Horizon spill</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           (Bloomberg) — The U.S. Interior Department said it’s merging two oversight agencies to create a Marine Minerals Administration and move toward a “more modern, coordinated approach” to managing offshore resources, including critical minerals ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/thunder-horse-gulf-of-mexico-photo-bp.jpg" alt="Trump administration to reunite offshore drilling agencies split after Deepwater Horizon spill">
+                    </div>
+                </a>
+
+                <!-- Additional example row -->
+                <a href="https://punchng.com/pengassan-suspends-strike-at-seplat-following-nnpcl-intervention/" class="update-row" data-id="22" data-category="markets" data-location="nigeria" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">04 April 2026</div>
+                        <div class="update-title">PENGASSAN suspends strike at Seplat following NNPCL intervention</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           The Petroleum and Natural Gas Senior Staff Association of Nigeria has suspended its industrial action against Seplat Energy Plc ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/Pengassan.jpg" alt="PENGASSAN suspends strike at Seplat following NNPCL intervention">
+                    </div>
+                </a>
+
+                 <!-- Additional example row -->
+                <a href="https://worldoil.com/news/2026/4/2/continental-resources-to-boost-u-s-oil-output-as-crude-tops-100/" class="update-row" data-id="22" data-category="markets" data-location="global" data-year="2026-q2">
+                    <div class="update-content">
+                        <div class="update-date">02 April 2026</div>
+                        <div class="update-title">Continental Resources to boost U.S. oil output as crude tops $100</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           The Petroleum and Natural Gas Senior Staff Association of Nigeria has suspended its industrial action against Seplat Energy Plc ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/newsletter-top-continental.jpg" alt="Continental Resources to boost U.S. oil output as crude tops $100">
+                    </div>
+                </a>
+
+                <!-- Q1 Section -->
+                <div class="quarter-header">
+                    <h3>Q1 2026</h3>
                 </div>
 
                 <!-- Additional example row -->
-                <div class="update-row" data-id="7" data-category="procedure,policy" data-location="nigeria" data-year="2024-q1">
+                <a href="https://thenationonlineng.net/oil-exports-nigeria-others-to-benefit-from-rising-crude-oil-prices-says-imf/" class="update-row" data-id="1" data-category="markets" data-location="nigeria" data-year="2026-q1">
                     <div class="update-content">
-                        <div class="update-date">10 April 2024</div>
-                        <div class="update-title">PENGASSEN meet FG</div>
+                        <div class="update-date">23 March 2026</div>
+                        <div class="update-title">Oil exports: Nigeria, others to benefit from rising crude oil prices, says IMF</div>
                         <div class="update-tags">- Nigeria</div>
                         <div class="update-description">
-                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
+                           The International Monetary Fund (IMF) at the weekend, predicted significant recovery in Nigeria’s Balance of Payment (BoP) following ongoing surge in crude oil prices ...
                         </div>
                     </div>
-                   
-                </div>
+                    <div class="update-image">
+                         <img src="img/International_Monetary_Fund_logo.png" alt="Oil exports: Nigeria, others to benefit from rising crude oil prices">
+                    </div>
+                </a>
 
                 <!-- Additional example row -->
-                <div class="update-row" data-id="8" data-category="markets,policy" data-location="nigeria,global" data-year="2024-q1">
+                <a href="https://hallmarknews.com/opl-245-nigerias-oil-sector-set-for-major-leap/" class="update-row" data-id="2" data-category="markets" data-location="nigeria" data-year="2026-q1">
                     <div class="update-content">
-                        <div class="update-date">20 February 2024</div>
-                        <div class="update-title">Oando and Seplat on the rise</div>
+                        <div class="update-date">23 March 2026</div>
+                        <div class="update-title">OPL 245: Nigeria’s oil sector set for major leap</div>
                         <div class="update-tags">- Nigeria</div>
                         <div class="update-description">
-                            Important updates to our corporate travel policy have been implemented. All employees should review the new guidelines before...
+                           Exploration and production activities are about to commence at one of Nigeria’s biggest oil fields, OPL 245 popularly known around the world as Malabu ...
                         </div>
                     </div>
-                   
-                </div>
+                    <div class="update-image">
+                         <img src="img/opl24-malabu-news.jpeg" alt="OPL 24 Malabu">
+                    </div>
+                </a>
+
+                <a href="https://www.businesswire.com/news/home/20260306732402/en/SingaporeBased-WPH-Digital-Among-the-First-AIFocused-Digital-Companies-in-Asia-to-Achieve-ISOIEC-420012023-Setting-a-Global-First-for-Oil-Gas-AI-Governance" class="update-row" data-id="3" data-category="policy,procedure" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">23 March 2026</div>
+                        <div class="update-title">Singapore‑Based WPH Digital Among the First AI‑Focused Digital Companies in Asia to Achieve ISO/IEC 42001:2023, Setting a Global First for Oil & Gas AI Governance</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           SINGAPORE--(BUSINESS WIRE)--WPH Digital PTE. LTD., a Singapore-based AI and Digital Service Provider, announced today that it has become one of the first AI and Digital Service Providers ...
+                        </div>
+                    </div>
+                    <!--
+                    <div class="update-image">
+                         <img src="img/ship_oil_news.jpg" alt="U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise">
+                    </div>
+                -->
+                </a>
+
+                <a href="https://www.reuters.com/business/energy/oil-prices-rise-after-us-iran-threaten-hit-energy-targets-middle-east-2026-03-22/" class="update-row" data-id="4" data-category="markets" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">22 March 2026</div>
+                        <div class="update-title">Oil prices plunge 11% on US-Iran talks to resolve the hostilities in the Middle East</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           NEW YORK, March 23 (Reuters) - Oil prices dropped about 11% to a one-week low on Monday after U.S. President Donald Trump said ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/ship_oil_news.jpg" alt="U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise">
+                    </div>
+                </a>
+
+                <a href="https://www.worldoil.com/news/2026/3/22/u-s-targets-iran-positions-near-strait-of-hormuz-as-oil-market-tensions-rise/" class="update-row" data-id="5" data-category="markets" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">22 March 2026</div>
+                        <div class="update-title">U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           (Bloomberg) - U.S. officials signaled an intensifying military campaign against Iran focused on securing access to the Strait of Hormuz ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/strait-of-hormuz-close-up.jpg" alt="U.S. targets Iran positions near Strait of Hormuz as oil market tensions rise">
+                    </div>
+                </a>
+
+                <a href="https://www.worldoil.com/news/2026/3/20/brazil-mexico-weigh-petrobras-pemex-tie-up-for-offshore-oil-exploration/" class="update-row" data-id="6" data-category="markets" data-location="global" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">20 March 2026</div>
+                        <div class="update-title">Brazil, Mexico weigh Petrobras–Pemex tie-up for offshore oil exploration</div>
+                        <div class="update-tags">- Global</div>
+                        <div class="update-description">
+                           (Bloomberg) – Brazil President Luiz Inacio Lula da Silva said he spoke with Mexican leader Claudia Sheinbaum about a possible exploration ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/newsletter-petrobras-drillship.jpg" alt="Brazil, Mexico weigh Petrobras–Pemex tie-up for offshore oil exploration">
+                    </div>
+                </a>
+                
+                <a href="https://businessday.ng/energy/oilandgas/article/nigerias-oil-output-drops-for-seven-consecutive-months-to-1-46m-bpd/#google_vignette" class="update-row" data-id="7" data-category="markets" data-location="nigeria" data-year="2026-q1">
+                    <div class="update-content">
+                        <div class="update-date">11 March 2026</div>
+                        <div class="update-title">Nigeria’s oil output drops for seven consecutive months to 1.46m bpd</div>
+                        <div class="update-tags">- Nigeria</div>
+                        <div class="update-description">
+                           Nigeria has missed its oil production quota for the seventh consecutive month, with crude output falling to 1.46 million barrels per day (bpd) in January 2026 ...
+                        </div>
+                    </div>
+                    <div class="update-image">
+                         <img src="img/crude-oil-prices.png" alt="Crude Oil Prices">
+                    </div>
+                </a>
             </div>
 
             <!-- Detail Page 1 -->
+            <!--
             <div id="detail1" class="detail-page">
                 <a class="back-button" onclick="showList()">Back to news list</a>
                 
@@ -403,8 +906,9 @@
                     <p>Thank you for your cooperation in following these procedures. These guidelines help us manage travel costs effectively while ensuring your safety and comfort during business trips.</p>
                 </div>
             </div>
-
+        -->
             <!-- Detail Page 2 -->
+             <!--
             <div id="detail2" class="detail-page">
                 <a class="back-button" onclick="showList()">Back to news list</a>
                 
@@ -445,8 +949,9 @@
                     <p>We're confident this new system will enhance your travel booking experience. Please don't hesitate to reach out to the support team if you need any assistance during the transition.</p>
                 </div>
             </div>
-
+        -->
             <!-- Detail Page 3 -->
+             <!--
             <div id="detail3" class="detail-page">
                 <a class="back-button" onclick="showList()">Back to news list</a>
                 
@@ -488,7 +993,7 @@
                     <p>These policy updates will take effect on October 1, 2022. Please review the complete policy document available on the company portal and contact HR with any questions or concerns.</p>
                 </div>
             </div>
-
+        -->
         </div>
     </div>
   </div>
@@ -606,7 +1111,7 @@ window.onclick = function(e) {
 </script>
 
 <script>
-        let currentTab = 'category';
+        let currentTab = 'location';
 
           function showDetail(id) {
             document.getElementById('listPage').classList.add('hidden');
@@ -626,14 +1131,17 @@ window.onclick = function(e) {
             currentTab = tab;
             
             // Hide all filter options
-            document.getElementById('categoryFilters').style.display = 'none';
+            /* document.getElementById('categoryFilters').style.display = 'none'; */
             document.getElementById('locationFilters').style.display = 'none';
             document.getElementById('yearsFilters').style.display = 'none';
             
             // Show selected tab
+            /*
             if (tab === 'category') {
                 document.getElementById('categoryFilters').style.display = 'flex';
-            } else if (tab === 'location') {
+            }
+            */ 
+            if (tab === 'location') {
                 document.getElementById('locationFilters').style.display = 'flex';
             } else if (tab === 'years') {
                 document.getElementById('yearsFilters').style.display = 'flex';
@@ -659,24 +1167,24 @@ window.onclick = function(e) {
         }
 
         function applyFilters() {
-            const selectedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value);
+            /* const selectedCategories = Array.from(document.querySelectorAll('#categoryFilters input:checked')).map(cb => cb.value); */
             const selectedLocations = Array.from(document.querySelectorAll('#locationFilters input:checked')).map(cb => cb.value);
             const selectedYears = Array.from(document.querySelectorAll('#yearsFilters input:checked')).map(cb => cb.value);
             
             const rows = document.querySelectorAll('.update-row');
             
             rows.forEach(row => {
-                const rowCategories = row.dataset.category.split(',');
+               /* const rowCategories = row.dataset.category.split(','); */
                 const rowLocations = row.dataset.location.split(',');
                 const rowYear = row.dataset.year;
                 
                 let showRow = true;
                 
-                
                 // Check category filter
-                if (selectedCategories.length > 0) {
+               /* if (selectedCategories.length > 0) {
                     showRow = selectedCategories.some(cat => rowCategories.includes(cat));
                 }
+                    */
                 
                 // Check location filter
                 if (showRow && selectedLocations.length > 0) {
