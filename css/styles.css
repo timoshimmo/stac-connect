@@ -714,7 +714,7 @@ a:hover {
 }
 
 .ann-brand-title {
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-weight: 700 !important;
   color: #1a362b !important;
   letter-spacing: 1px !important;
@@ -723,7 +723,7 @@ a:hover {
 }
 
 .ann-brand-sub {
-  font-size: 12px !important;
+  font-size: 14px !important;
   color: #8a8a85 !important;
   margin: 0 0 20px 0 !important;
 }
@@ -737,7 +737,7 @@ a:hover {
 }
 
 .ann-brand-features li {
-  font-size: 12px !important;
+  font-size: 14px !important;
   color: #4a4a45 !important;
   margin-bottom: 10px !important;
   display: flex !important;
@@ -809,7 +809,7 @@ a:hover {
 
 .ann-news-desc {
   margin: 0 !important;
-  font-size: 13.5px !important;
+  font-size: 15px !important;
   color: #475569 !important; /* Soft descriptive muted color */
   line-height: 1.5 !important;
 }
@@ -848,7 +848,12 @@ a:hover {
 .ann-headline-brand {
   color: #2d6a4f;
   text-decoration: none;
-  background-image: linear-gradient(to right, transparent, #FFD700, transparent);
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #ffd700,
+    transparent
+  );
   background-position: bottom;
   background-size: 100% 2px;
   background-repeat: no-repeat;
@@ -856,7 +861,7 @@ a:hover {
 
 /* Headline size tweak to match image */
 .ann-news-headline {
-  font-size: 18px !important;
+  font-size: 24px !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
   margin: 0 0 8px 0 !important;
@@ -877,7 +882,7 @@ a:hover {
 }
 
 .ann-feature-item {
-  font-size: 12.5px !important;
+  font-size: 16px !important;
   color: #374151 !important;
   display: flex !important;
   align-items: center !important;
@@ -887,7 +892,7 @@ a:hover {
 
 .ann-feature-item i {
   color: #2d6a4f !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   width: 16px !important;
 }
 
@@ -904,7 +909,7 @@ a:hover {
 }
 
 .control-meta-label {
-  font-size: 10px !important;
+  font-size: 14px !important;
   font-weight: 700 !important;
   color: #8a8a85 !important;
   letter-spacing: 0.5px !important;
