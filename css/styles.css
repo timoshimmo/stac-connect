@@ -1458,6 +1458,495 @@
   to {opacity: 1}
 }
 
+/* announcement banner below navbar */
+.stac-announcement-banner {
+  display: grid !important;
+  grid-template-columns: 220px 1fr 200px !important;
+  background: #ffffff !important;
+  padding: 0 30px !important;
+  overflow: hidden !important;
+  margin-bottom: 35px !important;
+  font-family: "Inter", sans-serif !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Left Sidebar Panel Column */
+.ann-brand-col {
+  background: #f4f3ee !important; /* Premium neutral greyish-cream seen in image */
+  padding: 24px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+/* Left Sidebar Panel Column */
+.ann-brand-col {
+  background: #f4f3ee !important; /* Premium neutral greyish-cream seen in image */
+  padding: 24px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+.ann-brand-logo {
+  width: 48px !important;
+  height: 48px !important;
+  background: #e6f0ea !important; /* Sage green background tint */
+  color: #2d6a4f !important; /* Dark green icon */
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  margin-bottom: 12px !important;
+}
+
+.ann-brand-title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #1a362b !important;
+  letter-spacing: 1px !important;
+  margin: 0 0 4px 0 !important;
+  text-transform: uppercase !important;
+}
+
+.ann-brand-sub {
+  font-size: 14px !important;
+  color: #8a8a85 !important;
+  margin: 0 0 20px 0 !important;
+}
+
+.ann-brand-features {
+  list-style: none !important;
+  padding: 0 10px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.ann-brand-features li {
+  font-size: 14px !important;
+  color: #4a4a45 !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.ann-brand-features li i {
+  color: #2d6a4f !important;
+}
+
+/* Center Content Stream Column */
+.ann-content-col {
+  padding: 28px 32px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.slideshow-container {
+  width: 100% !important;
+  position: relative !important;
+}
+
+/* Badges system */
+.ann-badge {
+  display: inline-block !important;
+  padding: 4px 12px !important;
+  border-radius: 50px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 14px !important;
+}
+
+.badge-local {
+  background: #e6f0ea !important;
+  color: #2d6a4f !important;
+  border: 1px solid #d2e4d8 !important;
+}
+.badge-global {
+  background: #ebf4ff !important;
+  color: #1a6fbf !important;
+  border: 1px solid #d1e5ff !important;
+}
+.badge-nigeria {
+  background: #fff2e5 !important;
+  color: #8a5a1a !important;
+  border: 1px solid #ffe3cc !important;
+}
+
+/* Headline Custom Hyperlinks */
+.ann-news-headline {
+  margin: 0 0 8px 0 !important;
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+}
+
+.ann-news-headline a {
+  color: #0f172a !important; /* Refined dark slate */
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.ann-news-headline a:hover {
+  color: #2d6a4f !important; /* Sage text color switch */
+}
+
+.ann-news-desc {
+  margin: 0 !important;
+  font-size: 15px !important;
+  color: #475569 !important; /* Soft descriptive muted color */
+  line-height: 1.5 !important;
+}
+
+/* Outlined pill badge style (matching image) */
+.ann-badge {
+  background: transparent !important;
+  border: 1.5px solid currentColor !important;
+  border-radius: 50px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  padding: 3px 12px !important;
+  margin-bottom: 12px !important;
+  display: inline-block !important;
+  letter-spacing: 0.4px !important;
+  text-transform: uppercase !important;
+}
+
+.badge-local {
+  color: #2d6a4f !important;
+  border-color: #2d6a4f !important;
+  background: transparent !important;
+}
+.badge-global {
+  color: #1a6fbf !important;
+  border-color: #1a6fbf !important;
+  background: transparent !important;
+}
+.badge-nigeria {
+  color: #8a5a1a !important;
+  border-color: #8a5a1a !important;
+  background: transparent !important;
+}
+
+/* Inline brand colour in headline */
+.ann-headline-brand {
+  color: #2d6a4f;
+  text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #ffd700,
+    transparent
+  );
+  background-position: bottom;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+}
+
+/* Headline size tweak to match image */
+.ann-news-headline {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 8px 0 !important;
+  color: #0f172a !important;
+}
+
+.ann-news-headline a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* 2x2 feature grid */
+.ann-feature-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px 24px !important;
+  margin-top: 14px !important;
+}
+
+.ann-feature-item {
+  font-size: 16px !important;
+  color: #374151 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-weight: 500 !important;
+}
+
+.ann-feature-item i {
+  color: #2d6a4f !important;
+  font-size: 16px !important;
+  width: 16px !important;
+}
+
+/* Right Control Panel Desk */
+.ann-control-col {
+  background: #f4f3ee !important;
+  padding: 24px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-left: 1px solid #e2e8f0 !important;
+  gap: 12px !important;
+}
+
+.control-meta-label {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #8a8a85 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.ann-nav-arrows {
+  display: flex !important;
+  gap: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+.ann-btn-arrow {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  border: 1px solid #dcdcd6 !important;
+  background: #ffffff !important;
+  color: #1a362b !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+}
+
+.ann-btn-arrow:hover {
+  background: #2d6a4f !important;
+  color: #ffffff !important;
+  border-color: #2d6a4f !important;
+}
+
+.ann-footer-bar {
+  grid-column: 1 / -1 !important; /* span all 3 grid columns */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background-color: #0d1b2e !important;
+  padding: 7px 20px !important;
+  margin-top: 0 !important;
+}
+
+.ann-footer-text {
+  color: #c8d6e5;
+  font-size: 0.72rem;
+  font-family: sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.ann-footer-link {
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+
+.ann-footer-link:hover {
+  background-color: #a93226;
+  text-decoration: none;
+}
+
+/* Animations engine */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adaptive Viewports */
+@media (max-width: 992px) {
+  .stac-announcement-banner {
+    grid-template-columns: 1fr !important;
+  }
+  .ann-brand-col {
+    border-right: none !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .ann-control-col {
+    border-left: none !important;
+    border-top: 1px solid #e2e8f0 !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+  .ann-notify-btn {
+    width: auto !important;
+  }
+}
+/* Action Trigger Button matching core specification */
+.ann-notify-action-btn {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  background: #f4f3ee !important;
+  border: 1px solid #c0c0ba !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.ann-notify-action-btn i {
+  font-size: 14px !important;
+}
+
+.ann-notify-action-btn:hover {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Screen Size Viewport Media Breakpoints Adjustments */
+@media (max-width: 992px) {
+  .ann-control-col {
+    border-left: none !important;
+    border-top: 1px solid #e2e8f0 !important;
+    width: 100% !important;
+    padding: 24px !important;
+  }
+  .stac-countdown-grid {
+    max-width: 320px !important;
+  }
+  .ann-notify-action-btn {
+    max-width: 320px !important;
+  }
+}
+/* Revamped Right Column Layout Sheet */
+.ann-control-col {
+  background: #f4f3ee !important;
+  padding: 24px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-left: 1px solid #e2e8f0 !important;
+  gap: 16px !important;
+}
+
+.control-meta-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #8a8a85 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+}
+
+/* Countdown Matrix Grid Layout */
+.stac-countdown-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 6px !important;
+  width: 100% !important;
+}
+
+/* Individual Card Blocks matching image geometry */
+.countdown-box {
+  background: #ffffff !important;
+  border: 1px solid #dcdcd6 !important;
+  border-radius: 10px !important;
+  padding: 8px 4px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
+}
+
+.countdown-num {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important; /* Elegant dark text font color */
+  line-height: 1.1 !important;
+  font-variant-numeric: tabular-nums !important; /* Prevents shifting during countdown ticks */
+}
+
+.countdown-lbl {
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  color: #8a8a85 !important;
+  letter-spacing: 0.5px !important;
+  margin-top: 4px !important;
+}
+
+/* Action Trigger Button matching core specification */
+.ann-notify-action-btn {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  background: #f4f3ee !important;
+  border: 1px solid #c0c0ba !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.ann-notify-action-btn i {
+  font-size: 14px !important;
+}
+
+.ann-notify-action-btn:hover {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Screen Size Viewport Media Breakpoints Adjustments */
+@media (max-width: 992px) {
+  .ann-control-col {
+    border-left: none !important;
+    border-top: 1px solid #e2e8f0 !important;
+    width: 100% !important;
+    padding: 24px !important;
+  }
+  .stac-countdown-grid {
+    max-width: 320px !important;
+  }
+  .ann-notify-action-btn {
+    max-width: 320px !important;
+  }
+}
+
 .announcement {
   width: auto;
   margin: 0px 60px;

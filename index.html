@@ -173,6 +173,7 @@
     </div>
   </header>
   
+  <!-- 
   <div class="announcement">
     <div class="slideshow-container">
       <button class="ann-arrow ann-arrow-left" onclick="changeSlide(-1)">&#8249;</button>
@@ -273,26 +274,13 @@
           </div>
         </div>
       </div>
-
-<!--
-      <div class="annSlides fade">
-        <div class="annBody">
-          <img class="ic_announcement" src="img/megaphone.png" alt="Announcecement megaphoe"/>
-          <div>
-            <h2 class="announcement-title">Announcements/News Updates</h2>
-            <h2 class="announcement-title">(8/8)</h2>
-          </div>
-          <div>
-            <a href="https://www.albawaba.com/news/massive-fire-russias-tuapse-oil-refinery-1625817" class="announcement-link">Massive fire at Russia's Tuapse oil refinery after Ukrainian drone</a>
-            <p class="announcement-subtitle">Global</p>
-          </div>
-        </div>
-      </div>
-      --> 
       <button class="ann-arrow ann-arrow-right" onclick="changeSlide(1)">&#8250;</button>
     </div>
-  </div>
-   <div class="quiz-top-bar" id="topBar">
+  </div> -->
+
+  <!-- Quiz/Action Required Bar -->
+  <!--
+  <div class="quiz-top-bar" id="topBar">
       <div class="icon-wrap">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2L4 5v6c0 5.25 3.5 10.15 8 11.35C16.5 21.15 20 16.25 20 11V5l-8-3z"/>
@@ -323,7 +311,96 @@
           </svg>
         </button>
       </div>
+    </div> -->
+
+    <div class="stac-announcement-banner">
+      <!-- LEFT COLUMN: Brand Identity -->
+      <div class="ann-brand-col">
+        <div class="ann-brand-logo">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 class="ann-brand-title">STAC ACADEMY</h3>
+        <p class="ann-brand-sub">Learning platform</p>
+
+        <ul class="ann-brand-features">
+          <li><i class="fa-regular fa-newspaper"></i> Certificates</li>
+          <li><i class="fa-solid fa-globe"></i> Online courses</li>
+          <li><i class="fa-solid fa-chart-line"></i> Track Progress</li>
+        </ul>
+      </div>
+
+      <!-- CENTER COLUMN: Active Dynamic Content Panel -->
+      <div class="ann-content-col">
+        <div class="slideshow-container">
+          <!-- Slide 1 -->
+          <div class="annSlides fade">
+            <span class="ann-badge badge-local">● Coming soon</span>
+            <h2 class="ann-news-headline">
+              Your career path starts with
+              <span class="ann-headline-brand">STAC Academy</span>
+            </h2>
+            <p class="ann-news-desc">
+              A world-class learning experience built for professionals. Grow
+              your skills, earn certificates, and take your career further.
+            </p>
+            <div class="ann-feature-grid">
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-chalkboard-user"></i> Expert-led courses
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-certificate"></i> Verified certificates
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-users"></i> Built for your team
+              </div>
+              <div class="ann-feature-item">
+                <i class="fa-solid fa-globe"></i> Globally recognised
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Ticker Bar -->
+      </div>
+
+      <!-- RIGHT COLUMN: Control Desk & Navigation Counter -->
+      <!-- RIGHT COLUMN: Dynamic Launch Countdown Block -->
+      <div class="ann-control-col">
+        <div class="control-meta-label">LAUNCHING IN</div>
+
+        <!-- Countdown Box Grid Elements Matrix -->
+        <div class="stac-countdown-grid">
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-days">00</span>
+            <span class="countdown-lbl">DAYS</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-hours">00</span>
+            <span class="countdown-lbl">HRS</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-mins">00</span>
+            <span class="countdown-lbl">MIN</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="stac-secs">00</span>
+            <span class="countdown-lbl">SEC</span>
+          </div>
+        </div>
+      </div>
+      <div class="ann-footer-bar">
+        <span class="ann-footer-text">
+          • STAC Marine Offshore &middot; Powered by
+          <strong style="color: #39bc3c ; font-size: 14px;">OpenSesame</strong>
+        </span>
+        <a
+          href="https://stacacademy.site"
+          target="_blank"
+          class="ann-footer-link"
+          >stacacademy.stacmarine.com</a
+        >
+      </div>
     </div>
+
   <!-- Page Shell -->
   <main class="shell">
     <!-- Left rail -->
@@ -1413,6 +1490,59 @@ window.addEventListener('resize', () => {
   if (bonny?.history) drawSpark('bonnyChart', bonny.history, '#00b89e', '#00b89e');
 });
 </script>
+
+ <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set your target launch date specifically to July 6, 2026
+        const targetLaunchDate = new Date("July 6, 2026 00:00:00").getTime();
+
+        function computeCountdownTimer() {
+          const exactCurrentTime = new Date().getTime();
+          const differenceTimeDistance = targetLaunchDate - exactCurrentTime;
+
+          // Verify if target countdown phase completed
+          if (differenceTimeDistance < 0) {
+            document.getElementById("stac-days").textContent = "00";
+            document.getElementById("stac-hours").textContent = "00";
+            document.getElementById("stac-mins").textContent = "00";
+            document.getElementById("stac-secs").textContent = "00";
+            return;
+          }
+
+          // Standard time transformations logic
+          const dynamicDays = Math.floor(
+            differenceTimeDistance / (1000 * 60 * 60 * 24),
+          );
+          const dynamicHours = Math.floor(
+            (differenceTimeDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+          const dynamicMinutes = Math.floor(
+            (differenceTimeDistance % (1000 * 60 * 60)) / (1000 * 60),
+          );
+          const dynamicSeconds = Math.floor(
+            (differenceTimeDistance % (1000 * 60)) / 1000,
+          );
+
+          // Render values safely with padding zero string formats
+          document.getElementById("stac-days").textContent = String(
+            dynamicDays,
+          ).padStart(2, "0");
+          document.getElementById("stac-hours").textContent = String(
+            dynamicHours,
+          ).padStart(2, "0");
+          document.getElementById("stac-mins").textContent = String(
+            dynamicMinutes,
+          ).padStart(2, "0");
+          document.getElementById("stac-secs").textContent = String(
+            dynamicSeconds,
+          ).padStart(2, "0");
+        }
+
+        // Initialize tracking interval mechanics
+        computeCountdownTimer();
+        setInterval(computeCountdownTimer, 1000);
+      });
+    </script>
 
 <script>
 
