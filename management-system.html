@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <title>STACconnect - Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden; /* Prevent scrolling on the body */
+    }
+    .iframe-container {
+        padding-bottom: 60px; /* Height of the header */
+        height: 100%;
+        box-sizing: border-box;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .site-footer {
+        display: none; /* Hide footer on this page */
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Gradient Nav topbar -->
+  <header class="site-header">
+    <div class="topbar-inner">
+      <div class="logo" aria-label="STAC Connect">
+         <a href="/"><img src="img/stac_logo_new.jpg" height="45px"/></a>
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="whatsNew()">
+            WHAT'S NEW
+          </button>
+          <div class="dropdown-content" id="whatsNewMenu">
+            <h2>What's New</h2>
+            <div class="dropdown-grid">
+               <div class="dropdown-column">
+                  <h4>Global &amp; Nigeria News</h4>
+                  <a href="news">Global</a>
+                  <a href="news">Nigeria</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>STAC Community</h4>
+                  <a href="https://engage.cloud.microsoft/">Viva Engage</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>More News</h4>
+                  <a href="https://stacmarine.com/" target="_blank">Company Website</a>
+                  <a href="https://www.linkedin.com/company/stac-marine-offshore-limited/posts/?feedView=all" target="_blank">STAC LinkedIn</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdownDo">
+            <button class="dropbtn" onclick="whatWeDo()">
+              WHAT WE DO
+            </button>
+            <div class="dropdown-content" id="whatWeDoMenu">
+              <h2>What We Do</h2>
+              <div class="dropdown-grid">
+                <div class="dropdown-column">
+                    <h4>Working at STAC – Our Safety Culture</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:p:/s/HumanResources/IQCmUVjMsYxVRZhkOJQt4U17AcXOuDbUwXJXMmYeqOcM4g4?e=tVyCv4">Organization Charts</a>
+                    <a href="zero-harm">Zero Harm</a>
+                    <a href="#">Cultural Programme</a>
+                    <a href="employee-resources">Employee Resources</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Company Standards and Sustainability</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQBH7dukjfrKR7dryvRsr96UAVwdJ-pLndd4TsfZ-DX-q7Q?isSPOFile=1&xsdata=MDV8MDJ8fDA0MTcyN2E2ODUxMDQ3MGEzYzRkMDhkZTZhZWQ2NTA4fGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQ5NjgwMjEwNjl8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFk1TkRVMU5nPT18OTUzZmZjYzI3YmExNDExODNjNGQwOGRlNmFlZDY1MDh8YWJhMWVhNzg0ZDNlNDVjMTlkZTQ0MmZiYjk2N2IwMzk%3D&sdata=RFFLMHBtVU51TTBkSzZuTi91WlNodGJEdXFiblE2YmZrdXlBcG1rVFkybz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Corporate Governance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQAe6RN2iulrQLzt-B60DVoQAWT3Z0_DLHtyglI1kDPU954?isSPOFile=1&xsdata=MDV8MDJ8fDU5MjczMzIyNDlmNjQzMzkyMGI0MDhkZTZhZWQzYjhhfGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjQyNzE4OTA2MTJ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFl5TlRJNU13PT18MGM1MWVlOTlkN2YyNGVjNzIwYjQwOGRlNmFlZDNiOGF8OGQ0YjhkZmJmNjI3NGEwNGJiMzRlYWM0YzIzMjdlOTk%3D&sdata=Mnh4SlhmM285SU1kMEZJVys1VE1YSTRVU3hIYTYrYXBlc1pUV3VjVmJKaz0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Ethics & Business Conduct</a>
+                    <a href="#">Data Protection</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:b:/s/ComplianceandNigerianContent/IQCnHfZL33p2Ro1tKpYycMg0AXysqEGfS0-hJrupQ4A_utU?isSPOFile=1&xsdata=MDV8MDJ8fDQzNmM4ZWE1NGE0YjRmYjU1NGQ0MDhkZTZhZWQwMDZifGY2ZTA3YTI2MWY4NzQzNTA4NzAzOWQ4OTFmM2E3YmYxfDB8MHw2MzkwNjU3NjMyODAwMTY1OTZ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pWa1pUa3laVEUwTFdJMVpqTXROR1l6TnkwNU5UTmlMVEF6TkRCbFpUazBORE15TWw4Mk9XRXhZekU1TXkwM1lqSXdMVFEwT1RjdE9UZG1OaTB5TW1KaFlqYzVNR1F5WldGQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjM01EazNPVFV5TlRVMU9RPT18NTgwN2JkNmQ1ZTc2NGU4ODU0ZDQwOGRlNmFlZDAwNmJ8Yjk1MDc1MmViYTMyNDA2NThkYTVkMGNjYzI4ZTkxNDQ%3D&sdata=Vm1VTzN5ZUJVcWhGc01EQlByMXkvNGY5TWdSbEhFeDE4YUFBa3VwQTZyWT0%3D&ovuser=f6e07a26-1f87-4350-8703-9d891f3a7bf1%2CAbdullahi.Anas@stac-marine.com">Commitment to ESG Principles</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+        <a href="management-system.html">MANAGEMENT SYSTEM</a>
+         <div class="dropdownDo">
+            <button class="dropbtn" onclick="resourceTools()">
+              RESOURCES & TOOLS
+            </button>
+            <div class="dropdown-content" id="resourceToolsMenu">
+              <h2>Resources & Tools</h2>
+              <div class="dropdown-grid-sm">
+                  <div class="dropdown-column">
+                    <h4>References</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/iITHELPDESK">Cyber Security</a>
+                    <a href="#">E-Learning</a>
+                    <a href="#">Travel Advisory</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:f:/s/IT/IgDlF24jEQmgT4-_zs-BP0K0AQzMcSBILPAVLkPZC39-c1w">IT Guides (A-Z)</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>HSE</h4>
+                    <a href="control-work-procedure">Control of Work Procedure</a>
+                    <a href="standard-operating-procedures">SOPs</a>
+                    <a href="emergency-preparedness-procedure">Emergency Preparedness Procedures</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/:p:/r/sites/HSE30/_layouts/15/Doc.aspx?sourcedoc=%7B5952BABF-75E9-435C-91D1-43E145067968%7D&file=SEPTEMBER%202025%20HSE%20MEETING%20%26%20PERSONNEL%20ENGAGEMENT.pptx&action=edit&mobileredirect=true">Monthly Safety Meeting</a>
+                    <a href="corporate-policies">Corporate Policies</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>BI</h4>
+                    <a href="#">Daily Offshore Report</a>
+                    <a href="#">Finance</a>
+                    <a href="#">HSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">Operations and Maintenance</a>
+                    <a href="#">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Business Applications</h4>
+                    <a href="#">Action Tracker</a>
+                    <a href="https://workspace.stacmarine.com/portal/myworkspace">eXo</a>
+                    <a href="https://stacmarine-webapp.vercel.app/#/documents">DocuSeal</a>
+                    <a href="https://www.erpodoostacmarine.com/odoo">Odoo</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>SharePoint Sites</h4>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/ComplianceandNigerianContent">Compliance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/FinanceDepartment">Finance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HSE30">HSE</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/HumanResources">HR</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/IT">IT</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/PROJECTS">Operations and Maintenance</a>
+                    <a href="https://stacmarineoffshore.sharepoint.com/sites/SupplyChain">Supply Chain</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Mayo ABO</h4>
+                      <a href="https://stacmarineoffshore.sharepoint.com/:f:/r/sites/FPSOABOHandoverData/STAC%20MARINE/DocOrgABO?csf=1&web=1">DocOrgABO</a>
+                      <a href="https://stacmarineoffshore.sharepoint.com/:f:/r/sites/FPSOABOHandoverData/STAC%20MARINE/FPSO%20ABO%20Handover%20Data%20-%20STAC%20Marine?csf=1&web=1 ">Mayo ABO Operations & Maintenance</a>
+                      <a href="https://stacmarineoffshore.sharepoint.com/:f:/r/sites/FPSOABOHandoverData/STAC%20MARINE/Project%204266?csf=1&web=1 ">Project 4266</a>
+                  </div>
+              </div>
+            </div>
+        </div> 
+      </div>
+     
+      <div class="search">
+         <form action="https://google.com/search" method="get" class="search-box">
+          <input type="text" id="site-search" name="q" placeholder="Search Intranet" />
+          <input type="hidden" name="sitesearch" value="connect.stacmarine.com | stacmarineoffshore.sharepoint.com" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="iframe-container">
+    <iframe src="https://management.stacmarine.com"></iframe>
+  </div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+ var whatsNewMenu = document.getElementById("whatsNewMenu");
+    var whatWeDoMenu = document.getElementById("whatWeDoMenu");
+    var resourceToolsMenu = document.getElementById("resourceToolsMenu");
+
+function whatsNew() {
+  if (whatWeDoMenu.classList.contains('show')) {
+    whatWeDoMenu.classList.remove('show');
+  }
+  if (resourceToolsMenu.classList.contains('show')) {
+    resourceToolsMenu.classList.remove('show');
+  }
+  document.getElementById("whatsNewMenu").classList.toggle("show");
+}
+
+function whatWeDo() {
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+    document.getElementById("whatWeDoMenu").classList.toggle("show");
+}
+
+function resourceTools() {
+   if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+  document.getElementById("resourceToolsMenu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    if (whatsNewMenu.classList.contains('show')) {
+      whatsNewMenu.classList.remove('show');
+    }
+    if (whatWeDoMenu.classList.contains('show')) {
+      whatWeDoMenu.classList.remove('show');
+    }
+    if (resourceToolsMenu.classList.contains('show')) {
+      resourceToolsMenu.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
